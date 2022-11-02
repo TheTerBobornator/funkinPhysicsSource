@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="spaghetti_popup.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="spaghetti0000" x="0" y="0" width="519" height="220" frameX="-547" frameY="-357" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0001" x="519" y="0" width="599" height="296" frameX="-507" frameY="-319" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0002" x="1118" y="0" width="743" height="464" frameX="-435" frameY="-235" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0003" x="1861" y="0" width="959" height="628" frameX="-327" frameY="-153" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0004" x="2820" y="0" width="1166" height="716" frameX="-223" frameY="-109" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0005" x="0" y="716" width="1446" height="935" frameX="-83" frameY="0" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0006" x="1446" y="716" width="1502" height="887" frameX="-55" frameY="-24" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0007" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0008" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0009" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0010" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0011" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0012" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0013" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0014" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0015" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0016" x="0" y="1651" width="1614" height="843" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0017" x="1446" y="716" width="1502" height="887" frameX="-55" frameY="-24" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0018" x="0" y="716" width="1446" height="935" frameX="-83" frameY="0" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0019" x="2820" y="0" width="1166" height="716" frameX="-223" frameY="-109" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0020" x="1861" y="0" width="959" height="628" frameX="-327" frameY="-153" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0021" x="1118" y="0" width="743" height="464" frameX="-435" frameY="-235" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0022" x="519" y="0" width="599" height="296" frameX="-507" frameY="-319" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0023" x="0" y="0" width="519" height="220" frameX="-547" frameY="-357" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0024" x="1614" y="1651" width="519" height="140" frameX="-547" frameY="-397" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0025" x="2133" y="1651" width="483" height="56" frameX="-565" frameY="-439" frameWidth="1614" frameHeight="935"/>
+	<SubTexture name="spaghetti0026" x="2616" y="1651" width="299" height="16" frameX="-657" frameY="-459" frameWidth="1614" frameHeight="935"/>
+	<!-- SubTexture name="spaghetti0027" x="2915" y="1651" width="0" height="0" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/ im pretty sure these are broken so i commented them out lmao--> 
+	<!-- SubTexture name="spaghetti0028" x="2915" y="1651" width="0" height="0" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/ -->
+	<!-- SubTexture name="spaghetti0029" x="2915" y="1651" width="0" height="0" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/ -->
+	<!-- SubTexture name="spaghetti0030" x="2915" y="1651" width="0" height="0" frameX="0" frameY="-46" frameWidth="1614" frameHeight="935"/ -->
+</TextureAtlas>

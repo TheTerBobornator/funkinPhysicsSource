@@ -1,0 +1,5 @@
+val 1: set/sung, or auto
+
+val 2: if set or sung, the text
+
+go read the "lyricsinstruction" for in depth instructions

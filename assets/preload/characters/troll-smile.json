@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "smile idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-187,
+				-222
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "smile left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-190,
+				-516
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "smile down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-322,
+				-59
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "smile up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-181,
+				-257
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "smile right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/trolling/smile",
+	"position": [
+		-1100,
+		-600
+	],
+	"healthicon": "troll-smile",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,25 @@
+<TextureAtlas imagePath="troll1.png">
+	<SubTexture name="Dad Sing Note DOWN0000" x="1101" y="0" width="504" height="739"/>
+	<SubTexture name="Dad Sing Note DOWN0001" x="590" y="1409" width="509" height="728"/>
+	<SubTexture name="Dad Sing Note DOWN0002" x="590" y="679" width="509" height="728"/>
+	<SubTexture name="Dad Sing Note RIGHT0000" x="0" y="2108" width="588" height="705"/>
+	<SubTexture name="Dad Sing Note RIGHT0001" x="0" y="1395" width="588" height="711"/>
+	<SubTexture name="Dad Sing Note RIGHT0002" x="0" y="679" width="588" height="714"/>
+	<SubTexture name="Dad Sing Note LEFT0000" x="0" y="0" width="589" height="677"/>
+	<SubTexture name="Dad Sing Note LEFT0001" x="588" y="2815" width="585" height="677"/>
+	<SubTexture name="Dad Sing Note LEFT0002" x="0" y="2815" width="586" height="677"/>
+	<SubTexture name="Dad Sing Note UP0000" x="1101" y="1516" width="489" height="773"/>
+	<SubTexture name="Dad Sing Note UP0001" x="1101" y="741" width="489" height="773"/>
+	<SubTexture name="Dad Sing Note UP0002" x="1175" y="2291" width="486" height="770"/>
+	<SubTexture name="Dad idle dance0000" x="1592" y="741" width="460" height="716"/>
+	<SubTexture name="Dad idle dance0001" x="1607" y="0" width="451" height="713"/>
+	<SubTexture name="Dad idle dance0002" x="2054" y="715" width="447" height="707"/>
+	<SubTexture name="Dad idle dance0003" x="2047" y="1459" width="448" height="710"/>
+	<SubTexture name="Dad idle dance0004" x="1640" y="3063" width="449" height="701"/>
+	<SubTexture name="Dad idle dance0005" x="1640" y="3063" width="449" height="701"/>
+	<SubTexture name="Dad idle dance0006" x="1663" y="2174" width="448" height="700"/>
+	<SubTexture name="Dad idle dance0007" x="2054" y="715" width="447" height="707"/>
+	<SubTexture name="Dad idle dance0008" x="1592" y="1459" width="453" height="713"/>
+	<SubTexture name="Dad idle dance0009" x="1175" y="3063" width="463" height="716"/>
+	<SubTexture name="Dad idle dance0010" x="1175" y="3063" width="463" height="716"/>
+</TextureAtlas>

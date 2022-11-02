@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Troll idle"
+		},
+		{
+			"offsets": [
+				0,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Troll Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				1,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Troll Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				-2,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Troll Sing Note UP"
+		},
+		{
+			"offsets": [
+				-2,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Troll Sing Note RIGHT"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/trolling/coughtroll",
+	"position": [
+		-250,
+		-600
+	],
+	"healthicon": "trololo-sick",
+	"flip_x": false,
+	"healthbar_colors": [
+		135,
+		95,
+		75
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 1
+}

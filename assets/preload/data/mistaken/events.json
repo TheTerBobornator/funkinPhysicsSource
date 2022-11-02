@@ -1,0 +1,16 @@
+{
+	"song": {
+		"events": [
+			[
+				86400,
+				[
+					[
+						"Change Character",
+						"Dad",
+						"troll-p2e"
+					]
+				]
+			]
+		]
+	}
+}

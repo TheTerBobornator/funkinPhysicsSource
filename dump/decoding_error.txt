@@ -1,0 +1,888 @@
+{
+	doc: null
+	fields: [{
+		access: [APublic]
+		doc: 
+		Whether the event was canceled during the previous dispatch
+	
+		kind: FProp(default, null, TPath({
+			name: Bool
+			pack: []
+			params: []
+			sub: null
+		}), null)
+		meta: []
+		name: canceled
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: null
+		kind: FVar(TPath({
+			name: Array
+			pack: []
+			params: [TPType(TPath({
+				name: Bool
+				pack: []
+				params: []
+				sub: null
+			}))]
+			sub: null
+		}), null)
+		meta: [{
+			name: :noCompletion
+			params: []
+			pos: #pos
+		}, {
+			name: :dox
+			params: [{
+				expr: EConst(CIdent(hide))
+				pos: #pos
+			}]
+			pos: #pos
+		}]
+		name: __repeat
+		pos: #pos
+	}, {
+		access: [APrivate]
+		doc: null
+		kind: FVar(TPath({
+			name: Array
+			pack: []
+			params: [TPType(TPath({
+				name: Int
+				pack: []
+				params: []
+				sub: null
+			}))]
+			sub: null
+		}), null)
+		meta: [{
+			name: :noCompletion
+			params: []
+			pos: #pos
+		}]
+		name: __priorities
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: 
+		Creates a new Event instance
+	
+		kind: FFun({
+			args: []
+			expr: {
+				expr: EBlock([{
+					expr: EBinop(OpAssign, {
+						expr: EConst(CIdent(canceled))
+						pos: #pos
+					}, {
+						expr: EConst(CIdent(false))
+						pos: #pos
+					})
+					pos: #pos
+				}, {
+					expr: EBinop(OpAssign, {
+						expr: EConst(CIdent(__listeners))
+						pos: #pos
+					}, {
+						expr: ENew({
+							name: Array
+							pack: []
+							params: []
+							sub: null
+						}, [])
+						pos: #pos
+					})
+					pos: #pos
+				}, {
+					expr: EBinop(OpAssign, {
+						expr: EConst(CIdent(__priorities))
+						pos: #pos
+					}, {
+						expr: ENew({
+							name: Array
+							pack: []
+							params: [TPType(TPath({
+								name: Int
+								pack: []
+								params: []
+								sub: null
+							}))]
+							sub: null
+						}, [])
+						pos: #pos
+					})
+					pos: #pos
+				}, {
+					expr: EBinop(OpAssign, {
+						expr: EConst(CIdent(__repeat))
+						pos: #pos
+					}, {
+						expr: ENew({
+							name: Array
+							pack: []
+							params: [TPType(TPath({
+								name: Bool
+								pack: []
+								params: []
+								sub: null
+							}))]
+							sub: null
+						}, [])
+						pos: #pos
+					})
+					pos: #pos
+				}])
+				pos: #pos
+			}
+			params: []
+			ret: null
+		})
+		meta: []
+		name: new
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: 
+		Adds a new event listener
+		@param	listener	A callback that matches the signature of the event
+		@param	once	Whether to receive an event dispatch only once, or each time it is fired
+		@param	priority	The priority for this listener, a higher priority will be dispatched sooner
+	
+		kind: FFun({
+			args: [{
+				meta: []
+				name: listener
+				opt: false
+				type: TPath({
+					name: T
+					pack: []
+					params: []
+					sub: null
+				})
+				value: null
+			}, {
+				meta: []
+				name: once
+				opt: false
+				type: TPath({
+					name: Bool
+					pack: []
+					params: []
+					sub: null
+				})
+				value: {
+					expr: EConst(CIdent(false))
+					pos: #pos
+				}
+			}, {
+				meta: []
+				name: priority
+				opt: false
+				type: TPath({
+					name: Int
+					pack: []
+					params: []
+					sub: null
+				})
+				value: {
+					expr: EConst(CInt(0))
+					pos: #pos
+				}
+			}]
+			expr: {
+				expr: EBlock([{
+					expr: EFor({
+						expr: EBinop(OpIn, {
+							expr: EConst(CIdent(i))
+							pos: #pos
+						}, {
+							expr: EBinop(OpInterval, {
+								expr: EConst(CInt(0))
+								pos: #pos
+							}, {
+								expr: EField({
+									expr: EConst(CIdent(__priorities))
+									pos: #pos
+								}, length)
+								pos: #pos
+							})
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EBlock([{
+							expr: EIf({
+								expr: EBinop(OpGt, {
+									expr: EConst(CIdent(priority))
+									pos: #pos
+								}, {
+									expr: EArray({
+										expr: EConst(CIdent(__priorities))
+										pos: #pos
+									}, {
+										expr: EConst(CIdent(i))
+										pos: #pos
+									})
+									pos: #pos
+								})
+								pos: #pos
+							}, {
+								expr: EBlock([{
+									expr: ECall({
+										expr: EField({
+											expr: EConst(CIdent(__listeners))
+											pos: #pos
+										}, insert)
+										pos: #pos
+									}, [{
+										expr: EConst(CIdent(i))
+										pos: #pos
+									}, {
+										expr: ECast({
+											expr: EConst(CIdent(listener))
+											pos: #pos
+										}, null)
+										pos: #pos
+									}])
+									pos: #pos
+								}, {
+									expr: ECall({
+										expr: EField({
+											expr: EConst(CIdent(__priorities))
+											pos: #pos
+										}, insert)
+										pos: #pos
+									}, [{
+										expr: EConst(CIdent(i))
+										pos: #pos
+									}, {
+										expr: EConst(CIdent(priority))
+										pos: #pos
+									}])
+									pos: #pos
+								}, {
+									expr: ECall({
+										expr: EField({
+											expr: EConst(CIdent(__repeat))
+											pos: #pos
+										}, insert)
+										pos: #pos
+									}, [{
+										expr: EConst(CIdent(i))
+										pos: #pos
+									}, {
+										expr: EUnop(OpNot, false, {
+											expr: EConst(CIdent(once))
+											pos: #pos
+										})
+										pos: #pos
+									}])
+									pos: #pos
+								}, {
+									expr: EReturn(null)
+									pos: #pos
+								}])
+								pos: #pos
+							}, null)
+							pos: #pos
+						}])
+						pos: #pos
+					})
+					pos: #pos
+				}, {
+					expr: ECall({
+						expr: EField({
+							expr: EConst(CIdent(__listeners))
+							pos: #pos
+						}, push)
+						pos: #pos
+					}, [{
+						expr: ECast({
+							expr: EConst(CIdent(listener))
+							pos: #pos
+						}, null)
+						pos: #pos
+					}])
+					pos: #pos
+				}, {
+					expr: ECall({
+						expr: EField({
+							expr: EConst(CIdent(__priorities))
+							pos: #pos
+						}, push)
+						pos: #pos
+					}, [{
+						expr: EConst(CIdent(priority))
+						pos: #pos
+					}])
+					pos: #pos
+				}, {
+					expr: ECall({
+						expr: EField({
+							expr: EConst(CIdent(__repeat))
+							pos: #pos
+						}, push)
+						pos: #pos
+					}, [{
+						expr: EUnop(OpNot, false, {
+							expr: EConst(CIdent(once))
+							pos: #pos
+						})
+						pos: #pos
+					}])
+					pos: #pos
+				}])
+				pos: #pos
+			}
+			params: []
+			ret: TPath({
+				name: Void
+				pack: []
+				params: []
+				sub: null
+			})
+		})
+		meta: []
+		name: add
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: 
+		Marks the event as canceled, and stops the current event dispatch
+	
+		kind: FFun({
+			args: []
+			expr: {
+				expr: EBlock([{
+					expr: EBinop(OpAssign, {
+						expr: EConst(CIdent(canceled))
+						pos: #pos
+					}, {
+						expr: EConst(CIdent(true))
+						pos: #pos
+					})
+					pos: #pos
+				}])
+				pos: #pos
+			}
+			params: []
+			ret: TPath({
+				name: Void
+				pack: []
+				params: []
+				sub: null
+			})
+		})
+		meta: []
+		name: cancel
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: 
+		Checks whether a callback is a listener to this event
+		@param	listener	A callback that matches the signature of the event
+		@return	Whether the callback is a listener
+	
+		kind: FFun({
+			args: [{
+				meta: []
+				name: listener
+				opt: false
+				type: TPath({
+					name: T
+					pack: []
+					params: []
+					sub: null
+				})
+				value: null
+			}]
+			expr: {
+				expr: EBlock([{
+					expr: EFor({
+						expr: EBinop(OpIn, {
+							expr: EConst(CIdent(l))
+							pos: #pos
+						}, {
+							expr: EConst(CIdent(__listeners))
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EBlock([{
+							expr: EIf({
+								expr: ECall({
+									expr: EField({
+										expr: EConst(CIdent(Reflect))
+										pos: #pos
+									}, compareMethods)
+									pos: #pos
+								}, [{
+									expr: EConst(CIdent(l))
+									pos: #pos
+								}, {
+									expr: EConst(CIdent(listener))
+									pos: #pos
+								}])
+								pos: #pos
+							}, {
+								expr: EReturn({
+									expr: EConst(CIdent(true))
+									pos: #pos
+								})
+								pos: #pos
+							}, null)
+							pos: #pos
+						}])
+						pos: #pos
+					})
+					pos: #pos
+				}, {
+					expr: EReturn({
+						expr: EConst(CIdent(false))
+						pos: #pos
+					})
+					pos: #pos
+				}])
+				pos: #pos
+			}
+			params: []
+			ret: TPath({
+				name: Bool
+				pack: []
+				params: []
+				sub: null
+			})
+		})
+		meta: []
+		name: has
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: 
+		Removes an event listener
+		@param	listener	A callback that matches the signature of the event
+	
+		kind: FFun({
+			args: [{
+				meta: []
+				name: listener
+				opt: false
+				type: TPath({
+					name: T
+					pack: []
+					params: []
+					sub: null
+				})
+				value: null
+			}]
+			expr: {
+				expr: EBlock([{
+					expr: EVars([{
+						expr: {
+							expr: EField({
+								expr: EConst(CIdent(__listeners))
+								pos: #pos
+							}, length)
+							pos: #pos
+						}
+						isFinal: false
+						meta: null
+						name: i
+						type: null
+					}])
+					pos: #pos
+				}, {
+					expr: EWhile({
+						expr: EBinop(OpGte, {
+							expr: EUnop(OpDecrement, false, {
+								expr: EConst(CIdent(i))
+								pos: #pos
+							})
+							pos: #pos
+						}, {
+							expr: EConst(CInt(0))
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EBlock([{
+							expr: EIf({
+								expr: ECall({
+									expr: EField({
+										expr: EConst(CIdent(Reflect))
+										pos: #pos
+									}, compareMethods)
+									pos: #pos
+								}, [{
+									expr: EArray({
+										expr: EConst(CIdent(__listeners))
+										pos: #pos
+									}, {
+										expr: EConst(CIdent(i))
+										pos: #pos
+									})
+									pos: #pos
+								}, {
+									expr: EConst(CIdent(listener))
+									pos: #pos
+								}])
+								pos: #pos
+							}, {
+								expr: EBlock([{
+									expr: ECall({
+										expr: EField({
+											expr: EConst(CIdent(__listeners))
+											pos: #pos
+										}, splice)
+										pos: #pos
+									}, [{
+										expr: EConst(CIdent(i))
+										pos: #pos
+									}, {
+										expr: EConst(CInt(1))
+										pos: #pos
+									}])
+									pos: #pos
+								}, {
+									expr: ECall({
+										expr: EField({
+											expr: EConst(CIdent(__priorities))
+											pos: #pos
+										}, splice)
+										pos: #pos
+									}, [{
+										expr: EConst(CIdent(i))
+										pos: #pos
+									}, {
+										expr: EConst(CInt(1))
+										pos: #pos
+									}])
+									pos: #pos
+								}, {
+									expr: ECall({
+										expr: EField({
+											expr: EConst(CIdent(__repeat))
+											pos: #pos
+										}, splice)
+										pos: #pos
+									}, [{
+										expr: EConst(CIdent(i))
+										pos: #pos
+									}, {
+										expr: EConst(CInt(1))
+										pos: #pos
+									}])
+									pos: #pos
+								}])
+								pos: #pos
+							}, null)
+							pos: #pos
+						}])
+						pos: #pos
+					}, true)
+					pos: #pos
+				}])
+				pos: #pos
+			}
+			params: []
+			ret: TPath({
+				name: Void
+				pack: []
+				params: []
+				sub: null
+			})
+		})
+		meta: []
+		name: remove
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: 
+		Removes all event listeners
+	
+		kind: FFun({
+			args: []
+			expr: {
+				expr: EBlock([{
+					expr: EVars([{
+						expr: {
+							expr: EField({
+								expr: EConst(CIdent(__listeners))
+								pos: #pos
+							}, length)
+							pos: #pos
+						}
+						isFinal: false
+						meta: null
+						name: len
+						type: null
+					}])
+					pos: #pos
+				}, {
+					expr: ECall({
+						expr: EField({
+							expr: EConst(CIdent(__listeners))
+							pos: #pos
+						}, splice)
+						pos: #pos
+					}, [{
+						expr: EConst(CInt(0))
+						pos: #pos
+					}, {
+						expr: EConst(CIdent(len))
+						pos: #pos
+					}])
+					pos: #pos
+				}, {
+					expr: ECall({
+						expr: EField({
+							expr: EConst(CIdent(__priorities))
+							pos: #pos
+						}, splice)
+						pos: #pos
+					}, [{
+						expr: EConst(CInt(0))
+						pos: #pos
+					}, {
+						expr: EConst(CIdent(len))
+						pos: #pos
+					}])
+					pos: #pos
+				}, {
+					expr: ECall({
+						expr: EField({
+							expr: EConst(CIdent(__repeat))
+							pos: #pos
+						}, splice)
+						pos: #pos
+					}, [{
+						expr: EConst(CInt(0))
+						pos: #pos
+					}, {
+						expr: EConst(CIdent(len))
+						pos: #pos
+					}])
+					pos: #pos
+				}])
+				pos: #pos
+			}
+			params: []
+			ret: TPath({
+				name: Void
+				pack: []
+				params: []
+				sub: null
+			})
+		})
+		meta: []
+		name: removeAll
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: null
+		kind: FVar(TPath({
+			name: Array
+			pack: []
+			params: [TPType(TFunction([], TPath({
+				name: StdTypes
+				pack: []
+				params: []
+				sub: Void
+			})))]
+			sub: null
+		}), null)
+		meta: null
+		name: __listeners
+		pos: #pos
+	}, {
+		access: [APublic]
+		doc: null
+		kind: FFun({
+			args: []
+			expr: {
+				expr: EBlock([{
+					expr: EBinop(OpAssign, {
+						expr: EConst(CIdent(canceled))
+						pos: #pos
+					}, {
+						expr: EConst(CIdent(false))
+						pos: #pos
+					})
+					pos: #pos
+				}, {
+					expr: EVars([{
+						expr: {
+							expr: EConst(CIdent(__listeners))
+							pos: #pos
+						}
+						isFinal: false
+						meta: null
+						name: listeners
+						type: null
+					}])
+					pos: #pos
+				}, {
+					expr: EVars([{
+						expr: {
+							expr: EConst(CIdent(__repeat))
+							pos: #pos
+						}
+						isFinal: false
+						meta: null
+						name: repeat
+						type: null
+					}])
+					pos: #pos
+				}, {
+					expr: EVars([{
+						expr: {
+							expr: EConst(CInt(0))
+							pos: #pos
+						}
+						isFinal: false
+						meta: null
+						name: i
+						type: null
+					}])
+					pos: #pos
+				}, {
+					expr: EWhile({
+						expr: EBinop(OpLt, {
+							expr: EConst(CIdent(i))
+							pos: #pos
+						}, {
+							expr: EField({
+								expr: EConst(CIdent(listeners))
+								pos: #pos
+							}, length)
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EBlock([{
+							expr: ECall({
+								expr: EArray({
+									expr: EConst(CIdent(listeners))
+									pos: #pos
+								}, {
+									expr: EConst(CIdent(i))
+									pos: #pos
+								})
+								pos: #pos
+							}, [])
+							pos: #pos
+						}, {
+							expr: EIf({
+								expr: EUnop(OpNot, false, {
+									expr: EArray({
+										expr: EConst(CIdent(repeat))
+										pos: #pos
+									}, {
+										expr: EConst(CIdent(i))
+										pos: #pos
+									})
+									pos: #pos
+								})
+								pos: #pos
+							}, {
+								expr: EBlock([{
+									expr: ECall({
+										expr: EField({
+											expr: EConst(CIdent(this))
+											pos: #pos
+										}, remove)
+										pos: #pos
+									}, [{
+										expr: ECast({
+											expr: EArray({
+												expr: EConst(CIdent(listeners))
+												pos: #pos
+											}, {
+												expr: EConst(CIdent(i))
+												pos: #pos
+											})
+											pos: #pos
+										}, null)
+										pos: #pos
+									}])
+									pos: #pos
+								}])
+								pos: #pos
+							}, {
+								expr: EBlock([{
+									expr: EUnop(OpIncrement, true, {
+										expr: EConst(CIdent(i))
+										pos: #pos
+									})
+									pos: #pos
+								}])
+								pos: #pos
+							})
+							pos: #pos
+						}, {
+							expr: EIf({
+								expr: EConst(CIdent(canceled))
+								pos: #pos
+							}, {
+								expr: EBlock([{
+									expr: EBreak
+									pos: #pos
+								}])
+								pos: #pos
+							}, null)
+							pos: #pos
+						}])
+						pos: #pos
+					}, true)
+					pos: #pos
+				}])
+				pos: #pos
+			}
+			params: []
+			ret: TPath({
+				name: Void
+				pack: []
+				params: []
+				sub: null
+			})
+		})
+		meta: null
+		name: dispatch
+		pos: #pos
+	}]
+	isExtern: null
+	kind: TDClass(null, null, null, null, null)
+	meta: [{
+		name: :dox
+		params: [{
+			expr: EConst(CIdent(hide))
+			pos: #pos
+		}]
+		pos: #pos
+	}, {
+		name: :noCompletion
+		params: null
+		pos: #pos
+	}, {
+		name: :fileXml
+		params: [{
+			expr: EConst(CString(tags="haxe,release", SingleQuotes))
+			pos: #pos
+		}]
+		pos: #pos
+	}, {
+		name: :noDebug
+		params: null
+		pos: #pos
+	}]
+	name: _Event_Void_Void
+	pack: [lime, app]
+	params: [{
+		constraints: null
+		meta: null
+		name: T
+		params: null
+	}]
+	pos: #pos
+}

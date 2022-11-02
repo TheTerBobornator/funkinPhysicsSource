@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "LONETROLL_IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				49,
+				14
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LONETROLL_LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "LONETROLL_DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				73,
+				138
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "LONETROLL_UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				77
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "LONETROLL_RIGHT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/trolling/lone-troll",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "troll-alone",
+	"flip_x": false,
+	"healthbar_colors": [
+		201,
+		215,
+		255
+	],
+	"camera_position": [
+		-800,
+		-250
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

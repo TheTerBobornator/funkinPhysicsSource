@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lone-troll.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="LONETROLL_DOWN0000" x="0" y="0" width="1372" height="915"/>
+	<SubTexture name="LONETROLL_DOWN0001" x="0" y="0" width="1372" height="915"/>
+	<SubTexture name="LONETROLL_DOWN0002" x="1372" y="0" width="1327" height="821" frameX="-11" frameY="-8" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0003" x="1372" y="0" width="1327" height="821" frameX="-11" frameY="-8" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0004" x="2699" y="0" width="1302" height="745" frameX="-20" frameY="-22" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0005" x="2699" y="0" width="1302" height="745" frameX="-20" frameY="-22" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0006" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0007" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0008" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0009" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0010" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0011" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0012" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0013" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_DOWN0014" x="4001" y="0" width="1288" height="713" frameX="-19" frameY="-21" frameWidth="1372" frameHeight="915"/>
+	<SubTexture name="LONETROLL_LEFT0000" x="5289" y="0" width="1364" height="805" frameX="0" frameY="-6" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0001" x="5289" y="0" width="1364" height="805" frameX="0" frameY="-6" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0002" x="6653" y="0" width="1341" height="791" frameX="-25" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0003" x="6653" y="0" width="1341" height="791" frameX="-25" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0004" x="0" y="915" width="1331" height="770" frameX="-35" frameY="0" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0005" x="0" y="915" width="1331" height="770" frameX="-35" frameY="0" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0006" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0007" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0008" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0009" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0010" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0011" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0012" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0013" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_LEFT0014" x="1331" y="915" width="1327" height="763" frameX="-38" frameY="-1" frameWidth="1366" frameHeight="811"/>
+	<SubTexture name="LONETROLL_RIGHT0000" x="2658" y="915" width="1367" height="804"/>
+	<SubTexture name="LONETROLL_RIGHT0001" x="2658" y="915" width="1367" height="804"/>
+	<SubTexture name="LONETROLL_RIGHT0002" x="4025" y="915" width="1324" height="770" frameX="-2" frameY="-33" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0003" x="4025" y="915" width="1324" height="770" frameX="-2" frameY="-33" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0004" x="5349" y="915" width="1301" height="727" frameX="-3" frameY="-69" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0005" x="5349" y="915" width="1301" height="727" frameX="-3" frameY="-69" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0006" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0007" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0008" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0009" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0010" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0011" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0012" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0013" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_RIGHT0014" x="6650" y="915" width="1301" height="723" frameX="-3" frameY="-74" frameWidth="1367" frameHeight="804"/>
+	<SubTexture name="LONETROLL_UP0000" x="0" y="1719" width="1384" height="837" frameX="0" frameY="0" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0001" x="0" y="1719" width="1384" height="837" frameX="0" frameY="0" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0002" x="1384" y="1719" width="1356" height="739" frameX="-28" frameY="-93" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0003" x="1384" y="1719" width="1356" height="739" frameX="-28" frameY="-93" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0004" x="2740" y="1719" width="1347" height="715" frameX="-39" frameY="-117" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0005" x="2740" y="1719" width="1347" height="715" frameX="-39" frameY="-117" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0006" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0007" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0008" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0009" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0010" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0011" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0012" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0013" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_UP0014" x="4087" y="1719" width="1354" height="718" frameX="-40" frameY="-129" frameWidth="1394" frameHeight="847"/>
+	<SubTexture name="LONETROLL_IDLE0000" x="5441" y="1719" width="1345" height="844"/>
+	<SubTexture name="LONETROLL_IDLE0001" x="5441" y="1719" width="1345" height="844"/>
+	<SubTexture name="LONETROLL_IDLE0002" x="6786" y="1719" width="1307" height="769" frameX="-11" frameY="-9" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0003" x="6786" y="1719" width="1307" height="769" frameX="-11" frameY="-9" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0004" x="0" y="2563" width="1289" height="726" frameX="-10" frameY="-8" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0005" x="0" y="2563" width="1289" height="726" frameX="-10" frameY="-8" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0006" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0007" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0008" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0009" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0010" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0011" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0012" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0013" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+	<SubTexture name="LONETROLL_IDLE0014" x="1289" y="2563" width="1297" height="732" frameX="-3" frameY="-3" frameWidth="1345" frameHeight="844"/>
+</TextureAtlas>

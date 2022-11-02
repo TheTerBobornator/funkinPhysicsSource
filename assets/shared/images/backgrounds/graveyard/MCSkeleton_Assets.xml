@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MCSkeleton_Assets.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MCSkeleton_Assets0000" x="0" y="0" width="335" height="639" frameX="-15" frameY="0" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0001" x="0" y="0" width="335" height="639" frameX="-15" frameY="0" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0002" x="335" y="0" width="345" height="631" frameX="-6" frameY="-9" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0003" x="335" y="0" width="345" height="631" frameX="-6" frameY="-9" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0004" x="680" y="0" width="344" height="634" frameX="-7" frameY="-6" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0005" x="680" y="0" width="344" height="634" frameX="-7" frameY="-6" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0006" x="1024" y="0" width="351" height="639" frameX="0" frameY="-2" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0007" x="1024" y="0" width="351" height="639" frameX="0" frameY="-2" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0008" x="1375" y="0" width="321" height="631" frameX="-30" frameY="-10" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0009" x="1375" y="0" width="321" height="631" frameX="-30" frameY="-10" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0010" x="1696" y="0" width="326" height="630" frameX="-25" frameY="-11" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0011" x="0" y="639" width="321" height="629" frameX="-30" frameY="-12" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0012" x="0" y="639" width="321" height="629" frameX="-30" frameY="-12" frameWidth="351" frameHeight="641"/>
+	<SubTexture name="MCSkeleton_Assets0013" x="0" y="639" width="321" height="629" frameX="-30" frameY="-12" frameWidth="351" frameHeight="641"/>
+</TextureAtlas>
