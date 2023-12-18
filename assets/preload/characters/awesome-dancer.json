@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "epicface_dancerright"
+		},
+		{
+			"offsets": [
+				-19,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "epicface_dancerleft"
+		},
+		{
+			"offsets": [
+				52,
+				-98
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "epicface_down"
+		},
+		{
+			"offsets": [
+				203,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "epicface_left"
+		},
+		{
+			"offsets": [
+				53,
+				31
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "epicface_up"
+		},
+		{
+			"offsets": [
+				-26,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "epicface_right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/epicface_assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "awesome-dancer",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		228,
+		75
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 1
+}

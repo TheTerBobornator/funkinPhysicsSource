@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "cereal_idle"
+		},
+		{
+			"offsets": [
+				57,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "cereal_down"
+		},
+		{
+			"offsets": [
+				68,
+				37
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "cereal_up"
+		},
+		{
+			"offsets": [
+				110,
+				-6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "cereal_left"
+		},
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "cereal_right"
+		},
+		{
+			"offsets": [
+				52,
+				55
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "spit",
+			"indices": [],
+			"name": "cereal_escupe"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/cereal_guy",
+	"position": [
+		50,
+		100
+	],
+	"healthicon": "cereal",
+	"flip_x": false,
+	"healthbar_colors": [
+		215,
+		215,
+		235
+	],
+	"camera_position": [
+		-100,
+		-100
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}

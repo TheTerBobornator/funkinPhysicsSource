@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				292,
+				208
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "baldidown"
+		},
+		{
+			"offsets": [
+				434,
+				236
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "baldleft"
+		},
+		{
+			"offsets": [
+				214,
+				557
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "baldiup"
+		},
+		{
+			"offsets": [
+				215,
+				279
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "baldiright"
+		},
+		{
+			"offsets": [
+				70,
+				310
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "baldi idle"
+		},
+		{
+			"offsets": [
+				260,
+				410
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "whip",
+			"loop": true,
+			"name": "baldiwhip"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/joke/epicbald",
+	"position": [
+		-10,
+		30
+	],
+	"healthicon": "baldi",
+	"flip_x": false,
+	"healthbar_colors": [
+		85,
+		214,
+		188
+	],
+	"camera_position": [
+		-100,
+		-330
+	],
+	"sing_duration": 4.0,
+	"scale": 1
+}

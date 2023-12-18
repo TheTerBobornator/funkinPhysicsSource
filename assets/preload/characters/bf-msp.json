@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "TrollPaintBF Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				1
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "TrollPaintBF Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "TrollPaintBF Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				1
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "TrollPaintBF missdown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-5,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "TrollPaintBF Right"
+		},
+		{
+			"offsets": [
+				-5,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "TrollPaintBF missright"
+		},
+		{
+			"offsets": [
+				2,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "TrollPaintBF Left"
+		},
+		{
+			"offsets": [
+				2,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "TrollPaintBF missleft"
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "TrollPaintBF missup"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/TrollPaintBF",
+	"position": [
+		0,
+		300
+	],
+	"healthicon": "bf",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4.0,
+	"scale": 1
+}

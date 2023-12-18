@@ -8,71 +8,82 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Trollge Idle",
+			"name": "cerealrage_idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-79,
-				13
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Trollge Left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				30,
-				-111
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Trollge Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-13,
-				69
+				206,
+				98
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "Trollge Up",
+			"name": "cerealrage_up",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				120,
-				-110
+				121,
+				6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "cerealrage_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-36,
+				-130
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "cerealrage_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-26
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Trollge Right",
+			"name": "cerealrage_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				267,
+				173
+			],
+			"anim": "pissed",
+			"fps": 24,
+			"name": "cerealtable0",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/story/TrollgeUWU",
+	"image": "characters/internet/cereal_guy_rage",
 	"position": [
-		0,
-		0
+		172,
+		30
 	],
-	"healthicon": "corruptus",
+	"healthicon": "cereal",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		135,
-		20
+		215,
+		215,
+		235
 	],
 	"camera_position": [
-		0,
-		0
+		-100,
+		-50
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.1
 }

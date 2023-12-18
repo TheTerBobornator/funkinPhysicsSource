@@ -1,0 +1,118 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-130,
+				374
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "idle instance 1"
+		},
+		{
+			"offsets": [
+				-130,
+				374
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				26,
+				27,
+				28
+			],
+			"name": "idle instance 1"
+		},
+		{
+			"offsets": [
+				166,
+				660
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left instance 1"
+		},
+		{
+			"offsets": [
+				-25,
+				621
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down instance 1"
+		},
+		{
+			"offsets": [
+				-47,
+				614
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right instance 1"
+		},
+		{
+			"offsets": [
+				62,
+				667
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/derp",
+	"position": [
+		-100,
+		420
+	],
+	"healthicon": "derp",
+	"flip_x": false,
+	"healthbar_colors": [
+		256,
+		256,
+		256
+	],
+	"camera_position": [
+		210,
+		-420
+	],
+	"sing_duration": 11.0,
+	"scale": 0.8
+}

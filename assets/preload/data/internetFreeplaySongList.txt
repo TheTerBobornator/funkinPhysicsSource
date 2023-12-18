@@ -1,0 +1,9 @@
+Ragdoll, 0, garry, null, null, 0xFFb7dffb
+Griefed, 0, bob, null, null, 0xFFcee3e6
+Never Be Funkin', 0, cereal, null, null, WHITE
+Silly, 0, derp, null, null, 0xFFd4d4d4
+Idiot, 0, idiot, null, null, 0xFF898989
+Speed, 0, sanic, Speed (Old), Speed (Oldest), 0xFF5e4cff
+Crybaby, 0, tails, null, null, 0xFFfeb300
+Awestruck, 0, awesome-face, null, null, 0xFFfffd7e
+Obey, 0, weegee, Obey (Old), null, 0xFF03af3c

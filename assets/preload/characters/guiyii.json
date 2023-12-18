@@ -8,70 +8,81 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Trollge Idle",
+			"name": "guiyii_idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-79,
-				13
+				54,
+				7
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Trollge Left",
+			"name": "guiyii_left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				30,
-				-111
+				12,
+				-25
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Trollge Down",
+			"name": "guiyii_down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-13,
-				69
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Trollge Up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				120,
-				-110
+				-5,
+				3
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Trollge Right",
+			"name": "guiyii_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				35
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "guiyii_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				212,
+				695
+			],
+			"anim": "appear",
+			"fps": 24,
+			"name": "guiyii_appear",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/story/TrollgeUWU",
+	"image": "characters/internet/guiyii_assets",
 	"position": [
-		0,
-		0
+		-600,
+		200
 	],
-	"healthicon": "corruptus",
-	"flip_x": false,
+	"healthicon": "guiyii",
+	"flip_x": true,
 	"healthbar_colors": [
-		255,
-		135,
-		20
+		89,
+		148,
+		80
 	],
 	"camera_position": [
-		0,
-		0
+		100,
+		-1550
 	],
 	"sing_duration": 4,
 	"scale": 1

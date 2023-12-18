@@ -1,78 +1,78 @@
 {
 	"animations": [
 		{
-			"loop": false,
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Trollge Idle",
+			"name": "gigaweegee_idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-79,
-				13
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Trollge Left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				30,
-				-111
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Trollge Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-13,
-				69
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Trollge Up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				120,
-				-110
+				-566,
+				170
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Trollge Right",
+			"name": "gigaweegee_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-284,
+				2
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "gigaweegee_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-559,
+				65
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "gigaweegee_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-380,
+				70
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "gigaweegee_left",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/story/TrollgeUWU",
+	"image": "characters/internet/gigaweegee_assets",
 	"position": [
-		0,
-		0
+		-230,
+		-800
 	],
-	"healthicon": "corruptus",
+	"healthicon": "omega-weegee",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		135,
-		20
+		63,
+		122,
+		82
 	],
 	"camera_position": [
-		0,
-		0
+		400,
+		180
 	],
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1
 }

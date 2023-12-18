@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				22,
+				2
+			],
+			"anim": "dance",
+			"fps": 24,
+			"name": "awebf_dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "awebf_idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				70,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "awebf_left"
+		},
+		{
+			"offsets": [
+				-19,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "awebf_miss"
+		},
+		{
+			"offsets": [
+				-19,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "awebf_miss"
+		},
+		{
+			"offsets": [
+				-19,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "awebf_miss"
+		},
+		{
+			"offsets": [
+				-19,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "awebf_miss"
+		},
+		{
+			"offsets": [
+				-82,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "awebf_right"
+		},
+		{
+			"offsets": [
+				-26,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "awebf_up"
+		},
+		{
+			"offsets": [
+				20,
+				-46
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "awebf_down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/epicBENDAGEbf_assets",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf-awesome",
+	"flip_x": true,
+	"healthbar_colors": [
+		94,
+		198,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

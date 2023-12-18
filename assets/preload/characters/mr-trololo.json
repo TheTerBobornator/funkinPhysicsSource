@@ -8,70 +8,70 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Trollge Idle",
+			"name": "MrTrololo_Idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-79,
-				13
+				162,
+				-1
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Trollge Left",
+			"name": "MrTrololo_Left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				30,
-				-111
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Trollge Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-13,
-				69
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Trollge Up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				120,
-				-110
+				71,
+				-77
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Trollge Right",
+			"name": "MrTrololo_Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-35,
+				-193
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MrTrololo_Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-26,
+				78
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MrTrololo_Up",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/story/TrollgeUWU",
+	"image": "characters/trolling/MrTrololo_Assets",
 	"position": [
-		0,
-		0
+		130,
+		-400
 	],
-	"healthicon": "corruptus",
+	"healthicon": "mr-trololo",
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
-		135,
-		20
+		255,
+		255
 	],
 	"camera_position": [
-		0,
-		0
+		60,
+		-40
 	],
 	"sing_duration": 4,
 	"scale": 1

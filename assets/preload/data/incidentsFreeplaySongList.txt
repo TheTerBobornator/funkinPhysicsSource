@@ -1,0 +1,11 @@
+Imposter, 0, imposter, null, null, 0xFF201219
+Smile, 0, troll-smile, null, null, GRAY
+Ultimate Trolldown, 0, mr-trololo-sick, null, null, 0xFFc38a35
+Trollistic, 0, troll-whitty, null, null, GRAY
+Alone Forever, 0, troll-alone, null, null, 0xFFa6b2a4
+Happiness, 0, troll-happy, null, null, 0xFF3e3d3d
+Youtooz, 0, youtooz, null, null, 0xFFf08228
+Controlling Yourself, 0, cy-trollge, null, null, 0xFF005a50
+Troll Lore, 0, lore-limc, null, null, 0xFFf6dcff
+Absurde, 0, corruptus, null, null, WHITE
+Trodding, 0, todd, null, null, 0xFF313338

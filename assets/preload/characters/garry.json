@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-75,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "Garrys idle dance"
+		},
+		{
+			"offsets": [
+				290,
+				-2
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Garrys Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				-76,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Garrys Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				175,
+				50
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Garrys Sing Note UP"
+		},
+		{
+			"offsets": [
+				-75,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Garrys Sing Note RIGHT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-75,
+				0
+			],
+			"anim": "Tbag",
+			"fps": 24,
+			"name": "Garrys Tbag",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				165,
+				0
+			],
+			"anim": "before Jumping",
+			"fps": 24,
+			"name": "Garrys before jump",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				165,
+				0
+			],
+			"anim": "Jumping",
+			"fps": 24,
+			"name": "Garrys jumping",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				165,
+				0
+			],
+			"anim": "getting nuke",
+			"fps": 24,
+			"name": "Garrys getting nuke",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				165,
+				0
+			],
+			"anim": "idle standing nuke",
+			"fps": 24,
+			"name": "Garrys standing nuke",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				141,
+				0
+			],
+			"anim": "down nuke",
+			"fps": 24,
+			"name": "Garrys dying nuke",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/trolling/Garrys",
+	"position": [
+		-80,
+		-50
+	],
+	"healthicon": "garry",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		20,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}
