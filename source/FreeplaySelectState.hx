@@ -31,14 +31,10 @@ class FreeplaySelectState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var selectedMenuItems:FlxTypedGroup<FlxSprite>;
 	var titleTxts:FlxTypedGroup<FlxText>;
-	var lightThing:FlxSprite;
-	private var camGame:FlxCamera;
-	private var camAchievement:FlxCamera;
+	var spookyIcon:FlxSprite;
 	
-	var optionShit:Array<String> = ['incidents', 'internet'];
-
-	//var camFollow:FlxObject;
-	//var camFollowPos:FlxObject;
+	var optionShit:Array<String> = ['story', 'incidents', 'internet'];
+	var completedItemTween:Bool = false;
 
 	override function create()
 	{
@@ -47,74 +43,93 @@ class FreeplaySelectState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		camGame = new FlxCamera();
-		camAchievement = new FlxCamera();
-		camAchievement.bgColor.alpha = 0;
-
-		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camAchievement, false);
-		FlxG.cameras.setDefaultDrawTarget(camGame, true);
-
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
 		persistentUpdate = persistentDraw = true;
 
-	//	var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		
-	//	camFollow = new FlxObject(0, 0, 1, 1);
-	//	camFollowPos = new FlxObject(0, 0, 1, 1);
-	//	add(camFollow);
-	//	add(camFollowPos);
+		FlxG.mouse.visible = true;
+
+		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xffffffff);
+		add(bg);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
-
+		
 		selectedMenuItems = new FlxTypedGroup<FlxSprite>();
 		add(selectedMenuItems);
 
 		titleTxts = new FlxTypedGroup<FlxText>();
-
-		/*var scale:Float = 1;
-		if(optionShit.length > 6) {
-			scale = 6 / optionShit.length;
-		}*/
+		add(titleTxts);
 
 		for (i in 0...optionShit.length)
 		{
-			var box:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay-select/' + optionShit[i] + '1'));
-			box.x = (i == 0 ? (FlxG.width * 0.02) : ((FlxG.width * 0.98) - box.width));
+			var box:FlxSprite = new FlxSprite(0, FlxG.height).loadGraphic(Paths.image('freeplay-select/' + optionShit[i]));
 			box.ID = i;
-			box.setGraphicSize(Std.int(box.width * 0.8));
-			//box.updateHitbox();
+			box.antialiasing = ClientPrefs.globalAntialiasing;
+		/*	switch (i)
+			{
+				case 2:
+					box.x = FlxG.width * 0.1;
+				case 0:
+					box.x = (FlxG.width * 0.5) - (box.width * 0.5);
+				case 1:
+					box.x = (FlxG.width * 0.9) - box.width;
+			}*/
 			menuItems.add(box);
-
-			var boxSelected:FlxSprite = new FlxSprite(box.x - 10, box.y - 10).loadGraphic(Paths.image('freeplay-select/' + optionShit[i] + '2'));
-			boxSelected.ID = i;
-			boxSelected.setGraphicSize(Std.int((boxSelected.width * 0.8) + 20));
-			//boxSelected.updateHitbox();
-			boxSelected.alpha = 0;
-			selectedMenuItems.add(boxSelected);
-
-			var title:FlxText = new FlxText(box.x + 200, FlxG.height - 50, 0, optionShit[i].toUpperCase(), 32);
+			FlxTween.tween(box, {y: 150}, 0.4 + (i * 0.1), {ease: FlxEase.quartInOut});
+			var title:FlxText = new FlxText(box.x, box.y + box.height + 40, box.width, optionShit[i].toUpperCase(), 32);
+			title.setFormat(Paths.font("impact.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			title.antialiasing = ClientPrefs.globalAntialiasing;
 			titleTxts.add(title);
+			FlxTween.tween(title, {alpha: 1}, 0.2 + (i * 0.1), {ease: FlxEase.quartInOut, startDelay: 1.0});
+			
+			var box2:FlxSprite = new FlxSprite(0, 150).loadGraphic(Paths.image('freeplay-select/' + optionShit[i]));
+			box2.ID = i;
+			box2.alpha = 0;
+			box2.antialiasing = ClientPrefs.globalAntialiasing;
+			selectedMenuItems.add(box2);
 		}
 
-		lightThing = new FlxSprite(titleTxts.members[0].x - 90, titleTxts.members[0].y - 100).loadGraphic(Paths.image('freeplay-select/fuckYouShrub'));
-		add(lightThing);
+		//whatever
+		var tweenTargets:Array<Int> = [];
+		switch (curSelected)
+		{
+			case 0: //story
+				tweenTargets = [2, 0, 1];
+			case 1: //incidents
+				tweenTargets = [0, 1, 2];
+			case 2: //internet
+				tweenTargets = [1, 2, 0];
+		}
+		FlxTween.tween(menuItems.members[tweenTargets[0]], {x: FlxG.width * 0.1}, 0.5, {ease: FlxEase.quadOut});
+		FlxTween.tween(menuItems.members[tweenTargets[1]], {x: (FlxG.width * 0.5) - (menuItems.members[tweenTargets[1]].width * 0.5)}, 0.5, {ease: FlxEase.quadOut});
+		FlxTween.tween(menuItems.members[tweenTargets[2]], {x: (FlxG.width * 0.9) - menuItems.members[tweenTargets[2]].width}, 0.5, {ease: FlxEase.quadOut,
+		onComplete: function(twn:FlxTween)
+		{
+			changeItem();
+			completedItemTween = true;
+		}});
 
-		add(titleTxts);
+		var spookyText:FlxSprite = new FlxSprite(FlxG.width * 0.9, FlxG.height - (FlxG.height * 0.025)).loadGraphic(Paths.image('freeplay-select/spookyTxt'));
+		spookyText.y -= spookyText.height;
+		spookyText.antialiasing = ClientPrefs.globalAntialiasing;
+		FlxTween.tween(spookyText, {alpha: 1}, 1, {ease: FlxEase.quartInOut, startDelay: 0.5});
+		add(spookyText);
 
-	//	FlxG.camera.follow(camFollowPos, null, 1);
+		spookyIcon = new FlxSprite(spookyText.x + 26, spookyText.y + 49).loadGraphic(Paths.image('freeplay-select/spookyIcon'));
+		spookyIcon.antialiasing = ClientPrefs.globalAntialiasing;
+		FlxTween.tween(spookyIcon, {alpha: 1}, 1, {ease: FlxEase.quartInOut, startDelay: 0.6});
+		add(spookyIcon);
 
-		// NG.core.calls.event.logEvent('swag').send();
-
-		changeItem();
+		var backButton:MenuBackButton = new MenuBackButton(new MainMenuState());
+		add(backButton);
 
 		super.create();
 	}
 
 	var selectedSomethin:Bool = false;
+	var spookySelected:Bool = false;
 
 	override function update(elapsed:Float)
 	{
@@ -124,10 +139,13 @@ class FreeplaySelectState extends MusicBeatState
 			if(FreeplayState.vocals != null) FreeplayState.vocals.volume += 0.5 * elapsed;
 		}
 
-		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
-	//	camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
-
-		if (!selectedSomethin)
+		for (i in 0...menuItems.members.length)
+		{
+			selectedMenuItems.members[i].setPosition(menuItems.members[i].x, menuItems.members[i].y);
+			titleTxts.members[i].setPosition(menuItems.members[i].x, menuItems.members[i].y + menuItems.members[i].height + 20);
+		}
+		
+		if (!selectedSomethin && completedItemTween)
 		{
 			if (controls.UI_LEFT_P)
 			{
@@ -149,82 +167,42 @@ class FreeplaySelectState extends MusicBeatState
 			}
 
 			if (controls.ACCEPT)
+				acceptItem();
+
+			if (FlxG.mouse.wheel != 0)
 			{
-				selectedSomethin = true;
-				FlxG.sound.play(Paths.sound('confirmMenu'));
-
-			/*	titleTxts.forEach(function(spr:FlxText)
-				{
-					FlxTween.tween(spr, {alpha: 0}, 0.4, {
-						ease: FlxEase.quadOut,
-						onComplete: function(twn:FlxTween)
-						{
-							spr.kill();
-						}
-					});
-				});*/
-
-				FlxTween.tween(lightThing, {alpha: 0}, 0.6, {
-					ease: FlxEase.quadOut,
-					onComplete: function(twn:FlxTween)
-					{
-						lightThing.kill();
-						
-						titleTxts.forEach(function(spr:FlxText)
-						{
-							spr.kill();
-						});
-					}
-				});
-
-				menuItems.forEach(function(spr:FlxSprite)
-				{
-					if (curSelected != spr.ID)
-					{
-						FlxTween.tween(spr, {alpha: 0}, 0.4, {
-							ease: FlxEase.quadOut,
-							onComplete: function(twn:FlxTween)
-							{
-								spr.kill();
-							}
-						});
-					}
-					else
-					{
-						FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
-						{
-							var daChoice:String = optionShit[curSelected];
-
-							switch (daChoice)
-							{
-								case 'incidents':
-									MusicBeatState.switchState(new FreeplayState());
-								case 'internet':
-								//	MusicBeatState.switchState(new StoryMenuState());
-								PlayState.isStoryMode = false;
-								PlayState.storyDifficulty = 2;
-								PlayState.SONG = Song.loadFromJson('spooky-scary-hard', 'spooky-scary');
-								PlayState.campaignScore = 0;
-								PlayState.campaignMisses = 0;
-								//PlayState.storyWeek = 8;
-								//PlayState.storyPlaylist = ['Tomfoolery'];
-								new FlxTimer().start(1, function(tmr:FlxTimer)
-								{
-									LoadingState.loadAndSwitchState(new PlayState(), true);
-									FreeplayState.destroyFreeplayVocals();
-								});
-									
-							}
-						});
-					}
-				});
-
-				selectedMenuItems.forEach(function(spr:FlxSprite)
-				{
-					if (curSelected == spr.ID)
-						FlxFlicker.flicker(spr, 1, 0.06, false);
-				});
+				FlxG.sound.play(Paths.sound('scrollMenu'));
+				changeItem(-FlxG.mouse.wheel);
 			}
+
+			if (FlxG.mouse.overlaps(spookyIcon))
+			{
+				if (!spookySelected)
+				{
+					FlxG.sound.play(Paths.sound('scrollMenu'));
+					spookyIcon.setGraphicSize(70);
+					spookyIcon.offset.set();
+				}
+
+				if (FlxG.mouse.justPressed)
+				{
+					PlayState.isStoryMode = false;
+					PlayState.storyDifficulty = 2;
+					PlayState.SONG = Song.loadFromJson('spooky-scary-hard', 'spooky-scary');
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+				}
+
+				spookySelected = true;
+			}
+			else
+			{
+				spookySelected = false;
+				spookyIcon.setGraphicSize(53);
+				spookyIcon.offset.set();
+			}
+
+			if (FlxG.mouse.overlaps(menuItems.members[curSelected]) && FlxG.mouse.justPressed)
+				acceptItem();
 		}
 
 		super.update(elapsed);
@@ -232,6 +210,7 @@ class FreeplaySelectState extends MusicBeatState
 
 	function changeItem(huh:Int = 0)
 	{
+		completedItemTween = false;
 		curSelected += huh;
 
 		if (curSelected >= menuItems.length)
@@ -239,23 +218,80 @@ class FreeplaySelectState extends MusicBeatState
 		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
 
-		lightThing.setPosition(titleTxts.members[curSelected].x - 90, titleTxts.members[curSelected].y - 100);
+		var tweenTargets:Array<Int> = [];
+		//lowkey wanna kms for this one 
+		switch (curSelected)
+		{
+			case 0: //story
+				tweenTargets = [2, 0, 1];
+			case 1: //incidents
+				tweenTargets = [0, 1, 2];
+			case 2: //internet
+				tweenTargets = [1, 2, 0];
+		}
 
+		FlxTween.tween(menuItems.members[tweenTargets[0]], {x: FlxG.width * 0.1}, 0.5, {ease: FlxEase.quadOut});
+		FlxTween.tween(menuItems.members[tweenTargets[1]], {x: (FlxG.width * 0.5) - (menuItems.members[tweenTargets[1]].width * 0.5)}, 0.5, {ease: FlxEase.quadOut});
+		FlxTween.tween(menuItems.members[tweenTargets[2]], {x: (FlxG.width * 0.9) - menuItems.members[tweenTargets[2]].width}, 0.5, {ease: FlxEase.quadOut,
+		onComplete: function(twn:FlxTween)
+		{
+			completedItemTween = true;
+		}});
+		
 		selectedMenuItems.forEach(function(spr:FlxSprite)
 		{
 			if (spr.ID == curSelected)
+			{
 				spr.alpha = 1;
-				
+				spr.setGraphicSize(320);
+			}
 			else
+			{
 				spr.alpha = 0;
+				spr.setGraphicSize(300);
+			}
+		});
+	}
+
+	function acceptItem()
+	{
+		FlxG.cameras.flash(FlxColor.WHITE, 1, null, true);
+		selectedSomethin = true;
+		FlxG.sound.play(Paths.sound('confirmMenu'));
+
+		menuItems.forEach(function(spr:FlxSprite)
+		{
+			if (curSelected != spr.ID)
+			{
+				FlxTween.tween(spr, {y: 1280}, 0.5, {
+					ease: FlxEase.quadOut,
+					startDelay: 1,
+					onComplete: function(twn:FlxTween)
+					{
+						spr.kill();
+					}
+				});
+			}
+			else
+			{
+				FlxFlicker.flicker(spr, 1, 0.05, true, false, function(flick:FlxFlicker)
+				{
+					var daChoice:String = optionShit[curSelected];
+					MusicBeatState.switchState(new FreeplayState(daChoice));
+				});
+			}
+		});
+
+		selectedMenuItems.forEach(function(spr:FlxSprite)
+		{
+			if (curSelected == spr.ID)
+				FlxFlicker.flicker(spr, 1, 0.05, true);
 		});
 
 		titleTxts.forEach(function(spr:FlxText)
 		{
-			if (spr.ID == curSelected)
-				spr.color = 0xFFFF0000;
-			else
-				spr.color = 0xFF000000;
+			if (curSelected == spr.ID)
+				FlxFlicker.flicker(spr, 1, 0.05, true);
 		});
 	}
 }

@@ -46,6 +46,7 @@ typedef AnimArray = {
 
 class Character extends FlxSprite
 {
+	public var mostRecentHitNote:Note = null;
 	public var animOffsets:Map<String, Array<Dynamic>>;
 	public var debugMode:Bool = false;
 
@@ -56,6 +57,7 @@ class Character extends FlxSprite
 	public var holdTimer:Float = 0;
 	public var heyTimer:Float = 0;
 	public var specialAnim:Bool = false;
+	public var uninterruptableAnim:Bool = false; //because psych didnt have this already?????
 	public var animationNotes:Array<Dynamic> = [];
 	public var stunned:Bool = false;
 	public var singDuration:Float = 4; //Multiplier of how long a character holds the sing pose
@@ -245,13 +247,13 @@ class Character extends FlxSprite
 			}*/
 		}
 
-		switch(curCharacter)
+	/*	switch(curCharacter)
 		{
 			case 'pico-speaker':
 				skipDance = true;
 				loadMappedAnims();
 				playAnim("shoot1");
-		}
+		}*/
 	}
 
 	override function update(elapsed:Float)
@@ -270,9 +272,16 @@ class Character extends FlxSprite
 					}
 					heyTimer = 0;
 				}
-			} else if(specialAnim && animation.curAnim.finished)
+			} 
+			else if(specialAnim && animation.curAnim.finished)
 			{
 				specialAnim = false;
+				dance();
+			}
+
+			if(uninterruptableAnim && animation.curAnim.finished)
+			{
+				uninterruptableAnim = false;
 				dance();
 			}
 			
@@ -320,7 +329,7 @@ class Character extends FlxSprite
 	 */
 	public function dance()
 	{
-		if (!debugMode && !skipDance && !specialAnim)
+		if (!debugMode && !skipDance && !specialAnim && !uninterruptableAnim)
 		{
 			if(danceIdle)
 			{
@@ -339,6 +348,9 @@ class Character extends FlxSprite
 
 	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
+		if (uninterruptableAnim) //get fucked no anim 4 u
+			return;
+
 		specialAnim = false;
 		animation.play(AnimName, Force, Reversed, Frame);
 
@@ -368,7 +380,7 @@ class Character extends FlxSprite
 		}
 	}
 	
-	function loadMappedAnims():Void
+	/*function loadMappedAnims():Void
 	{
 		var noteData:Array<SwagSection> = Song.loadFromJson('picospeaker', Paths.formatToSongPath(PlayState.SONG.song)).notes;
 		for (section in noteData) {
@@ -378,7 +390,7 @@ class Character extends FlxSprite
 		}
 		TankmenBG.animationNotes = animationNotes;
 		animationNotes.sort(sortAnims);
-	}
+	}*/
 
 	function sortAnims(Obj1:Array<Dynamic>, Obj2:Array<Dynamic>):Int
 	{

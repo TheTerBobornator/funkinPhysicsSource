@@ -51,13 +51,17 @@ class Note extends FlxSprite
 	public var colorSwap:ColorSwap;
 	public var inEditor:Bool = false;
 
+	public static var scales:Array<Float> = [0.7, 0.6, 0.55, 0.46];
+	public static var swidths:Array<Float> = [160, 120, 110, 90];
+	public static var posRest:Array<Int> = [0, 35, 50, 70];
+
 	public var animSuffix:String = '';
 	public var gfNote:Bool = false;
 	public var earlyHitMult:Float = 0.5;
 	public var lateHitMult:Float = 1;
 	public var lowPriority:Bool = false;
 
-	public static var swagWidth:Float = 160 * 0.7;
+	public static var swagWidth:Float = 0.7;
 	
 	private var colArray:Array<String> = ['purple', 'blue', 'green', 'red'];
 	private var pixelInt:Array<Int> = [0, 1, 2, 3];
@@ -132,7 +136,7 @@ class Note extends FlxSprite
 			switch(value) {
 				case 'Hurt Note':
 					ignoreNote = mustPress;
-					reloadNote('HURT');
+					reloadNote('notes/HURT');
 					noteSplashTexture = 'HURTnoteSplashes';
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
@@ -152,29 +156,62 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-				case 'Oil' | 'Bob':
+
+				case 'Oil' | 'Magnet':
 					ignoreNote = mustPress;
-					reloadNote('', 'NOTE_types', '', value);
 					noteSplashTexture = 'HURTnoteSplashes';
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
 					lowPriority = true;
-
-					if(isSustainNote) {
-						missHealth = 0.1;
-					} else {
-						missHealth = 0.3;
-					}
+					missHealth = 0;
 					hitCausesMiss = true;
+					reloadNote('notes/${value.toLowerCase()}_', 'NOTE_assets', '', value);
+				case 'Bob':
+					ignoreNote = mustPress;
+					noteSplashTexture = 'HURTnoteSplashes';
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					lowPriority = true;
+					missHealth = 0;
+					hitCausesMiss = true;	
+					reloadNote('notes/mineTroller_', 'NOTE_assets', '', value);
 				case 'Grenade':
 					noAnimation = true;
 					noMissAnimation = true;
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
-					reloadNote('', 'NOTE_types', '', value);
-
+					reloadNote('notes/grenade_', 'NOTE_assets', '', value);
+					offset.set(-40 * scales[(PlayState.absurde ? 0 : PlayState.SONG.mania)], 5 * scales[(PlayState.absurde ? 0 : PlayState.SONG.mania)]);
+				case 'Axe':
+					ignoreNote = mustPress;
+					noteSplashTexture = 'HURTnoteSplashes';
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					lowPriority = true;
+					missHealth = 2;
+					hitCausesMiss = true;
+					reloadNote('notes/AXETROLL', '', '', value);
+				case 'Angel':
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					missHealth = 0;
+					if(isSustainNote) {
+						hitHealth = 0.25;
+					} else {
+						hitHealth = 0.5;
+					}
+					reloadNote('notes/angel_', 'NOTE_assets', '', value);
+				case 'Glitch':
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					missHealth = 0.5;
+					reloadNote('notes/glitch_', 'NOTE_assets', '', value);
 			}
 			noteType = value;
 		}
@@ -188,6 +225,8 @@ class Note extends FlxSprite
 	{
 		super();
 
+		var mania = PlayState.SONG.mania;
+
 		if (prevNote == null)
 			prevNote = this;
 
@@ -195,7 +234,7 @@ class Note extends FlxSprite
 		isSustainNote = sustainNote;
 		this.inEditor = inEditor;
 
-		x += (ClientPrefs.middleScroll ? PlayState.STRUM_X_MIDDLESCROLL : PlayState.STRUM_X) + 50;
+		x += (ClientPrefs.middleScroll ? PlayState.STRUM_X_MIDDLESCROLL : PlayState.STRUM_X) + 50 - posRest[mania];
 		// MAKE SURE ITS DEFINITELY OFF SCREEN?
 		y -= 2000;
 		this.strumTime = strumTime;
@@ -208,11 +247,11 @@ class Note extends FlxSprite
 			colorSwap = new ColorSwap();
 			shader = colorSwap.shader;
 
-			x += swagWidth * (noteData);
-			if(!isSustainNote && noteData > -1 && noteData < 4) { //Doing this 'if' check to fix the warnings on Senpai songs
+			x += swidths[mania] * swagWidth * (noteData % Main.ammo[mania]);
+			if(!isSustainNote) { //Doing this 'if' check to fix the warnings on Senpai songs
 				var animToPlay:String = '';
 				animToPlay = colArray[noteData % 4];
-				animation.play(animToPlay + 'Scroll');
+				animation.play(Main.gfxLetter[Main.gfxIndex[mania][noteData]]);
 			}
 		}
 
@@ -231,7 +270,7 @@ class Note extends FlxSprite
 			offsetX += width / 2;
 			copyAngle = false;
 
-			animation.play(colArray[noteData % 4] + 'holdend');
+			animation.play(Main.gfxLetter[Main.gfxIndex[mania][noteData]] + ' end');
 
 			updateHitbox();
 
@@ -242,7 +281,7 @@ class Note extends FlxSprite
 
 			if (prevNote.isSustainNote)
 			{
-				prevNote.animation.play(colArray[prevNote.noteData % 4] + 'hold');
+				prevNote.animation.play(Main.gfxLetter[Main.gfxIndex[mania][noteData]] + ' hold');
 
 				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.05;
 				if(PlayState.instance != null)
@@ -280,7 +319,9 @@ class Note extends FlxSprite
 		if(texture.length < 1) {
 			skin = PlayState.SONG.arrowSkin;
 			if(skin == null || skin.length < 1) {
-				skin = 'NOTE_assets';
+				skin = 'notes/NOTE_assets';
+				if (PlayState.SONG.mania > 0)
+					skin = 'notes/extra_NOTE_assets';
 			}
 		}
 
@@ -328,12 +369,8 @@ class Note extends FlxSprite
 			
 			switch (animToLoad)
 			{
-				case 'Oil':
-					loadOilNoteAnims();
-				case 'Bob':
-					loadBobNoteAnims();
-				case 'Grenade':
-					loadGrenadeNoteAnims();	
+				case 'Oil' | 'Magnet' | 'Glitch' | 'Angel' | 'Bob' | 'Grenade' | 'Axe':
+					loadExtraNoteAnims(animToLoad);
 				default:
 					loadNoteAnims();
 			}
@@ -354,61 +391,88 @@ class Note extends FlxSprite
 		}
 	}
 
-	function loadNoteAnims() {
-		animation.addByPrefix(colArray[noteData] + 'Scroll', colArray[noteData] + '0');
-
-		if (isSustainNote)
+	function loadNoteAnims() 
+	{
+		if (PlayState.SONG.mania > 0)
 		{
-			animation.addByPrefix('purpleholdend', 'pruple end hold'); // ?????
-			animation.addByPrefix(colArray[noteData] + 'holdend', colArray[noteData] + ' hold end');
-			animation.addByPrefix(colArray[noteData] + 'hold', colArray[noteData] + ' hold piece');
+			for (i in 0...9)
+			{
+				animation.addByPrefix(Main.gfxLetter[i], Main.gfxLetter[i] + '0');
+	
+				if (isSustainNote)
+				{
+					animation.addByPrefix(Main.gfxLetter[i] + ' hold', Main.gfxLetter[i] + ' hold');
+					animation.addByPrefix(Main.gfxLetter[i] + ' end', Main.gfxLetter[i] + ' tail');
+				}
+			}
+		}
+		else
+		{
+			for (i in 0...4)
+			{
+				animation.addByPrefix(Main.gfxLetter[i], colArray[i] + '0');
+
+				if (isSustainNote)
+				{
+					animation.addByPrefix(Main.gfxLetter[i] + ' hold', colArray[i] + ' hold piece');
+					animation.addByPrefix(Main.gfxLetter[i] + ' end', colArray[i] + ' hold end');
+				}
+			}
 		}
 
-		setGraphicSize(Std.int(width * 0.7));
-		updateHitbox();
-	}
-	//the subtexture names are so royally fucked up on the xml kill me
-	//warning: FNI Axe
-	//angel: light blue/white dumbshit
-	//glitch: self explainitory
-	function loadOilNoteAnims() {
-		animation.addByPrefix(colArray[noteData] + 'Scroll', 'halo ' + colArray[noteData] + '0');
+		var ogW = width;
+		var ogH = height;
+		if (!isSustainNote)
+			setGraphicSize(Std.int(ogW * scales[(PlayState.absurde ? 0 : PlayState.SONG.mania)]));
+		else
+			setGraphicSize(Std.int(ogW * scales[(PlayState.absurde ? 0 : PlayState.SONG.mania)]), Std.int(ogH * scales[0]));
 
-		if (isSustainNote)
-		{
-			//animation.addByPrefix('purpleholdend', 'pruple end hold'); // ?????
-			animation.addByPrefix(colArray[noteData] + 'holdend', 'halo hold end');
-			animation.addByPrefix(colArray[noteData] + 'hold', 'halo hold piece');
-		}
-
-		setGraphicSize(Std.int(width * 0.7));
-		updateHitbox();
-	}
-
-	function loadGrenadeNoteAnims() {
-		animation.addByPrefix(colArray[noteData] + 'Scroll', 'bob blue0'); //they all look the same. for consistancy we just use the same anim, the ss is fucky
-
-		if (isSustainNote)
-		{
-			//animation.addByPrefix('purpleholdend', 'pruple end hold'); // ?????
-			animation.addByPrefix(colArray[noteData] + 'holdend', 'bob hold end');
-			animation.addByPrefix(colArray[noteData] + 'hold', 'bob hold piece');
-		}
-
-		setGraphicSize(Std.int(width * 0.7));
 		updateHitbox();
 	}
 
-	function loadBobNoteAnims() {
-		animation.addByPrefix(colArray[noteData] + 'Scroll', 'fire ' + colArray[noteData] + '0');
+	/*
+		the subtexture names are so royally fucked up on the xml kill me
+		warning: FNI Axe
+		angel: light blue/white dumbshit
+		glitch: self explainitory
+		^^^^old lol doesnt apply anymo
+	*/
+	function loadExtraNoteAnims(which:String = '') { 
 
-		if (isSustainNote)
+		switch (which)
 		{
-			//animation.addByPrefix('purpleholdend', 'pruple end hold'); // ?????
-			animation.addByPrefix(colArray[noteData] + 'holdend', 'fire hold end');
-			animation.addByPrefix(colArray[noteData] + 'hold', 'fire hold piece');
-		}
+			case 'Grenade':
+				animation.addByPrefix(Main.gfxLetter[noteData], 'scroll');
+				if (isSustainNote) //so we dont crash
+				{
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' hold', 'scroll');
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' end', 'scroll');
+				}
 
+			case 'Bob':
+				animation.addByPrefix(Main.gfxLetter[noteData], Main.gfxLetter[noteData]);
+				if (isSustainNote) //again, so we dont crash
+				{
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' hold', 'E');
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' end', 'E');
+				}
+
+			case 'Axe':
+				animation.addByPrefix(Main.gfxLetter[noteData], 'scroll');
+				if (isSustainNote)
+				{
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' hold', 'hold piece0');
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' end', 'hold end0');
+				}
+
+			default:	//oil, magnet, angel, and glitch notes
+				animation.addByPrefix(Main.gfxLetter[noteData], Main.gfxLetter[noteData]);
+				if (isSustainNote)
+				{
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' hold', 'hold0');
+					animation.addByPrefix(Main.gfxLetter[noteData] + ' end', 'hold end0');
+				}
+		}
 		setGraphicSize(Std.int(width * 0.7));
 		updateHitbox();
 	}
@@ -426,6 +490,9 @@ class Note extends FlxSprite
 	{
 		super.update(elapsed);
 
+		if (isSustainNote) // for ghost jumps, we turn a parent note into a noanim note so the children need to follow suit
+			noAnimation = parent.noAnimation;
+		
 		if (mustPress)
 		{
 			// ok river

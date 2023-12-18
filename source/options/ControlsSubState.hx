@@ -35,7 +35,7 @@ class ControlsSubState extends MusicBeatSubstate {
 	private var bindLength:Int = 0;
 
 	var optionShit:Array<Dynamic> = [
-		['NOTES'],
+		['4 KEY'],
 		['Left', 'note_left'],
 		['Down', 'note_down'],
 		['Up', 'note_up'],
@@ -59,7 +59,27 @@ class ControlsSubState extends MusicBeatSubstate {
 		[''],
 		['DEBUG'],
 		['Key 1', 'debug_1'],
-		['Key 2', 'debug_2']
+		['Key 2', 'debug_2'],
+		[''],
+		['6 OR 7 KEY'],
+		['Left 1', 'a1'],
+		['Up  ', 'a2'],
+		['Right 1', 'a3'],
+		['Center', 'a4'],
+		['Left 2', 'a5'],
+		['Down  ', 'a6'],
+		['Right 2', 'a7'],
+		[''],
+		['9 KEY'],
+		['Left 1 ', 'b1'],
+		['Down 1', 'b2'],
+		['Up 1', 'b3'],
+		['Right 1 ', 'b4'],
+		['Center ', 'b5'],
+		['Left 2 ', 'b6'],
+		['Down 2', 'b7'],
+		['Up 2 ', 'b8'],
+		['Right 2 ', 'b9']
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -109,6 +129,10 @@ class ControlsSubState extends MusicBeatSubstate {
 				if(curSelected < 0) curSelected = i;
 			}
 		}
+
+		var backButton:MenuBackButton = new MenuBackButton(null);
+		add(backButton);
+
 		changeSelection();
 	}
 
@@ -125,6 +149,8 @@ class ControlsSubState extends MusicBeatSubstate {
 			if (controls.UI_LEFT_P || controls.UI_RIGHT_P) {
 				changeAlt();
 			}
+			if(FlxG.mouse.wheel != 0)
+				changeSelection(-FlxG.mouse.wheel);
 
 			if (controls.BACK) {
 				ClientPrefs.reloadControls();

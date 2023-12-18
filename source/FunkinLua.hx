@@ -121,7 +121,12 @@ class FunkinLua {
 		set('scrollSpeed', PlayState.SONG.speed);
 		set('crochet', Conductor.crochet);
 		set('stepCrochet', Conductor.stepCrochet);
-		set('songLength', FlxG.sound.music.length);
+		// dont know if this is stupid or not but it would keep crashin on introllduction from the title screen saying the music is null
+		// i have a few other ideas of how i could fix this but i dont think this is really wrong so whatevs
+		if (FlxG.sound.music != null) 
+			set('songLength', FlxG.sound.music.length);
+		else
+			set('songLength', 100);
 		set('songName', PlayState.SONG.song);
 		set('songPath', Paths.formatToSongPath(PlayState.SONG.song));
 		set('startedCountdown', false);
@@ -201,6 +206,8 @@ class FunkinLua {
 		set('scoreZoom', ClientPrefs.scoreZoom);
 		set('cameraZoomOnBeat', ClientPrefs.camZooms);
 		set('flashingLights', ClientPrefs.flashing);
+		set('shaking', ClientPrefs.shaking);
+		set('photosensitivity', ClientPrefs.photosensitivity);
 		set('noteOffset', ClientPrefs.noteOffset);
 		set('healthBarAlpha', ClientPrefs.healthBarAlpha);
 		set('noResetButton', ClientPrefs.noReset);
@@ -1553,7 +1560,7 @@ class FunkinLua {
 			if(PlayState.isStoryMode)
 				MusicBeatState.switchState(new StoryMenuState());
 			else
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplayState(PlayState.songCategory));
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			PlayState.changedDifficulty = false;

@@ -14,13 +14,14 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
 import flixel.util.FlxStringUtil;
+import sys.FileSystem;
 
 class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Change Difficulty', 'Exit to menu'];
+	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', /*'Change Difficulty',*/ 'Exit to menu'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
@@ -31,12 +32,14 @@ class PauseSubState extends MusicBeatSubstate
 	var curTime:Float = Math.max(0, Conductor.songPosition);
 	//var botplayText:FlxText;
 
-	public static var songName:String = '';
+	public static var pauseThemeName:String = 'Troll_Pause_Theme_';
+
+	var character:FlxSprite;
 
 	public function new(x:Float, y:Float)
 	{
 		super();
-		if(CoolUtil.difficulties.length < 2) menuItemsOG.remove('Change Difficulty'); //No need to change difficulty if there is only one!
+		//if(CoolUtil.difficulties.length < 2) menuItemsOG.remove('Change Difficulty'); //No need to change difficulty if there is only one! //erm whats a difficulties!
 
 		if(PlayState.chartingMode)
 		{
@@ -52,6 +55,9 @@ class PauseSubState extends MusicBeatSubstate
 			menuItemsOG.insert(4 + num, 'Toggle Practice Mode');
 			menuItemsOG.insert(5 + num, 'Toggle Botplay');
 		}
+
+		if (PlayState.SONG.song == 'Introllduction' && PlayState.isStoryMode == true)
+			menuItemsOG.remove('Exit to menu');
 		menuItems = menuItemsOG;
 
 		for (i in 0...CoolUtil.difficulties.length) {
@@ -60,13 +66,11 @@ class PauseSubState extends MusicBeatSubstate
 		}
 		difficultyChoices.push('BACK');
 
-
 		pauseMusic = new FlxSound();
-		if(songName != null) {
-			pauseMusic.loadEmbedded(Paths.music(songName), true, true);
-		} else if (songName != 'None') {
-			pauseMusic.loadEmbedded(Paths.music(Paths.formatToSongPath(ClientPrefs.pauseMusic)), true, true);
-		}
+
+		if(pauseThemeName != null)
+			pauseMusic.loadEmbedded(Paths.music(pauseThemeName), true, true);
+		
 		pauseMusic.volume = 0;
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 
@@ -77,42 +81,50 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		add(bg);
 
+		if (PlayState.isStoryMode == true)
+			createCharacter();
+
 		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
-		levelInfo.text += PlayState.SONG.song;
+		levelInfo.text += PlayState.SONG.credit + " - " + PlayState.SONG.song;
 		levelInfo.scrollFactor.set();
-		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
+		levelInfo.setFormat(Paths.font("impact.otf"), 32);
 		levelInfo.updateHitbox();
+		levelInfo.antialiasing = ClientPrefs.globalAntialiasing;
 		add(levelInfo);
 
 		var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, "", 32);
 		levelDifficulty.text += CoolUtil.difficultyString();
 		levelDifficulty.scrollFactor.set();
-		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+		levelDifficulty.setFormat(Paths.font('impact.otf'), 32);
 		levelDifficulty.updateHitbox();
+		levelDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
 		add(levelDifficulty);
 
 		var blueballedTxt:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
 		blueballedTxt.text = "Blueballed: " + PlayState.deathCounter;
 		blueballedTxt.scrollFactor.set();
-		blueballedTxt.setFormat(Paths.font('vcr.ttf'), 32);
+		blueballedTxt.setFormat(Paths.font('impact.otf'), 32);
 		blueballedTxt.updateHitbox();
+		blueballedTxt.antialiasing = ClientPrefs.globalAntialiasing;
 		add(blueballedTxt);
 
 		practiceText = new FlxText(20, 15 + 101, 0, "PRACTICE MODE", 32);
 		practiceText.scrollFactor.set();
-		practiceText.setFormat(Paths.font('vcr.ttf'), 32);
+		practiceText.setFormat(Paths.font('impact.otf'), 32);
 		practiceText.x = FlxG.width - (practiceText.width + 20);
 		practiceText.updateHitbox();
 		practiceText.visible = PlayState.instance.practiceMode;
+		practiceText.antialiasing = ClientPrefs.globalAntialiasing;
 		add(practiceText);
 
 		var chartingText:FlxText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
 		chartingText.scrollFactor.set();
-		chartingText.setFormat(Paths.font('vcr.ttf'), 32);
+		chartingText.setFormat(Paths.font('impact.otf'), 32);
 		chartingText.x = FlxG.width - (chartingText.width + 20);
 		chartingText.y = FlxG.height - (chartingText.height + 20);
 		chartingText.updateHitbox();
 		chartingText.visible = PlayState.chartingMode;
+		chartingText.antialiasing = ClientPrefs.globalAntialiasing;
 		add(chartingText);
 
 		blueballedTxt.alpha = 0;
@@ -140,7 +152,7 @@ class PauseSubState extends MusicBeatSubstate
 	override function update(elapsed:Float)
 	{
 		cantUnpause -= elapsed;
-		if (pauseMusic.volume < 0.5)
+		if (pauseMusic.volume < 0.75)
 			pauseMusic.volume += 0.01 * elapsed;
 
 		super.update(elapsed);
@@ -257,15 +269,18 @@ class PauseSubState extends MusicBeatSubstate
 
 					WeekData.loadTheFirstEnabledMod();
 
-					switch (PlayState.SONG.song)
+					if(PlayState.isStoryMode) 
+						MusicBeatState.switchState(new MainMenuState());
+					else
 					{
-						case 'Spooky Scary':
-							MusicBeatState.switchState(new FreeplaySelectState());
-						default:
-							if(PlayState.isStoryMode) 
-								MusicBeatState.switchState(new MainMenuState());
-							else
-								MusicBeatState.switchState(new FreeplayState());
+						trace ('not story mode');
+						switch (PlayState.SONG.song)
+						{
+							case "Spooky Scary":
+								MusicBeatState.switchState(new FreeplaySelectState());
+							default:
+								MusicBeatState.switchState(new FreeplayState(PlayState.songCategory));
+						}
 					}
 
 					PlayState.cancelMusicFadeTween();
@@ -364,7 +379,7 @@ class PauseSubState extends MusicBeatSubstate
 			if(menuItems[i] == 'Skip Time')
 			{
 				skipTimeText = new FlxText(0, 0, 0, '', 64);
-				skipTimeText.setFormat(Paths.font("vcr.ttf"), 64, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				skipTimeText.setFormat(Paths.font("impact.otf"), 64, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 				skipTimeText.scrollFactor.set();
 				skipTimeText.borderSize = 2;
 				skipTimeTracker = item;
@@ -390,5 +405,42 @@ class PauseSubState extends MusicBeatSubstate
 	function updateSkipTimeText()
 	{
 		skipTimeText.text = FlxStringUtil.formatTime(Math.max(0, Math.floor(curTime / 1000)), false) + ' / ' + FlxStringUtil.formatTime(Math.max(0, Math.floor(FlxG.sound.music.length / 1000)), false);
+	}
+
+	//for rage this is only on story mode so a grand total of 5 fucking songs but this will be thru .json and be on every song in the next update #leaking!!!
+	function createCharacter()
+	{
+		var songName:String = PlayState.SONG.song.toLowerCase();
+		if (Paths.image('pause/characters/' + songName) == null)
+			return;
+
+		character = new FlxSprite();
+		character.antialiasing = ClientPrefs.globalAntialiasing;
+
+		if (FileSystem.exists('assets/shared/images/pause/characters/' + songName + '.xml'))
+		{
+			character.frames = Paths.getSparrowAtlas('pause/characters/' + songName);
+			character.animation.addByPrefix('idle', songName + " idle", 24, true);
+			character.animation.play('idle', true);
+		}
+		else
+			character.loadGraphic(Paths.image('pause/characters/' + songName));
+
+		add(character);
+
+		var targetPosition:Array<Int> = [0, 0];
+		switch (songName)
+		{
+			case 'trolling' | 'introllduction':
+				targetPosition = [935, 61];
+			case 'foretoken':
+				targetPosition = [760, 22];
+			case 'impending doom':
+				targetPosition = [413, 183];
+			case 'tomfoolery':
+				targetPosition = [577, 8];
+		}
+		character.setPosition(FlxG.width, targetPosition[1]);
+		FlxTween.tween(character, {x: targetPosition[0], y: targetPosition[1]}, 0.6, {ease: FlxEase.quartInOut, startDelay: 0.7});
 	}
 }

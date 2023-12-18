@@ -65,13 +65,14 @@ class NotesSubState extends MusicBeatSubstate
 			for (j in 0...3) {
 				var optionText:Alphabet = new Alphabet(0, yPos + 60, Std.string(ClientPrefs.arrowHSV[i][j]), true);
 				optionText.x = posX + (225 * j) + 250;
+				optionText.targetY = i;
 				grpNumbers.add(optionText);
 			}
 
 			var note:FlxSprite = new FlxSprite(posX, yPos);
-			note.frames = Paths.getSparrowAtlas('NOTE_assets');
-			var animations:Array<String> = ['purple0', 'blue0', 'green0', 'red0'];
-			note.animation.addByPrefix('idle', animations[i]);
+			note.frames = Paths.getSparrowAtlas('notes/extra_NOTE_assets');
+			//var animations:Array<String> = ["A0", "B0", "C0", "D0"];
+			note.animation.addByPrefix('idle', Main.gfxLetter[i] + '0');
 			note.animation.play('idle');
 			note.antialiasing = ClientPrefs.globalAntialiasing;
 			grpNotes.add(note);
@@ -88,6 +89,9 @@ class NotesSubState extends MusicBeatSubstate
 		hsbText.x = posX + 240;
 		add(hsbText);
 
+		var backButton:MenuBackButton = new MenuBackButton(null);
+		add(backButton);
+		
 		changeSelection();
 	}
 
@@ -197,6 +201,8 @@ class NotesSubState extends MusicBeatSubstate
 		curValue = ClientPrefs.arrowHSV[curSelected][typeSelected];
 		updateValue();
 
+		var bullShit:Int = 0;
+		
 		for (i in 0...grpNumbers.length) {
 			var item = grpNumbers.members[i];
 			item.alpha = 0.6;
@@ -204,6 +210,12 @@ class NotesSubState extends MusicBeatSubstate
 				item.alpha = 1;
 			}
 		}
+
+		for (item in grpNumbers.members) {
+			item.targetY = bullShit - curSelected;
+			bullShit++;
+		}
+
 		for (i in 0...grpNotes.length) {
 			var item = grpNotes.members[i];
 			item.alpha = 0.6;

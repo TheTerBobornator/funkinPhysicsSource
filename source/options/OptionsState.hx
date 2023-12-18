@@ -1,5 +1,6 @@
 package options;
 
+import flixel.FlxState;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -33,6 +34,8 @@ class OptionsState extends MusicBeatState
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
+	//var prevFreeplay:String = ''; //used to take you to a specific freeplay if you choose to update settings before a song
+	var backState:FlxState = new MainMenuState();
 
 	function openSelectedSubstate(label:String) {
 		switch(label) {
@@ -53,6 +56,14 @@ class OptionsState extends MusicBeatState
 
 	var selectorLeft:Alphabet;
 	var selectorRight:Alphabet;
+
+	public function new(prevFreeplay:String = '')
+	{
+		super();
+		//this.prevFreeplay = prevFreeplay;
+		if (prevFreeplay != '')
+			backState = new FreeplayState(prevFreeplay);
+	}
 
 	override function create() {
 		#if desktop
@@ -75,6 +86,7 @@ class OptionsState extends MusicBeatState
 			var optionText:Alphabet = new Alphabet(0, 0, options[i], true, false);
 			optionText.screenCenter();
 			optionText.y += (100 * (i - (options.length / 2))) + 50;
+			optionText.ID = i;
 			grpOptions.add(optionText);
 		}
 
@@ -83,12 +95,16 @@ class OptionsState extends MusicBeatState
 		selectorRight = new Alphabet(0, 0, '<', true, false);
 		add(selectorRight);
 
+		var backButton:MenuBackButton = new MenuBackButton(backState);
+		add(backButton);
+
 		changeSelection();
 		ClientPrefs.saveSettings();
 
 		super.create();
 	}
 
+	
 	override function closeSubState() {
 		super.closeSubState();
 		ClientPrefs.saveSettings();
@@ -106,20 +122,36 @@ class OptionsState extends MusicBeatState
 
 		if (controls.BACK) {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
+			MusicBeatState.switchState(backState);
 		}
 
 		if (controls.ACCEPT) {
 			openSelectedSubstate(options[curSelected]);
 		}
+
+		grpOptions.forEach(function(spr:Alphabet)
+		{
+			if (FlxG.mouse.overlaps(spr))
+			{
+				if (curSelected != spr.ID)
+					changeSelection(spr.ID, true);
+				if (FlxG.mouse.justPressed)
+					openSelectedSubstate(options[curSelected]);
+			}
+		});
 	}
 	
-	function changeSelection(change:Int = 0) {
-		curSelected += change;
-		if (curSelected < 0)
-			curSelected = options.length - 1;
-		if (curSelected >= options.length)
-			curSelected = 0;
+	function changeSelection(change:Int = 0, ?mouseControlled = false) {
+		if (!mouseControlled)
+		{
+			curSelected += change;
+			if (curSelected < 0)
+				curSelected = options.length - 1;
+			if (curSelected >= options.length)
+				curSelected = 0;
+		}
+		else
+			curSelected = change;
 
 		var bullShit:Int = 0;
 
