@@ -1,0 +1,5 @@
+Introllduction, 0, terry, null, null, 0xFFD9DEEC
+Trolling, 0, terry, Trolling (Old), Trolling (Older), 0xFFD9DEEC
+Foretoken, 0, terry-mad, Mistaken, null, 0xFF797C86
+Impending Doom, 0, terry-insane, The Incident, null, 0xFFff0202
+Tomfoolery, 0, corruptus, Tomfoolery (Old), null, 0xFF585EA5

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stalker1.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="stalkeridle0000" x="0" y="0" width="474" height="771" frameX="-69" frameY="-3" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0001" x="474" y="0" width="539" height="722" frameX="0" frameY="-52" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0002" x="474" y="0" width="539" height="722" frameX="0" frameY="-52" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0003" x="1013" y="0" width="518" height="745" frameX="-23" frameY="-29" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0004" x="1013" y="0" width="518" height="745" frameX="-23" frameY="-29" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0005" x="1531" y="0" width="502" height="756" frameX="-41" frameY="-18" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0006" x="1531" y="0" width="502" height="756" frameX="-41" frameY="-18" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0007" x="0" y="771" width="479" height="770" frameX="-64" frameY="-4" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0008" x="0" y="771" width="479" height="770" frameX="-64" frameY="-4" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0009" x="479" y="771" width="472" height="774" frameX="-72" frameY="0" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0010" x="479" y="771" width="472" height="774" frameX="-72" frameY="0" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0011" x="479" y="771" width="472" height="774" frameX="-72" frameY="0" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0012" x="479" y="771" width="472" height="774" frameX="-72" frameY="0" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0013" x="479" y="771" width="472" height="774" frameX="-72" frameY="0" frameWidth="544" frameHeight="774"/>
+	<SubTexture name="stalkeridle0014" x="479" y="771" width="472" height="774" frameX="-72" frameY="0" frameWidth="544" frameHeight="774"/>
+</TextureAtlas>

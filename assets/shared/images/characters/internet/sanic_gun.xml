@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanic_gun.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sanic_gun0000" x="3" y="3" width="429" height="586"/>
+	<SubTexture name="sanic_gun0001" x="3" y="3" width="429" height="586"/>
+	<SubTexture name="sanic_gun0002" x="3" y="3" width="429" height="586"/>
+	<SubTexture name="sanic_gun0003" x="3" y="3" width="429" height="586"/>
+	<SubTexture name="sanic_gun0004" x="3" y="3" width="429" height="586"/>
+	<SubTexture name="sanic_gun0005" x="3" y="3" width="429" height="586"/>
+	<SubTexture name="sanic_gun0006" x="435" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0007" x="435" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0008" x="435" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0009" x="435" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0010" x="435" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0011" x="435" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0012" x="867" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0013" x="867" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0014" x="867" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0015" x="867" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0016" x="867" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0017" x="867" y="3" width="429" height="580" frameX="0" frameY="-6" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0018" x="1299" y="3" width="429" height="584" frameX="0" frameY="-2" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0019" x="1299" y="3" width="429" height="584" frameX="0" frameY="-2" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0020" x="1299" y="3" width="429" height="584" frameX="0" frameY="-2" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0021" x="1299" y="3" width="429" height="584" frameX="0" frameY="-2" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0022" x="1299" y="3" width="429" height="584" frameX="0" frameY="-2" frameWidth="429" frameHeight="586"/>
+	<SubTexture name="sanic_gun0023" x="1299" y="3" width="429" height="584" frameX="0" frameY="-2" frameWidth="429" frameHeight="586"/>
+</TextureAtlas>

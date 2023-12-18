@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="awestruckGAMEOVERleaveBTN_assets.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="leavebtn_appear0000" x="3" y="3" width="100" height="100" frameX="-183" frameY="-40" frameWidth="585" frameHeight="206"/>
+	<SubTexture name="leavebtn_appear0001" x="106" y="3" width="585" height="83" frameX="0" frameY="-61" frameWidth="585" frameHeight="206"/>
+	<SubTexture name="leavebtn_appear0002" x="3" y="106" width="380" height="206" frameX="-103" frameY="0" frameWidth="585" frameHeight="206"/>
+	<SubTexture name="leavebtn_appear0003" x="386" y="106" width="392" height="171" frameX="-96" frameY="-17" frameWidth="585" frameHeight="206"/>
+	<SubTexture name="leavebtn_hover0000" x="3" y="315" width="392" height="171"/>
+	<SubTexture name="leavebtn_hover0001" x="398" y="315" width="364" height="171" frameX="-14" frameY="0" frameWidth="392" frameHeight="171"/>
+	<SubTexture name="leavebtn_loop0000" x="3" y="489" width="392" height="171"/>
+	<SubTexture name="leavebtn_loop0001" x="398" y="489" width="364" height="171" frameX="-14" frameY="0" frameWidth="392" frameHeight="171"/>
+	<SubTexture name="leavebtn_press0000" x="3" y="663" width="392" height="171" frameX="-96" frameY="-17" frameWidth="585" frameHeight="206"/>
+	<SubTexture name="leavebtn_press0001" x="398" y="663" width="380" height="206" frameX="-103" frameY="0" frameWidth="585" frameHeight="206"/>
+	<SubTexture name="leavebtn_press0002" x="3" y="872" width="585" height="83" frameX="0" frameY="-61" frameWidth="585" frameHeight="206"/>
+	<SubTexture name="leavebtn_press0003" x="591" y="872" width="100" height="100" frameX="-183" frameY="-40" frameWidth="585" frameHeight="206"/>
+</TextureAtlas>

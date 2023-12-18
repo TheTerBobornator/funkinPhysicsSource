@@ -69,7 +69,7 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		addOption(option);
 
 		option.minValue = 60;
-		option.maxValue = 240;
+		option.maxValue = 99; //240; todo: fix whatever dumbfuck issue psych has on this vers that causes crashes on >100 fps
 		option.displayFormat = '%v FPS';
 		option.onChange = onChangeFramerate;
 		#end

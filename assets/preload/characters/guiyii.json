@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "guiyii_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				54,
+				7
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "guiyii_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				-25
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "guiyii_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "guiyii_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				35
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "guiyii_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				212,
+				695
+			],
+			"anim": "appear",
+			"fps": 24,
+			"name": "guiyii_appear",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/guiyii_assets",
+	"position": [
+		-600,
+		200
+	],
+	"healthicon": "guiyii",
+	"flip_x": true,
+	"healthbar_colors": [
+		89,
+		148,
+		80
+	],
+	"camera_position": [
+		100,
+		-1550
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

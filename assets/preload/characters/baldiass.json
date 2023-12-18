@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				434,
+				236
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "baldleft"
+		},
+		{
+			"offsets": [
+				215,
+				279
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "baldiright"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				131,
+				60
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "baldiassup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				130,
+				60
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "baldiassdown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				130,
+				60
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "baldiassdown",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/joke/baldiass",
+	"position": [
+		-10,
+		-30
+	],
+	"healthicon": "baldi",
+	"flip_x": false,
+	"healthbar_colors": [
+		85,
+		214,
+		188
+	],
+	"camera_position": [
+		-380,
+		-160
+	],
+	"sing_duration": 4.0,
+	"scale": 1.5
+}

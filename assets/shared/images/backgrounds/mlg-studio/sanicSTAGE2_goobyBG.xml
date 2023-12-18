@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanicSTAGE2_goobyBG.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="goobyidle0000" x="3" y="3" width="557" height="649"/>
+	<SubTexture name="goobyidle0001" x="3" y="3" width="557" height="649"/>
+	<SubTexture name="goobyidle0002" x="563" y="3" width="552" height="649" frameX="-5" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0003" x="563" y="3" width="552" height="649" frameX="-5" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0004" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0005" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0006" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0007" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0008" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0009" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0010" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0011" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0012" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+	<SubTexture name="goobyidle0013" x="1118" y="3" width="550" height="649" frameX="-7" frameY="0" frameWidth="557" frameHeight="649"/>
+</TextureAtlas>

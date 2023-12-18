@@ -18,6 +18,7 @@ typedef SwagSong =
 	var notes:Array<SwagSection>;
 	var events:Array<Dynamic>;
 	var bpm:Float;
+	var mania:Int;
 	var needsVoices:Bool;
 	var speed:Float;
 
@@ -29,6 +30,8 @@ typedef SwagSong =
 	var arrowSkin:String;
 	var splashSkin:String;
 	var validScore:Bool;
+	var credit:String;
+	var card:String;
 }
 
 class Song
@@ -37,6 +40,7 @@ class Song
 	public var notes:Array<SwagSection>;
 	public var events:Array<Dynamic>;
 	public var bpm:Float;
+	public var mania:Int;
 	public var needsVoices:Bool = true;
 	public var arrowSkin:String;
 	public var splashSkin:String;
@@ -45,6 +49,8 @@ class Song
 	public var player1:String = 'bf';
 	public var player2:String = 'dad';
 	public var gfVersion:String = 'gf';
+	public var credit:String = '';
+	public var card:String = '';
 
 	private static function onLoadJson(songJson:Dynamic) // Convert old charts to newest format
 	{

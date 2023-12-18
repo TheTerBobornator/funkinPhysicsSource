@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="YAAIBlueScreen.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BlueScreenFace0000" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0001" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0002" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0003" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0004" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0005" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0006" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0007" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0008" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0009" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0010" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0011" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0012" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0013" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0014" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0015" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0016" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0017" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0018" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0019" x="10" y="10" width="93" height="179" frameX="-55" frameY="-66" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0020" x="106" y="10" width="96" height="179" frameX="-54" frameY="-67" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0021" x="106" y="10" width="96" height="179" frameX="-54" frameY="-67" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0022" x="205" y="10" width="101" height="179" frameX="-52" frameY="-69" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0023" x="205" y="10" width="101" height="179" frameX="-52" frameY="-69" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0024" x="309" y="10" width="120" height="177" frameX="-46" frameY="-75" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0025" x="309" y="10" width="120" height="177" frameX="-46" frameY="-75" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0026" x="432" y="10" width="171" height="122" frameX="-40" frameY="-98" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0027" x="432" y="10" width="171" height="122" frameX="-40" frameY="-98" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0028" x="606" y="10" width="130" height="161" frameX="-61" frameY="-79" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0029" x="739" y="10" width="142" height="213" frameX="-63" frameY="-55" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0030" x="884" y="10" width="294" height="203" frameX="-5" frameY="-57" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0031" x="884" y="10" width="294" height="203" frameX="-5" frameY="-57" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0032" x="1181" y="10" width="244" height="311" frameX="-37" frameY="0" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0033" x="1181" y="10" width="244" height="311" frameX="-37" frameY="0" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0034" x="1428" y="10" width="229" height="277" frameX="-23" frameY="-18" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0035" x="1428" y="10" width="229" height="277" frameX="-23" frameY="-18" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0036" x="1660" y="10" width="267" height="245" frameX="-15" frameY="-21" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0037" x="1660" y="10" width="267" height="245" frameX="-15" frameY="-21" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0038" x="10" y="324" width="289" height="246" frameX="-8" frameY="-22" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0039" x="10" y="324" width="289" height="246" frameX="-8" frameY="-22" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0040" x="302" y="324" width="294" height="254" frameX="-3" frameY="-24" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0041" x="302" y="324" width="294" height="254" frameX="-3" frameY="-24" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0042" x="599" y="324" width="294" height="252" frameX="-2" frameY="-30" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0043" x="599" y="324" width="294" height="252" frameX="-2" frameY="-30" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0044" x="896" y="324" width="295" height="246" frameX="0" frameY="-33" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0045" x="896" y="324" width="295" height="246" frameX="0" frameY="-33" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0046" x="1194" y="324" width="294" height="243" frameX="0" frameY="-34" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0047" x="1194" y="324" width="294" height="243" frameX="0" frameY="-34" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0048" x="1491" y="324" width="295" height="246" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0049" x="1491" y="324" width="295" height="246" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0050" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0051" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0052" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0053" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0054" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0055" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0056" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0057" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0058" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0059" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0060" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+	<SubTexture name="BlueScreenFace0061" x="10" y="581" width="295" height="247" frameX="0" frameY="-32" frameWidth="299" frameHeight="311"/>
+</TextureAtlas>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mineTroller_NOTE_assets.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="A0000" x="10" y="10" width="144" height="117"/>
+	<SubTexture name="B0000" x="174" y="10" width="117" height="144"/>
+	<SubTexture name="C0000" x="10" y="174" width="117" height="144"/>
+	<SubTexture name="D0000" x="147" y="174" width="144" height="117"/>
+	<SubTexture name="E0000" x="10" y="174" width="117" height="144"/> <!-- Added manually, up arrow is placeholder for center so we dont crash -->
+	<SubTexture name="F0000" x="10" y="10" width="144" height="117"/>
+	<SubTexture name="G0000" x="174" y="10" width="117" height="144"/>
+	<SubTexture name="H0000" x="10" y="174" width="117" height="144"/>
+	<SubTexture name="I0000" x="147" y="174" width="144" height="117"/>
+</TextureAtlas>

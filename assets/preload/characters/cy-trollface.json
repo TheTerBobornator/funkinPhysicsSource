@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				120,
+				110
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singUP",
+			"loop": false,
+			"name": "trollface up"
+		},
+		{
+			"offsets": [
+				120,
+				110
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "trollface left"
+		},
+		{
+			"offsets": [
+				120,
+				110
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "trollface right"
+		},
+		{
+			"offsets": [
+				120,
+				110
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "trollface down"
+		},
+		{
+			"offsets": [
+				120,
+				110
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "idle",
+			"loop": false,
+			"name": "trollface idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/trolling/trollface",
+	"position": [
+		10,
+		160
+	],
+	"healthicon": "cy-trollface",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		-55
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

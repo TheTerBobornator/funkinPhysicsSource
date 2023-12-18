@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lineBGImproved.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="betterLineLol0000" x="10" y="10" width="2582" height="32" frameX="0" frameY="-83" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0001" x="10" y="10" width="2582" height="32" frameX="0" frameY="-83" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0002" x="10" y="62" width="2582" height="58" frameX="0" frameY="-59" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0003" x="10" y="62" width="2582" height="58" frameX="0" frameY="-59" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0004" x="10" y="140" width="2582" height="84" frameX="0" frameY="0" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0005" x="10" y="140" width="2582" height="84" frameX="0" frameY="0" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0006" x="10" y="244" width="2582" height="119" frameX="0" frameY="0" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0007" x="10" y="244" width="2582" height="119" frameX="0" frameY="0" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0008" x="10" y="383" width="2582" height="58" frameX="0" frameY="-101" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0009" x="10" y="383" width="2582" height="58" frameX="0" frameY="-101" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0010" x="10" y="461" width="2582" height="112" frameX="0" frameY="-102" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0011" x="10" y="461" width="2582" height="112" frameX="0" frameY="-102" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0012" x="10" y="593" width="2582" height="94" frameX="0" frameY="-113" frameWidth="2582" frameHeight="214"/>
+	<SubTexture name="betterLineLol0013" x="10" y="593" width="2582" height="94" frameX="0" frameY="-113" frameWidth="2582" frameHeight="214"/>
+</TextureAtlas>

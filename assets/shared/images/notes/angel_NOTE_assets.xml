@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="angel_NOTE_assets.png">
+	<!-- Created with Adobe Animate version 23.0.1.70 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="A0000" x="363" y="10" width="154" height="156"/>
+	<SubTexture name="B0000" x="713" y="10" width="155" height="153"/>
+	<SubTexture name="C0000" x="537" y="10" width="156" height="153"/>
+	<SubTexture name="D0000" x="189" y="10" width="154" height="157"/>
+	<SubTexture name="E0000" x="10" y="10" width="159" height="160"/>
+	<SubTexture name="F0000" x="363" y="10" width="154" height="156"/>
+	<SubTexture name="G0000" x="713" y="10" width="155" height="153"/>
+	<SubTexture name="H0000" x="537" y="10" width="156" height="153"/>
+	<SubTexture name="I0000" x="189" y="10" width="154" height="157"/>
+	<SubTexture name="hold0000" x="888" y="94" width="50" height="44"/>
+	<SubTexture name="hold end0000" x="888" y="10" width="50" height="64"/>
+</TextureAtlas>

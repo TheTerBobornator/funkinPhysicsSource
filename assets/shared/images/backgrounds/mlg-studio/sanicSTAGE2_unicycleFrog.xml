@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanicSTAGE2_unicycleFrog.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="unicyclefrogbalance0000" x="3" y="3" width="196" height="230" frameX="0" frameY="0" frameWidth="196" frameHeight="238"/>
+	<SubTexture name="unicyclefrogbalance0001" x="202" y="3" width="193" height="237" frameX="-1" frameY="-1" frameWidth="196" frameHeight="238"/>
+</TextureAtlas>

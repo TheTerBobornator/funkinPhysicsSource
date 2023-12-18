@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mspaint_sanic.png">
+<SubTexture name="mspaint sanic idle0000" x="1647" y="1257" width="564" height="605" frameX="-220" frameY="-267" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic idle0001" x="2380" y="0" width="568" height="605" frameX="-213" frameY="-268" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic idle0002" x="515" y="1257" width="573" height="614" frameX="-213" frameY="-258" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic idle0003" x="1088" y="1257" width="559" height="610" frameX="-224" frameY="-262" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic up0000" x="0" y="0" width="480" height="630" frameX="-261" frameY="-242" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic up0001" x="1402" y="623" width="512" height="620" frameX="-252" frameY="-253" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic up0002" x="0" y="1257" width="515" height="616" frameX="-249" frameY="-257" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic down0000" x="1465" y="1873" width="764" height="556" frameX="-217" frameY="-316" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic down0001" x="724" y="1873" width="741" height="562" frameX="-220" frameY="-310" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic down0002" x="0" y="1873" width="724" height="563" frameX="-212" frameY="-309" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic right0000" x="1402" y="0" width="978" height="623" frameX="-266" frameY="-250" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic right0001" x="0" y="630" width="935" height="627" frameX="-249" frameY="-246" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic right0002" x="480" y="0" width="922" height="630" frameX="-245" frameY="-243" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic left0000" x="2380" y="605" width="535" height="488" frameX="-224" frameY="-351" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic left0001" x="1914" y="623" width="432" height="398" frameX="-123" frameY="-429" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic left0002" x="935" y="630" width="443" height="281" frameX="-187" frameY="-561" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic left0003" x="2380" y="1093" width="400" height="399" frameX="-264" frameY="-444" frameWidth="1284" frameHeight="960" />
+<SubTexture name="mspaint sanic left0004" x="2380" y="1492" width="443" height="355" frameX="-196" frameY="-423" frameWidth="1284" frameHeight="960" />
+</TextureAtlas>

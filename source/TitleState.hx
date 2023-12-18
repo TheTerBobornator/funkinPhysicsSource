@@ -41,7 +41,6 @@ import openfl.Assets;
 using StringTools;
 typedef TitleData =
 {
-
 	titlex:Float,
 	titley:Float,
 	startx:Float,
@@ -59,13 +58,14 @@ class TitleState extends MusicBeatState
 
 	public static var initialized:Bool = false;
 
+	var doTrollIntro:Bool = false;
 	var blackScreen:FlxSprite;
 	var credGroup:FlxGroup;
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
 	
-	var titleTextColors:Array<FlxColor> = [0xFF33FFFF, 0xFF3333CC];
+	var titleTextColors:Array<FlxColor> = [0xFFf9d051, 0xFFff0000];
 	var titleTextAlphas:Array<Float> = [1, .64];
 
 	var curWacky:Array<String> = [];
@@ -176,6 +176,16 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
+
+		//game checks for song a score on introllduction, if the score was reset or doesn't exist you get the special instance of playing it for the first time on boot
+		if (FlxG.save.data.songScores != null)
+		{
+			if (FlxG.save.data.songScores.get('introllduction-hard') == 0 || FlxG.save.data.songScores.get('introllduction-hard') == null)
+				doTrollIntro = true;
+		}
+		else
+			doTrollIntro = true;
+
 		if(FlxG.save.data.flashing == null && !FlashingState.leftState) {
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
@@ -191,27 +201,64 @@ class TitleState extends MusicBeatState
 			}
 			#end
 
-			if (initialized)
-				startIntro();
+			if (doTrollIntro)
+			{
+				trollIntro();
+			}
 			else
 			{
-				new FlxTimer().start(1, function(tmr:FlxTimer)
-				{
+				if (initialized)
 					startIntro();
-				});
+				else
+				{
+					new FlxTimer().start(1, function(tmr:FlxTimer)
+					{
+						startIntro();
+					});
+				}
 			}
 		}
 		#end
 	}
 
+	function trollIntro()
+	{
+		//new FlxTimer().start(0.1, function(tmr:FlxTimer)
+		//{
+			trace ('troll');
+			//FlxG.save.data.doTrollIntro = false;
+			//FlxG.save.flush();
+
+			#if MODS_ALLOWED
+			Paths.pushGlobalMods();
+			#end
+			WeekData.loadTheFirstEnabledMod();
+			CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
+
+			PlayState.isStoryMode = true;
+			PlayState.storyDifficulty = 2;
+			PlayState.SONG = Song.loadFromJson('introllduction-hard', 'introllduction');
+			PlayState.campaignScore = 0;
+			PlayState.campaignMisses = 0;
+			PlayState.storyWeek = 0;
+			PlayState.storyPlaylist = ['Introllduction'];
+			//MusicBeatState.switchState(new PlayState());
+			LoadingState.loadAndSwitchState(new PlayState());
+		//});
+	}
+
 	var logoBl:FlxSprite;
-	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
+	var whitebg:FlxSprite = new FlxSprite();
 
 	function startIntro()
 	{
+		//if (FlxG.save.data.songScores == null)
+		//	trollIntro();
+		//else
+		//{
 		if (!initialized)
 		{
 			/*var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond);
@@ -256,13 +303,15 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite().loadGraphic(Paths.image('halloLogo'));
-	//	logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+		whitebg.makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+		whitebg.alpha = 0;
+		add(whitebg);
+
+		logoBl = new FlxSprite();
+		logoBl.frames = Paths.getSparrowAtlas('logoBump');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-	//	logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
-	//	logoBl.animation.play('bump');
-		logoBl.setGraphicSize(Std.int(logoBl.width * 0.5));
-		logoBl.updateHitbox();
+		logoBl.animation.addByPrefix('bump', 'logoBump', 24, false);
+		logoBl.animation.play('bump');
 		logoBl.screenCenter();
 		logoBl.y -= 50;
 
@@ -310,7 +359,7 @@ class TitleState extends MusicBeatState
 		titleText.antialiasing = ClientPrefs.globalAntialiasing;
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
-		// titleText.screenCenter(X);
+		//titleText.screenCenter(X);
 		add(titleText);
 
 		//var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('halloLogo'));
@@ -335,7 +384,7 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
+		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('trollface')); //NOT ACTUALLY NG ANYMORE LOL ITS AN IMPOSTER TROLL SUS !!! (kill me)
 		add(ngSpr);
 		ngSpr.visible = false;
 		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
@@ -351,6 +400,7 @@ class TitleState extends MusicBeatState
 			initialized = true;
 
 		// credGroup.add(credTextShit);
+		//}
 	}
 
 	function getIntroTextShit():Array<Array<String>>
@@ -506,75 +556,46 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
-	//	if(logoBl != null)
-	//		logoBl.animation.play('bump', true);
+		if(logoBl != null)
+			logoBl.animation.play('bump', true);
 
 		if(!closedState) {
 			sickBeats++;
 			switch (sickBeats)
 			{
 				case 1:
-					//FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Psych Engine by'], 15);
-					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
-					#end
-				// credTextShit.visible = true;
+					createCoolText(['a bunch of dumbasses']);
 				case 4:
-					#if PSYCH_WATERMARKS
-					addMoreText('Shadow Mario', 15);
-					addMoreText('RiverOaken', 15);
-					addMoreText('shubs', 15);
-					#else
 					addMoreText('present');
-					#end
-				// credTextShit.text += '\npresent...';
-				// credTextShit.addText();
 				case 5:
 					deleteCoolText();
-				// credTextShit.visible = false;
-				// credTextShit.text = 'In association \nwith';
-				// credTextShit.screenCenter();
 				case 6:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Not associated', 'with'], -40);
-					#else
 					createCoolText(['In association', 'with'], -40);
-					#end
 				case 8:
-					addMoreText('newgrounds', -40);
+					addMoreText('ur mom lol', -40);
 					ngSpr.visible = true;
-				// credTextShit.text += '\nNewgrounds';
 				case 9:
 					deleteCoolText();
 					ngSpr.visible = false;
-				// credTextShit.visible = false;
-
-				// credTextShit.text = 'Shoutouts Tom Fulp';
-				// credTextShit.screenCenter();
 				case 10:
 					createCoolText([curWacky[0]]);
-				// credTextShit.visible = true;
 				case 12:
 					addMoreText(curWacky[1]);
-				// credTextShit.text += '\nlmao';
 				case 13:
 					deleteCoolText();
-				// credTextShit.visible = false;
-				// credTextShit.text = "Friday";
-				// credTextShit.screenCenter();
+					addMoreText("Funk");
 				case 14:
-					addMoreText('Friday');
-				// credTextShit.visible = true;
+					deleteCoolText();
+					addMoreText("Funkin'");
 				case 15:
-					addMoreText('Night');
-				// credTextShit.text += '\nNight';
+					addMoreText('Phys');
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					deleteCoolText();
+					addMoreText("Funkin'");
+					addMoreText('Physics');
 
 				case 17:
 					skipIntro();
@@ -592,6 +613,7 @@ class TitleState extends MusicBeatState
 			remove(credGroup);
 			FlxG.camera.flash(FlxColor.WHITE, 4);
 			skippedIntro = true;
+			FlxTween.tween(whitebg, {alpha: 1}, 4);
 		}
 	}
 }

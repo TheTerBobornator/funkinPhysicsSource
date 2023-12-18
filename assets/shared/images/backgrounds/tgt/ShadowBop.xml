@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ShadowBop.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="EdgyLol0000" x="0" y="0" width="817" height="1174" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0001" x="0" y="0" width="817" height="1174" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0002" x="817" y="0" width="817" height="1174" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0003" x="817" y="0" width="817" height="1174" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0004" x="1634" y="0" width="817" height="1174" frameX="0" frameY="-2" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0005" x="1634" y="0" width="817" height="1174" frameX="0" frameY="-2" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0006" x="2451" y="0" width="817" height="1174" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0007" x="2451" y="0" width="817" height="1174" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0008" x="3268" y="0" width="818" height="1175" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0009" x="3268" y="0" width="818" height="1175" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0010" x="3268" y="0" width="818" height="1175" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0011" x="3268" y="0" width="818" height="1175" frameX="0" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0012" x="0" y="1175" width="816" height="1174" frameX="-1" frameY="-1" frameWidth="818" frameHeight="1176"/>
+	<SubTexture name="EdgyLol0013" x="0" y="1175" width="816" height="1174" frameX="-1" frameY="-1" frameWidth="818" frameHeight="1176"/>
+</TextureAtlas>

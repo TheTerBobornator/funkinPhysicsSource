@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stop_sign_blur_this.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Stop sign0000" x="5" y="5" width="980" height="2099" pivotX="-697.95" pivotY="329.9" frameX="-3" frameY="0" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0001" x="5" y="5" width="980" height="2099" frameX="-3" frameY="0" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0002" x="990" y="5" width="985" height="2107" frameX="0" frameY="0" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0003" x="990" y="5" width="985" height="2107" frameX="0" frameY="0" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0004" x="1980" y="5" width="980" height="2105" frameX="-2" frameY="-1" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0005" x="1980" y="5" width="980" height="2105" frameX="-2" frameY="-1" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0006" x="2965" y="5" width="989" height="2106" frameX="-1" frameY="-1" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0007" x="2965" y="5" width="989" height="2106" frameX="-1" frameY="-1" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0008" x="3959" y="5" width="988" height="2102" frameX="-3" frameY="-3" frameWidth="991" frameHeight="2107"/>
+	<SubTexture name="Stop sign0009" x="3959" y="5" width="988" height="2102" frameX="-3" frameY="-3" frameWidth="991" frameHeight="2107"/>
+</TextureAtlas>

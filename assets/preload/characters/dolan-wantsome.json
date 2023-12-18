@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "donal"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/dolanWantSome-redone",
+	"position": [
+		40,
+		250
+	],
+	"healthicon": "dolan",
+	"flip_x": false,
+	"healthbar_colors": [
+		69,
+		112,
+		240
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

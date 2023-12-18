@@ -1,0 +1,130 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				2,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "gf_dance1bop0"
+		},
+		{
+			"offsets": [
+				2,
+				-5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "gf_dance2bop0"
+		},
+		{
+			"offsets": [
+				0,
+				-12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "sad",
+			"loop": false,
+			"name": "gf_sad"
+		},
+		{
+			"offsets": [
+				2,
+				-13
+			],
+			"indices": [
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27
+			],
+			"fps": 24,
+			"anim": "danceRight-alt",
+			"loop": false,
+			"name": "gf_danceweegeed0"
+		},
+		{
+			"offsets": [
+				2,
+				-13
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"fps": 24,
+			"anim": "danceLeft-alt",
+			"loop": false,
+			"name": "gf_danceweegeed0"
+		},
+		{
+			"offsets": [
+				2,
+				30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "weegeed",
+			"loop": false,
+			"name": "gf_peek0"
+		},
+		{
+			"offsets": [
+				2,
+				-13
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle-alt",
+			"loop": false,
+			"name": "gf_danceweegeed0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/GFWeegee_Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-100,
+		-150
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

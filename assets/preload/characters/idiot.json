@@ -1,0 +1,119 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				411,
+				-80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "YouAreLeft"
+		},
+		{
+			"offsets": [
+				284,
+				249
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "YouAreUp"
+		},
+		{
+			"offsets": [
+				230,
+				-73
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "YouAreRight"
+		},
+		{
+			"offsets": [
+				390,
+				190
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "YouAreDown"
+		},
+		{
+			"offsets": [
+				420,
+				-10
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "YouAreIdle"
+		},
+		{
+			"offsets": [
+				420,
+				-10
+			],
+			"indices": [
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "YouAreIdle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/Idiot",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "idiot",
+	"flip_x": false,
+	"healthbar_colors": [
+		242,
+		242,
+		242
+	],
+	"camera_position": [
+		-390,
+		-50
+	],
+	"sing_duration": 6.0,
+	"scale": 0.8
+}

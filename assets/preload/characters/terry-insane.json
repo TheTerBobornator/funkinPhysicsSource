@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				90,
+				77
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle_Trollge"
+		},
+		{
+			"offsets": [
+				726,
+				147
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left_Trollge"
+		},
+		{
+			"offsets": [
+				155,
+				29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right_Trollge"
+		},
+		{
+			"offsets": [
+				492,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down_Trollge"
+		},
+		{
+			"offsets": [
+				384,
+				497
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up_Trollge"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/story/ImpendingDoom",
+	"position": [
+		140,
+		0
+	],
+	"healthicon": "terry-insane",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-370,
+		-180
+	],
+	"sing_duration": 3.5,
+	"scale": 1
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="logoBump.png">
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="logoBump0000" x="10" y="10" width="648" height="555"/>
+	<SubTexture name="logoBump0001" x="10" y="10" width="648" height="555"/>
+	<SubTexture name="logoBump0002" x="678" y="10" width="625" height="534" frameX="-11" frameY="-10" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0003" x="678" y="10" width="625" height="534" frameX="-11" frameY="-10" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0004" x="10" y="585" width="619" height="529" frameX="-14" frameY="-13" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0005" x="10" y="585" width="619" height="529" frameX="-14" frameY="-13" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0006" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0007" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0008" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0009" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0010" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0011" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0012" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0013" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+	<SubTexture name="logoBump0014" x="649" y="585" width="612" height="524" frameX="-18" frameY="-15" frameWidth="648" frameHeight="555"/>
+</TextureAtlas>

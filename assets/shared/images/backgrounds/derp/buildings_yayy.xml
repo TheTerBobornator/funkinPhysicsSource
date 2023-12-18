@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="buildings_yayy.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="buildings yayy0000" x="5" y="5" width="3176" height="1791" pivotX="1789.5" pivotY="865.7" frameX="0" frameY="0" frameWidth="3176" frameHeight="1793"/>
+	<SubTexture name="buildings yayy0001" x="5" y="5" width="3176" height="1791" frameX="0" frameY="0" frameWidth="3176" frameHeight="1793"/>
+	<SubTexture name="buildings yayy0002" x="5" y="1801" width="3176" height="1792" frameX="0" frameY="0" frameWidth="3176" frameHeight="1793"/>
+	<SubTexture name="buildings yayy0003" x="5" y="1801" width="3176" height="1792" frameX="0" frameY="0" frameWidth="3176" frameHeight="1793"/>
+</TextureAtlas>

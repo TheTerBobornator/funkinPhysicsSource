@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="popup.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idiotFlash0000" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0001" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0002" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0003" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0004" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0005" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0006" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0007" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0008" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0009" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0010" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0011" x="10" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0012" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0013" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0014" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0015" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0016" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0017" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0018" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0019" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0020" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0021" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0022" x="310" y="10" width="280" height="300"/>
+	<SubTexture name="idiotFlash0023" x="310" y="10" width="280" height="300"/>
+</TextureAtlas>

@@ -10,7 +10,7 @@ class StrumNote extends FlxSprite
 {
 	private var colorSwap:ColorSwap;
 	public var resetAnim:Float = 0;
-	private var noteData:Int = 0;
+	public var noteData:Int = 0;
 	public var direction:Float = 90;//plan on doing scroll directions soon -bb
 	public var downScroll:Bool = false;//plan on doing scroll directions soon -bb
 	public var sustainReduce:Bool = true;
@@ -34,7 +34,10 @@ class StrumNote extends FlxSprite
 		this.noteData = leData;
 		super(x, y);
 
-		var skin:String = 'NOTE_assets';
+		var skin:String = 'notes/NOTE_assets';
+		if (PlayState.SONG.mania > 0)
+			skin = 'notes/extra_NOTE_assets';
+
 		if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1) skin = PlayState.SONG.arrowSkin;
 		texture = skin; //Load texture and anims
 
@@ -83,32 +86,44 @@ class StrumNote extends FlxSprite
 		else
 		{
 			frames = Paths.getSparrowAtlas(texture);
-			animation.addByPrefix('green', 'arrowUP');
-			animation.addByPrefix('blue', 'arrowDOWN');
-			animation.addByPrefix('purple', 'arrowLEFT');
-			animation.addByPrefix('red', 'arrowRIGHT');
+			//animation.addByPrefix('green', 'arrowUP');
+			//animation.addByPrefix('blue', 'arrowDOWN');
+			//animation.addByPrefix('purple', 'arrowLEFT');
+			//animation.addByPrefix('red', 'arrowRIGHT');
 
 			antialiasing = ClientPrefs.globalAntialiasing;
-			setGraphicSize(Std.int(width * 0.7));
-
-			switch (Math.abs(noteData) % 4)
+			setGraphicSize(Std.int(width * Note.scales[(PlayState.absurde ? 0 : PlayState.SONG.mania)]));
+			
+			if (PlayState.SONG.mania > 0)
 			{
-				case 0:
-					animation.addByPrefix('static', 'arrowLEFT');
-					animation.addByPrefix('pressed', 'left press', 24, false);
-					animation.addByPrefix('confirm', 'left confirm', 24, false);
-				case 1:
-					animation.addByPrefix('static', 'arrowDOWN');
-					animation.addByPrefix('pressed', 'down press', 24, false);
-					animation.addByPrefix('confirm', 'down confirm', 24, false);
-				case 2:
-					animation.addByPrefix('static', 'arrowUP');
-					animation.addByPrefix('pressed', 'up press', 24, false);
-					animation.addByPrefix('confirm', 'up confirm', 24, false);
-				case 3:
-					animation.addByPrefix('static', 'arrowRIGHT');
-					animation.addByPrefix('pressed', 'right press', 24, false);
-					animation.addByPrefix('confirm', 'right confirm', 24, false);
+				var dirName = Main.gfxDir[Main.gfxHud[PlayState.SONG.mania][noteData]];
+				var pressName = Main.gfxLetter[Main.gfxIndex[PlayState.SONG.mania][noteData]];
+//				trace (dirName + ', ' + pressName);
+				animation.addByPrefix('static', 'arrow' + dirName);
+				animation.addByPrefix('pressed', pressName + ' press', 24, false);
+				animation.addByPrefix('confirm', pressName + ' confirm', 24, false);
+			}
+			else
+			{
+				switch (Math.abs(noteData) % 4)
+				{
+					case 0:
+						animation.addByPrefix('static', 'arrowLEFT');
+						animation.addByPrefix('pressed', 'left press', 24, false);
+						animation.addByPrefix('confirm', 'left confirm', 24, false);
+					case 1:
+						animation.addByPrefix('static', 'arrowDOWN');
+						animation.addByPrefix('pressed', 'down press', 24, false);
+						animation.addByPrefix('confirm', 'down confirm', 24, false);
+					case 2:
+						animation.addByPrefix('static', 'arrowUP');
+						animation.addByPrefix('pressed', 'up press', 24, false);
+						animation.addByPrefix('confirm', 'up confirm', 24, false);
+					case 3:
+						animation.addByPrefix('static', 'arrowRIGHT');
+						animation.addByPrefix('pressed', 'right press', 24, false);
+						animation.addByPrefix('confirm', 'right confirm', 24, false);
+				}
 			}
 		}
 		updateHitbox();
@@ -121,9 +136,10 @@ class StrumNote extends FlxSprite
 
 	public function postAddedToGroup() {
 		playAnim('static');
-		x += Note.swagWidth * noteData;
+		x += Note.swidths[(PlayState.absurde ? 0 : PlayState.SONG.mania)] * Note.swagWidth * Math.abs(noteData);
 		x += 50;
 		x += ((FlxG.width / 2) * player);
+		x -= Note.posRest[(PlayState.absurde ? 0 : PlayState.SONG.mania)];
 		ID = noteData;
 	}
 

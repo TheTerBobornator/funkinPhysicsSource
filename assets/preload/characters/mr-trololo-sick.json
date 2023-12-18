@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IdleTroll",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				31,
+				11
+			],
+			"anim": "ahem",
+			"fps": 24,
+			"name": "CoughTrollOne",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				172,
+				69
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LeftTroll",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-35,
+				-133
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "DownTroll",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-26,
+				68
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "UpTroll",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-59,
+				-47
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RightTroll",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				-200
+			],
+			"anim": "cough",
+			"fps": 24,
+			"name": "CoughTrollTwo",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/trolling/MrTrololoSick_Assets",
+	"position": [
+		160,
+		-350
+	],
+	"healthicon": "mr-trololo-sick",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		60,
+		-160
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

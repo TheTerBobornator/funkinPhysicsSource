@@ -1,0 +1,2 @@
+Value 1: Direction
+Value 2: Strums to move (All (0), Enemy (1), Player (2))

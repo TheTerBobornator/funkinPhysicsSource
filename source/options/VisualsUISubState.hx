@@ -63,6 +63,20 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+		var option:Option = new Option('Shaking and Movement',
+			"Uncheck this if you're sensitive to fast shaking/twitching/movements!\nThis includes camera, object, and window movement.",
+			'shaking',
+			'bool',
+			true);
+		addOption(option);
+
+		var option:Option = new Option('Photosensitive Visuals',
+			"Uncheck this if you're sensitive to extreme \ncolors/contrasts/shaders!",
+			'photosensitivity',
+			'bool',
+			true);
+		addOption(option);
+		
 		var option:Option = new Option('Camera Zooms',
 			"If unchecked, the camera won't zoom in on a beat hit.",
 			'camZooms',
@@ -99,14 +113,14 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.onChange = onChangeFPSCounter;
 		#end
 		
-		var option:Option = new Option('Pause Screen Song:',
+	/*	var option:Option = new Option('Pause Screen Song:',
 			"What song do you prefer for the Pause Screen?",
 			'pauseMusic',
 			'string',
 			'Tea Time',
 			['None', 'Breakfast', 'Tea Time']);
 		addOption(option);
-		option.onChange = onChangePauseMusic;
+		option.onChange = onChangePauseMusic;*/
 		
 		#if CHECK_FOR_UPDATES
 		var option:Option = new Option('Check for Updates',
@@ -121,7 +135,7 @@ class VisualsUISubState extends BaseOptionsMenu
 	}
 
 	var changedMusic:Bool = false;
-	function onChangePauseMusic()
+/*	function onChangePauseMusic()
 	{
 		if(ClientPrefs.pauseMusic == 'None')
 			FlxG.sound.music.volume = 0;
@@ -129,7 +143,7 @@ class VisualsUISubState extends BaseOptionsMenu
 			FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.pauseMusic)));
 
 		changedMusic = true;
-	}
+	}*/
 
 	override function destroy()
 	{

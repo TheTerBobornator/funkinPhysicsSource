@@ -1,63 +1,63 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Trollge Idle"
-		},
-		{
-			"offsets": [
-				101,
-				24
-			],
-			"indices": [],
 			"fps": 24,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "Trollge Left"
+			"name": "Trollge Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				-5,
+				16
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Trollge Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				47,
+				-97
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Trollge Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				98
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Trollge Up",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				44,
-				-100
+				-102
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN",
-			"loop": false,
-			"name": "Trollge Down"
-		},
-		{
-			"offsets": [
-				7,
-				99
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP",
-			"loop": false,
-			"name": "Trollge Up"
-		},
-		{
-			"offsets": [
-				50,
-				-100
-			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "Trollge Right"
+			"fps": 24,
+			"name": "Trollge Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/trolling/TrollgeUWU",
+	"image": "characters/story/TrollgeUWU",
 	"position": [
 		0,
 		0
@@ -65,9 +65,9 @@
 	"healthicon": "corruptus",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		135,
-		20
+		252,
+		226,
+		96
 	],
 	"camera_position": [
 		0,

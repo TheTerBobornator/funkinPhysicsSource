@@ -21,11 +21,12 @@ import WeekData;
 
 using StringTools;
 
-// leaving this state here for now because theres some other vars in other states that are dependent on it
-
 class StoryMenuState extends MusicBeatState
 {
-	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
+	//public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
+
+	public static var weekCompleted:Map<Int, Bool> = new Map<Int, Bool>();
+
 
 	var scoreText:FlxText;
 
@@ -70,7 +71,7 @@ class StoryMenuState extends MusicBeatState
 
 		var rankText:FlxText = new FlxText(0, 10);
 		rankText.text = 'RANK: GREAT';
-		rankText.setFormat(Paths.font("vcr.ttf"), 32);
+		rankText.setFormat(Paths.font("impact.otf"), 32);
 		rankText.size = scoreText.size;
 		rankText.screenCenter(X);
 
@@ -99,7 +100,7 @@ class StoryMenuState extends MusicBeatState
 		for (i in 0...WeekData.weeksList.length)
 		{
 			var weekFile:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
-			var isLocked:Bool = weekIsLocked(WeekData.weeksList[i]);
+			var isLocked:Bool = false; //weekIsLocked(WeekData.weeksList[i]);
 			if(!isLocked || !weekFile.hiddenUntilUnlocked)
 			{
 				loadedWeeks.push(weekFile);
@@ -285,7 +286,7 @@ class StoryMenuState extends MusicBeatState
 
 	function selectWeek()
 	{
-		if (!weekIsLocked(loadedWeeks[curWeek].fileName))
+		//if (!weekIsLocked(loadedWeeks[curWeek].fileName))
 		{
 			if (stopspamming == false)
 			{
@@ -323,9 +324,9 @@ class StoryMenuState extends MusicBeatState
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 				FreeplayState.destroyFreeplayVocals();
 			});
-		} else {
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-		}
+		} //else {
+			//FlxG.sound.play(Paths.sound('cancelMenu'));
+		//}
 	}
 
 	var tweenDifficulty:FlxTween;
@@ -386,7 +387,7 @@ class StoryMenuState extends MusicBeatState
 
 		var bullShit:Int = 0;
 
-		var unlocked:Bool = !weekIsLocked(leWeek.fileName);
+		var unlocked:Bool = true;//!weekIsLocked(leWeek.fileName);
 		for (item in grpWeekText.members)
 		{
 			item.targetY = bullShit - curWeek;
@@ -449,10 +450,10 @@ class StoryMenuState extends MusicBeatState
 		updateText();
 	}
 
-	function weekIsLocked(name:String):Bool {
-		var leWeek:WeekData = WeekData.weeksLoaded.get(name);
-		return (!leWeek.startUnlocked && leWeek.weekBefore.length > 0 && (!weekCompleted.exists(leWeek.weekBefore) || !weekCompleted.get(leWeek.weekBefore)));
-	}
+//	function weekIsLocked(name:String):Bool {
+//		var leWeek:WeekData = WeekData.weeksLoaded.get(name);
+//		return (!leWeek.startUnlocked && leWeek.weekBefore.length > 0 && (!weekCompleted.exists(leWeek.weekBefore) || !weekCompleted.get(leWeek.weekBefore)));
+//	}
 
 	function updateText()
 	{

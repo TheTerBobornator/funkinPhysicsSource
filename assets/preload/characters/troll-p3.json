@@ -1,7 +1,7 @@
 {
 	"animations": [
 		{
-			"loop": false,
+			"loop": true,
 			"offsets": [
 				0,
 				0
@@ -57,10 +57,10 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/trolling/troll3",
+	"image": "characters/story/troll3",
 	"position": [
 		0,
-		0
+		50
 	],
 	"healthicon": "troll-p3",
 	"flip_x": false,

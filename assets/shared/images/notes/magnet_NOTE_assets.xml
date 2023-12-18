@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="magnet_NOTE_assets.png">
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="A0000" x="10" y="10" width="154" height="157"/>
+	<SubTexture name="B0000" x="184" y="10" width="157" height="154"/>
+	<SubTexture name="C0000" x="361" y="10" width="157" height="154"/>
+	<SubTexture name="D0000" x="538" y="10" width="154" height="157"/>
+	<SubTexture name="E0000" x="361" y="10" width="157" height="154"/>
+	<SubTexture name="F0000" x="10" y="10" width="154" height="157"/>
+	<SubTexture name="G0000" x="184" y="10" width="157" height="154"/>
+	<SubTexture name="H0000" x="361" y="10" width="157" height="154"/>
+	<SubTexture name="I0000" x="538" y="10" width="154" height="157"/>
+	<SubTexture name="hold0000" x="712" y="10" width="50" height="44"/>
+	<SubTexture name="hold end0000" x="782" y="10" width="50" height="64"/>
+</TextureAtlas>

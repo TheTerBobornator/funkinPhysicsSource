@@ -3752,6 +3752,8 @@
 		"validScore": true,
 		"stage": "graveyard",
 		"bpm": 113,
-		"speed": 2.8
+		"speed": 2.8,
+		"credit": "STA",
+		"card": "scary"
 	}
 }

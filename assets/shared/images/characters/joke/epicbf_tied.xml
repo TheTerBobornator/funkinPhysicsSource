@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="epicbf_tied.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bftied0000" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0001" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0002" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0003" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0004" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0005" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0006" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0007" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0008" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0009" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0010" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0011" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0012" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0013" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0014" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0015" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0016" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0017" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0018" x="10" y="10" width="454" height="585"/>
+	<SubTexture name="bftied0019" x="10" y="10" width="454" height="585"/>
+</TextureAtlas>

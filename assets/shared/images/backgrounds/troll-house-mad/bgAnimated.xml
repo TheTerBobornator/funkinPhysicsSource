@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bgAnimated.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bgIdle0000" x="10" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0001" x="10" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0002" x="10" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0003" x="10" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0004" x="2590" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0005" x="2590" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0006" x="2590" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0007" x="2590" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0008" x="5170" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0009" x="5170" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0010" x="5170" y="10" width="2560" height="1400"/>
+	<SubTexture name="bgIdle0011" x="5170" y="10" width="2560" height="1400"/>
+</TextureAtlas>

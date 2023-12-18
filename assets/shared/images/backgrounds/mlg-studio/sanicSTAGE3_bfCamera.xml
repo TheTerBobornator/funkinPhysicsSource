@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanicSTAGE3_bfCamera.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cambf_idle0000" x="3" y="3" width="671" height="684" frameX="0" frameY="-25" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0001" x="3" y="3" width="671" height="684" frameX="0" frameY="-25" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0002" x="677" y="3" width="679" height="699" frameX="-5" frameY="-13" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0003" x="677" y="3" width="679" height="699" frameX="-5" frameY="-13" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0004" x="1359" y="3" width="676" height="710" frameX="-13" frameY="-4" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0005" x="1359" y="3" width="676" height="710" frameX="-13" frameY="-4" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0006" x="2038" y="3" width="666" height="714" frameX="-25" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0007" x="2038" y="3" width="666" height="714" frameX="-25" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0008" x="2707" y="3" width="663" height="714" frameX="-27" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0009" x="2707" y="3" width="663" height="714" frameX="-27" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0010" x="2707" y="3" width="663" height="714" frameX="-27" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0011" x="2707" y="3" width="663" height="714" frameX="-27" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0012" x="2707" y="3" width="663" height="714" frameX="-27" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_idle0013" x="2707" y="3" width="663" height="714" frameX="-27" frameY="0" frameWidth="691" frameHeight="714"/>
+	<SubTexture name="cambf_turning0000" x="3373" y="3" width="663" height="714" frameX="-115" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0001" x="3373" y="3" width="663" height="714" frameX="-115" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0002" x="3" y="720" width="743" height="652" frameX="-57" frameY="-109" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0003" x="3" y="720" width="743" height="652" frameX="-57" frameY="-109" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0004" x="749" y="720" width="575" height="771" frameX="-77" frameY="0" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0005" x="1327" y="720" width="669" height="714" frameX="0" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0006" x="1327" y="720" width="669" height="714" frameX="0" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0007" x="1999" y="720" width="662" height="714" frameX="-2" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0008" x="1999" y="720" width="662" height="714" frameX="-2" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0009" x="1999" y="720" width="662" height="714" frameX="-2" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0010" x="1999" y="720" width="662" height="714" frameX="-2" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0011" x="1999" y="720" width="662" height="714" frameX="-2" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0012" x="1999" y="720" width="662" height="714" frameX="-2" frameY="-53" frameWidth="800" frameHeight="771"/>
+	<SubTexture name="cambf_turning0013" x="1999" y="720" width="662" height="714" frameX="-2" frameY="-53" frameWidth="800" frameHeight="771"/>
+</TextureAtlas>

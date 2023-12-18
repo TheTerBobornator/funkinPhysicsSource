@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tableThrowDodgable.png">
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="tablespin0000" x="10" y="10" width="390" height="378" frameX="-5" frameY="-6" frameWidth="395" frameHeight="393"/>
+	<SubTexture name="tablespin0001" x="10" y="10" width="390" height="378" frameX="-5" frameY="-6" frameWidth="395" frameHeight="393"/>
+	<SubTexture name="tablespin0002" x="420" y="10" width="394" height="386" frameX="0" frameY="0" frameWidth="395" frameHeight="393"/>
+	<SubTexture name="tablespin0003" x="420" y="10" width="394" height="386" frameX="0" frameY="0" frameWidth="395" frameHeight="393"/>
+	<SubTexture name="tablespin0004" x="10" y="416" width="390" height="390" frameX="-5" frameY="-3" frameWidth="395" frameHeight="393"/>
+	<SubTexture name="tablespin0005" x="10" y="416" width="390" height="390" frameX="-5" frameY="-3" frameWidth="395" frameHeight="393"/>
+</TextureAtlas>

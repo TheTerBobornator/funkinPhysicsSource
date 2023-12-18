@@ -90,7 +90,9 @@ class FPS extends TextField
 			text += "\nMemory: " + memoryMegas + " MB";
 			#end
 
-			textColor = 0xFFFFFFFF;
+			//text += "\nFP Prerelease Build #4"; not anymore!
+
+			textColor = 0x00FFFF;
 			if (memoryMegas > 3000 || currentFPS <= ClientPrefs.framerate / 2)
 			{
 				textColor = 0xFFFF0000;

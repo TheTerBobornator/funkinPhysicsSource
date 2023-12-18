@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfSMWDEATH_assets.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bf_death0000" x="3" y="3" width="318" height="416"/>
+	<SubTexture name="bf_death0001" x="3" y="3" width="318" height="416"/>
+	<SubTexture name="bf_death0002" x="324" y="3" width="318" height="416"/>
+	<SubTexture name="bf_death0003" x="324" y="3" width="318" height="416"/>
+</TextureAtlas>

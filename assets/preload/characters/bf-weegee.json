@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "bf_idle0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				-7
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bf_left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				-35
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bf_down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				21
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bf_up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-5
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bf_right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-5
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "bf_missright0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				4
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "bf_missleft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				21
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "bf_missup0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				-35
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "bf_missdown0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/bf_weegee",
+	"position": [
+		60,
+		280
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-90,
+		50
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

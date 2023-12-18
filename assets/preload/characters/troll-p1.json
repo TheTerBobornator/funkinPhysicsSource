@@ -57,10 +57,10 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/trolling/troll1",
+	"image": "characters/story/troll1",
 	"position": [
 		0,
-		0
+		50
 	],
 	"healthicon": "troll-p1",
 	"flip_x": false,

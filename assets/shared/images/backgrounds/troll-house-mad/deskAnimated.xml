@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="deskAnimated.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="deskIdle0000" x="10" y="10" width="2232" height="628" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0001" x="10" y="10" width="2232" height="628" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0002" x="10" y="10" width="2232" height="628" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0003" x="10" y="10" width="2232" height="628" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0004" x="2262" y="10" width="2197" height="645" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0005" x="2262" y="10" width="2197" height="645" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0006" x="2262" y="10" width="2197" height="645" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0007" x="2262" y="10" width="2197" height="645" frameX="0" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0008" x="4479" y="10" width="2197" height="689" frameX="-13" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0009" x="4479" y="10" width="2197" height="689" frameX="-13" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0010" x="4479" y="10" width="2197" height="689" frameX="-13" frameY="0" frameWidth="2232" frameHeight="689"/>
+	<SubTexture name="deskIdle0011" x="4479" y="10" width="2197" height="689" frameX="-13" frameY="0" frameWidth="2232" frameHeight="689"/>
+</TextureAtlas>

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				131,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "weegee_left"
+		},
+		{
+			"offsets": [
+				119,
+				-109
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "weegee_down"
+		},
+		{
+			"offsets": [
+				311,
+				210
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "weegee_up"
+		},
+		{
+			"offsets": [
+				215,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "weegee_right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "weegee_idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/weegee_assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "weegee",
+	"flip_x": false,
+	"healthbar_colors": [
+		83,
+		176,
+		130
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

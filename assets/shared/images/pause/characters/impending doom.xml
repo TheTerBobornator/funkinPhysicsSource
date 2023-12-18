@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="impending doom.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="impending doom idle0000" x="10" y="10" width="812" height="537"/>
+	<SubTexture name="impending doom idle0001" x="10" y="10" width="812" height="537"/>
+	<SubTexture name="impending doom idle0002" x="10" y="10" width="812" height="537"/>
+	<SubTexture name="impending doom idle0003" x="10" y="10" width="812" height="537"/>
+	<SubTexture name="impending doom idle0004" x="842" y="10" width="811" height="537" frameX="0" frameY="0" frameWidth="812" frameHeight="537"/>
+	<SubTexture name="impending doom idle0005" x="842" y="10" width="811" height="537" frameX="0" frameY="0" frameWidth="812" frameHeight="537"/>
+	<SubTexture name="impending doom idle0006" x="842" y="10" width="811" height="537" frameX="0" frameY="0" frameWidth="812" frameHeight="537"/>
+	<SubTexture name="impending doom idle0007" x="842" y="10" width="811" height="537" frameX="0" frameY="0" frameWidth="812" frameHeight="537"/>
+</TextureAtlas>

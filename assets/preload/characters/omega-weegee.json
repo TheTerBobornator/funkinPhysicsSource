@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "gigaweegee_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-566,
+				170
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "gigaweegee_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-284,
+				2
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "gigaweegee_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-559,
+				65
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "gigaweegee_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-380,
+				70
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "gigaweegee_left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/internet/gigaweegee_assets",
+	"position": [
+		-230,
+		-800
+	],
+	"healthicon": "omega-weegee",
+	"flip_x": false,
+	"healthbar_colors": [
+		63,
+		122,
+		82
+	],
+	"camera_position": [
+		400,
+		180
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

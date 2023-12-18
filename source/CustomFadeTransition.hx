@@ -33,6 +33,8 @@ class CustomFadeTransition extends MusicBeatSubstate {
 		transGradient.scrollFactor.set();
 		add(transGradient);
 
+		//transBlack = new FlxSprite().loadGraphic(Paths.image('trollfaceBetter'));
+		//transBlack.setGraphicSize(Std.int(FlxG.width / zoom), Std.int(FlxG.height / zoom) + 400);
 		transBlack = new FlxSprite().makeGraphic(width, height + 400, FlxColor.BLACK);
 		transBlack.scrollFactor.set();
 		add(transBlack);

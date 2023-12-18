@@ -30,23 +30,19 @@ class MainMenuState extends MusicBeatState
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
+	var menuIcons:FlxTypedGroup<FlxSprite>;
+	var menuTxts:FlxTypedGroup<FlxText>;
+	var menuChars:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['story', 'freeplay', 'credits', 'options'];
-	/*[
-		'story_mode',
-		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
-		#if ACHIEVEMENTS_ALLOWED 'awards', #end
-		'credits',
-		#if !switch 'donate', #end
-		'options'
-	];*/
+	var optionShit:Array<String> = ['week1', 'week2', 'extras', 'credits', 'options', 'community'];
+	var unlockedArray:Array<Bool> = [true, false, false, true, true, true];//FlxG.save.data.mainMenuUnlocks;
 
-	var camFollow:FlxObject;
-	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
+
+	var completedItemTween:Bool = false;
+//anchors away
 
 	override function create()
 	{
@@ -54,6 +50,9 @@ class MainMenuState extends MusicBeatState
 		Paths.pushGlobalMods();
 		#end
 		WeekData.loadTheFirstEnabledMod();
+		CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
+
+		FlxG.mouse.visible = true;
 
 		#if desktop
 		// Updating Discord Rich Presence
@@ -61,97 +60,111 @@ class MainMenuState extends MusicBeatState
 		#end
 		debugKeys = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_1'));
 
-		camGame = new FlxCamera();
-		camAchievement = new FlxCamera();
-		camAchievement.bgColor.alpha = 0;
-
-		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camAchievement, false);
-		FlxG.cameras.setDefaultDrawTarget(camGame, true);
-
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
 		persistentUpdate = persistentDraw = true;
 
-	//	var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		
-	//	camFollow = new FlxObject(0, 0, 1, 1);
-	//	camFollowPos = new FlxObject(0, 0, 1, 1);
-	//	add(camFollow);
-	//	add(camFollowPos);
+		trace (StoryMenuState.weekCompleted);
+
+		if (StoryMenuState.weekCompleted != null)
+		{
+			if (StoryMenuState.weekCompleted.get(1) == true)
+			{
+				unlockedArray[1] = true;
+				if (StoryMenuState.weekCompleted.get(2) == true)
+					unlockedArray[2] = true;
+			}
+		}
+
+		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xffffffff);
+		add(bg);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
-
-		var scale:Float = 1;
-		/*if(optionShit.length > 6) {
-			scale = 6 / optionShit.length;
-		}*/
+		menuTxts = new FlxTypedGroup<FlxText>();
+		add(menuTxts);
+		menuIcons = new FlxTypedGroup<FlxSprite>();
+		add(menuIcons);
+		menuChars = new FlxTypedGroup<FlxSprite>();
+		add(menuChars);
 
 		for (i in 0...optionShit.length)
 		{
-			var menuItem:FlxSprite = new FlxSprite(0, 0);
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/Menu-Assets');
-			menuItem.animation.addByPrefix('idle', optionShit[i] + "Idle", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + "Select", 24);
-			menuItem.animation.play('idle');
-			menuItem.ID = i;
-			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			menuItem.setGraphicSize(Std.int(menuItem.width * 0.41));
-			menuItem.updateHitbox();
-			switch (i)
+			var item:FlxSprite = new FlxSprite().loadGraphic(Paths.image('mainmenu/item'));
+			item.setPosition(-item.width - 10, 25 * (i + 1) + (i * item.height));
+			item.ID = i;
+			item.antialiasing = ClientPrefs.globalAntialiasing;
+			FlxTween.tween(item, {x: -70}, 0.4 + (i * 0.1), {ease: FlxEase.quartInOut});
+			
+			var icon:FlxSprite = new FlxSprite().loadGraphic(Paths.image('mainmenu/' + (unlockedArray[i] ? optionShit[i] : 'lock')));
+			icon.setPosition(item.x + 290, item.y);
+			icon.alpha = 0;
+			icon.ID = i;
+			icon.antialiasing = ClientPrefs.globalAntialiasing;
+			FlxTween.tween(icon, {alpha: 1}, 0.2 + (i * 0.1), {ease: FlxEase.quartInOut, startDelay: 1.0,
+			onComplete: function(twn:FlxTween)
 			{
+				changeItem();
+				if (i == optionShit.length - 1)
+					completedItemTween = true;
+			}});
+
+			var displayText:String = '';
+			switch (i) 
+			{
+				case 0:
+					displayText = 'Week 1';
+					icon.offset.set(-19, 16);
 				case 1:
-					menuItem.x += FlxG.width - menuItem.width;
+					displayText = 'Week 2';
+					icon.offset.set(-43, 5);
 				case 2:
-					menuItem.y += FlxG.height - menuItem.height;
+					displayText = 'Extras';
+					icon.offset.set(0, 18);
 				case 3:
-					menuItem.x += FlxG.width - menuItem.width;
-					menuItem.y += FlxG.height - menuItem.height;
+					displayText = 'Credits';
+					icon.offset.set(-33, 9);
+				case 4:
+					displayText = 'Options';
+					icon.offset.set(-48, 10);
+				case 5:
+					displayText = 'Community';
+					icon.offset.set(-27, 6);
 			}
-			menuItems.add(menuItem);
+
+			if (unlockedArray[i] == false)
+				icon.offset.set(-33, 8);
+
+			var txt:FlxText = new FlxText(item.x + 80, item.y + 8, 0, displayText, 60);
+			txt.setFormat(Paths.font("impact.otf"), 60, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			txt.borderSize = 3;
+			txt.ID = i;
+			txt.antialiasing = ClientPrefs.globalAntialiasing;
+
+			var char:FlxSprite = new FlxSprite().loadGraphic(Paths.image('mainmenu/' + optionShit[i] + '-char'));
+			char.setPosition(FlxG.width - char.width, FlxG.height - char.height);
+			char.ID = i;
+			char.antialiasing = ClientPrefs.globalAntialiasing;
+			char.alpha = 0.00001;
+
+			menuItems.add(item);
+			menuTxts.add(txt);
+			menuIcons.add(icon);
+			menuChars.add(char);
 		}
 
-	//	FlxG.camera.follow(camFollowPos, null, 1);
-
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
-		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Funkin' Physics v" + Application.current.meta.get('version'), 12);
-		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
 		// NG.core.calls.event.logEvent('swag').send();
 
-		changeItem();
-
-		#if ACHIEVEMENTS_ALLOWED
-		Achievements.loadAchievements();
-		var leDate = Date.now();
-		if (leDate.getDay() == 5 && leDate.getHours() >= 18) {
-			var achieveID:Int = Achievements.getAchievementIndex('friday_night_play');
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
-				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-				giveAchievement();
-				ClientPrefs.saveSettings();
-			}
-		}
-		#end
-
 		super.create();
 	}
-
-	#if ACHIEVEMENTS_ALLOWED
-	// Unlocks "Freaky on a Friday Night" achievement
-	function giveAchievement() {
-		add(new AchievementObject('friday_night_play', camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement "friday_night_play"');
-	}
-	#end
 
 	var selectedSomethin:Bool = false;
 
@@ -163,30 +176,24 @@ class MainMenuState extends MusicBeatState
 			if(FreeplayState.vocals != null) FreeplayState.vocals.volume += 0.5 * elapsed;
 		}
 
-		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
-	//	camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+		for (i in 0...menuIcons.members.length)
+		{
+			menuIcons.members[i].setPosition(menuItems.members[i].x + 290, menuItems.members[i].y);
+		}
+		for (i in 0...menuTxts.members.length)
+		{
+			menuTxts.members[i].setPosition(menuItems.members[i].x + 80, menuItems.members[i].y + 8);
+		}
 
-		if (!selectedSomethin)
+		if (!selectedSomethin && completedItemTween)
 		{
 			if (controls.UI_UP_P)
-			{
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-				changeItem(-2);
-			}
-
-			if (controls.UI_DOWN_P)
-			{
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-				changeItem(2);
-			}
-
-			if (controls.UI_LEFT_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(-1);
 			}
 
-			if (controls.UI_RIGHT_P)
+			if (controls.UI_DOWN_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
@@ -200,69 +207,22 @@ class MainMenuState extends MusicBeatState
 			}
 
 			if (controls.ACCEPT)
-			{
-				if (optionShit[curSelected] == 'donate')
-				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
-				}
-				else
-				{
-					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
-					menuItems.forEach(function(spr:FlxSprite)
-					{
-						if (curSelected != spr.ID)
-						{
-							FlxTween.tween(spr, {alpha: 0}, 0.4, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									spr.kill();
-								}
-							});
-						}
-						else
-						{
-							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
-							{
-								var daChoice:String = optionShit[curSelected];
+				acceptOption();
 
-								switch (daChoice)
-								{
-									case 'story':
-									//	MusicBeatState.switchState(new StoryMenuState());
-									PlayState.isStoryMode = true;
-									PlayState.storyDifficulty = 2;
-									PlayState.SONG = Song.loadFromJson('tomfoolery-hard', 'tomfoolery');
-									PlayState.campaignScore = 0;
-									PlayState.campaignMisses = 0;
-									PlayState.storyWeek = 8;
-									PlayState.storyPlaylist = ['Tomfoolery'];
-									new FlxTimer().start(1, function(tmr:FlxTimer)
-									{
-										LoadingState.loadAndSwitchState(new PlayState(), true);
-										FreeplayState.destroyFreeplayVocals();
-									});
-										
-									case 'freeplay':
-										MusicBeatState.switchState(new FreeplaySelectState());
-										//MusicBeatState.switchState(new FreeplayState());
-									#if MODS_ALLOWED
-									case 'mods':
-										MusicBeatState.switchState(new ModsMenuState());
-									#end
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
-									case 'credits':
-										MusicBeatState.switchState(new CreditsState());
-									case 'options':
-										LoadingState.loadAndSwitchState(new options.OptionsState());
-								}
-							});
-						}
-					});
+			menuItems.forEach(function(spr:FlxSprite)
+			{
+				if (FlxG.mouse.overlaps(spr))
+				{
+					if (curSelected != spr.ID)
+					{
+						FlxG.sound.play(Paths.sound('scrollMenu'));
+						changeItem(spr.ID, true);
+					}
+					if (FlxG.mouse.justPressed)
+						acceptOption();
 				}
-			}
+			});
+
 			#if desktop
 		//	else if (FlxG.keys.anyJustPressed(debugKeys)) //no :)
 		//	{
@@ -273,37 +233,106 @@ class MainMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
-
-	/*	menuItems.forEach(function(spr:FlxSprite)
-		{
-			spr.screenCenter(X);
-		});*/
 	}
 
-	function changeItem(huh:Int = 0)
+	function acceptOption()
 	{
-		curSelected += huh;
+		if (unlockedArray[curSelected])
+		{
+			FlxG.cameras.flash(FlxColor.WHITE, 1, null, true);
+			selectedSomethin = true;
+			FlxG.sound.play(Paths.sound('confirmMenu'));
+			menuItems.forEach(function(spr:FlxSprite)
+			{
+				if (curSelected != spr.ID)
+				{
+					FlxTween.tween(spr, {x: -spr.width - 80}, 0.8 - -(spr.ID * 0.05), {
+						ease: FlxEase.quartInOut,
+						onComplete: function(twn:FlxTween)
+						{
+							spr.kill();
+						}
+					});
+				}
+				else
+				{
+					FlxFlicker.flicker(spr, 1, 0.05, true, false, function(flick:FlxFlicker)
+					{
+						var daChoice:String = optionShit[curSelected];
+						switch (daChoice)
+						{
+							case 'week1':
+								PlayState.isStoryMode = true;
+								PlayState.storyDifficulty = 2;
+								PlayState.SONG = Song.loadFromJson('trolling-hard', 'trolling');
+								PlayState.campaignScore = 0;
+								PlayState.campaignMisses = 0;
+								PlayState.storyWeek = 1;
+								PlayState.storyPlaylist = ['Trolling', 'Foretoken', 'Impending Doom'];
+								LoadingState.loadAndSwitchState(new PlayState(), true);
+								FreeplayState.destroyFreeplayVocals();
+							case 'week2':
+								PlayState.isStoryMode = true;
+								PlayState.storyDifficulty = 2;
+								PlayState.SONG = Song.loadFromJson('tomfoolery-hard', 'tomfoolery');
+								PlayState.campaignScore = 0;
+								PlayState.campaignMisses = 0;
+								PlayState.storyWeek = 2;
+								PlayState.storyPlaylist = ['Tomfoolery'];
+								LoadingState.loadAndSwitchState(new PlayState(), true);
+								FreeplayState.destroyFreeplayVocals();
+							case 'extras':
+								MusicBeatState.switchState(new FreeplaySelectState());
+							case 'credits':
+								MusicBeatState.switchState(new CreditsState());
+							case 'options':
+								LoadingState.loadAndSwitchState(new options.OptionsState());
+							case 'community':
+								MusicBeatState.switchState(new CommunityMenuState());
+						}
+					});
+				}
+			});
+			menuIcons.forEach(function(icon:FlxSprite)
+			{
+				if (icon.ID == curSelected)
+					FlxFlicker.flicker(icon, 1, 0.05, true, false);
+			});
+			menuTxts.forEach(function(txt:FlxSprite)
+			{
+				if (txt.ID == curSelected)
+					FlxFlicker.flicker(txt, 1, 0.05, true, false);
+			});
+		}
+	}
 
-		if (curSelected >= menuItems.length)
-			curSelected = 0;
-		if (curSelected < 0)
-			curSelected = menuItems.length - 1;
+	function changeItem(huh:Int = 0, ?mouseChange:Bool = false)
+	{
+		if (!mouseChange)
+		{
+			curSelected += huh;
+
+			if (curSelected >= menuItems.length)
+				curSelected = 0;
+			if (curSelected < 0)
+				curSelected = menuItems.length - 1;
+		}
+		else
+			curSelected = huh;
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.animation.play('idle');
-			spr.updateHitbox();
-
 			if (spr.ID == curSelected)
-			{
-				spr.animation.play('selected');
-				var add:Float = 0;
-				if(menuItems.length > 4) {
-					add = menuItems.length * 8;
-				}
-			//	camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y - add);
-				spr.centerOffsets();
-			}
+				FlxTween.tween(spr, {x: 0}, 0.1, {ease: FlxEase.quartInOut});
+			else
+				FlxTween.tween(spr, {x: -70}, 0.1, {ease: FlxEase.quartInOut});
+		});
+		menuChars.forEach(function(spr:FlxSprite)
+		{
+			if (spr.ID == curSelected)
+				spr.alpha = 1;
+			else
+				spr.alpha = 0.00001;
 		});
 	}
 }

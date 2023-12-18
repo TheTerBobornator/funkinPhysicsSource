@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Garrys.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Garrys Sing Note DOWN0000" x="4200" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note DOWN0001" x="4800" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note DOWN0002" x="5400" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note DOWN0003" x="6000" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note DOWN0004" x="6600" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note LEFT0000" x="7200" y="0" width="700" height="720"/>
+	<SubTexture name="Garrys Sing Note LEFT0001" x="7200" y="720" width="700" height="720"/>
+	<SubTexture name="Garrys Sing Note LEFT0002" x="7200" y="1440" width="700" height="720"/>
+	<SubTexture name="Garrys Sing Note LEFT0003" x="7200" y="2160" width="700" height="720"/>
+	<SubTexture name="Garrys Sing Note LEFT0004" x="7200" y="2880" width="700" height="720"/>
+	<SubTexture name="Garrys Sing Note RIGHT0000" x="3600" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note RIGHT0001" x="4200" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note RIGHT0002" x="4800" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note RIGHT0003" x="5400" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note RIGHT0004" x="6000" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note UP0000" x="0" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note UP0001" x="600" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note UP0002" x="1200" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note UP0003" x="1800" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note UP0004" x="2400" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys Sing Note UP0005" x="3000" y="1440" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0000" x="0" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0001" x="600" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0002" x="1200" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0003" x="1800" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0004" x="2400" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0005" x="3000" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0006" x="3600" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0007" x="4200" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0008" x="4800" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0009" x="5400" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0009" x="6000" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0009" x="6600" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0010" x="0" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0011" x="600" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0012" x="1200" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0013" x="1800" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0014" x="2400" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0015" x="3000" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0016" x="3600" y="720" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0017" x="0" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0018" x="0" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0019" x="0" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys idle dance0020" x="0" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys Tbag0000" x="0" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys Tbag0001" x="7200" y="3600" width="600" height="720"/>
+	<SubTexture name="Garrys Tbag0002" x="7200" y="4320" width="600" height="720"/>
+	<SubTexture name="Garrys Tbag0003" x="7200" y="4320" width="600" height="720"/>
+	<SubTexture name="Garrys Tbag0004" x="7200" y="5040" width="600" height="720"/>
+	<SubTexture name="Garrys Tbag0005" x="0" y="0" width="600" height="720"/>
+	<SubTexture name="Garrys jumping0000" x="0" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0001" x="800" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0002" x="1600" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0003" x="2400" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0004" x="3200" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0005" x="4000" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0006" x="4800" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0007" x="5600" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0008" x="6400" y="2160" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0009" x="0" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0010" x="800" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0011" x="1600" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0012" x="2400" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0013" x="3200" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0014" x="4000" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0015" x="4800" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0016" x="5600" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0017" x="6400" y="2880" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0018" x="0" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0019" x="800" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0020" x="1600" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0021" x="2400" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0022" x="3200" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0023" x="4000" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0024" x="4800" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0025" x="5600" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0026" x="6400" y="3600" width="800" height="720"/>
+	<SubTexture name="Garrys jumping0027" x="0" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0000" x="800" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0001" x="1600" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0002" x="2400" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0003" x="3200" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0004" x="4000" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0005" x="4800" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0006" x="5600" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0007" x="6400" y="4320" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0008" x="0" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0009" x="800" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0010" x="1600" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0011" x="2400" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0012" x="3200" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0013" x="4000" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0014" x="4800" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0015" x="5600" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0016" x="6400" y="5040" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0017" x="0" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0018" x="800" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0019" x="1600" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0020" x="2400" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0021" x="3200" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0022" x="4000" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0023" x="4800" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0024" x="5600" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0025" x="6400" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0026" x="7200" y="5760" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0027" x="0" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0028" x="800" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0029" x="1600" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0030" x="2400" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0031" x="3200" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0032" x="4000" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0033" x="4800" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0034" x="5600" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0035" x="6400" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0036" x="7200" y="6480" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0037" x="0" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0038" x="800" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0039" x="1600" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0040" x="2400" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0041" x="3200" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0042" x="4000" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0043" x="4800" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0044" x="5600" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0045" x="6400" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0046" x="7200" y="7200" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0047" x="0" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0048" x="800" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0049" x="1600" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0050" x="2400" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0051" x="3200" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0052" x="4000" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0053" x="4800" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0054" x="5600" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0055" x="6400" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0056" x="7200" y="7920" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0057" x="0" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0058" x="800" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0059" x="1600" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0060" x="2400" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0061" x="3200" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0062" x="4000" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0063" x="4800" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0064" x="5600" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0065" x="6400" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0066" x="7200" y="8640" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0067" x="0" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0068" x="800" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0069" x="1600" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0070" x="2400" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0071" x="3200" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0072" x="4000" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0073" x="4800" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0074" x="5600" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0075" x="6400" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0076" x="7200" y="9360" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0077" x="0" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0078" x="800" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0079" x="1600" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0080" x="2400" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0081" x="3200" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys getting nuke0082" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0000" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0001" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0002" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0003" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0004" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0005" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0006" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0007" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0008" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0009" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0010" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0011" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0012" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0013" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0014" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0015" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0016" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0017" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0018" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0019" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0020" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0021" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0022" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0023" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0024" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0025" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0026" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0027" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0028" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys standing nuke0029" x="4000" y="10080" width="800" height="720"/>
+	<SubTexture name="Garrys dying nuke0000" x="0" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0001" x="900" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0002" x="1800" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0003" x="2700" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0004" x="3600" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0005" x="4500" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0006" x="5400" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0007" x="6300" y="10800" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0008" x="0" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0009" x="900" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0010" x="1800" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0011" x="2700" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0012" x="3600" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0013" x="4500" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0014" x="5400" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0015" x="6300" y="11520" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0016" x="0" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0017" x="900" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0018" x="1800" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0019" x="2700" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0020" x="3600" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0021" x="4500" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0022" x="5400" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0023" x="6300" y="12240" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0024" x="0" y="12960" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+	<SubTexture name="Garrys dying nuke0025" x="900" y="12960" width="900" height="720" frameX="500" frameY="0" frameWidth="900" frameHeight="720"/>
+</TextureAtlas>

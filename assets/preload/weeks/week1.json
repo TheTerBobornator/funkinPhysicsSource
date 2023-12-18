@@ -1,0 +1,50 @@
+{
+	"storyName": "Week 0",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week0",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Trolling",
+			"terry",
+			[
+				0,
+				0,
+				0
+			]
+		],
+		[
+			"Foretoken",
+			"terry-mad",
+			[
+				0,
+				0,
+				0
+			]
+		],
+		[
+			"Impending Doom",
+			"terry-insane",
+			[
+				0,
+				0,
+				0
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Week 1",
+	"hiddenUntilUnlocked": false
+}

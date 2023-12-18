@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="limc_trollge.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="0" y="0" width="523" height="471"/>
+	<SubTexture name="down0001" x="523" y="0" width="523" height="471"/>
+	<SubTexture name="idle0000" x="1046" y="0" width="404" height="530"/>
+	<SubTexture name="idle0001" x="1450" y="0" width="404" height="530"/>
+	<SubTexture name="idle0002" x="1854" y="0" width="404" height="530"/>
+	<SubTexture name="idle0003" x="2258" y="0" width="404" height="530"/>
+	<SubTexture name="idle0004" x="2662" y="0" width="404" height="530"/>
+	<SubTexture name="idle0005" x="3066" y="0" width="404" height="530"/>
+	<SubTexture name="idle0006" x="3470" y="0" width="404" height="530"/>
+	<SubTexture name="idle0007" x="0" y="530" width="404" height="530"/>
+	<SubTexture name="left0000" x="404" y="530" width="430" height="516"/>
+	<SubTexture name="left0001" x="834" y="530" width="430" height="516"/>
+	<SubTexture name="right0000" x="1264" y="530" width="537" height="497"/>
+	<SubTexture name="right0001" x="1801" y="530" width="537" height="497"/>
+	<SubTexture name="up0000" x="2338" y="530" width="390" height="571"/>
+	<SubTexture name="up0001" x="2728" y="530" width="390" height="571"/>
+</TextureAtlas>

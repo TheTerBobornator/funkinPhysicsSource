@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanicSTAGE2_computerSN.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="minisonc_down0000" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0001" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0002" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0003" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0004" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0005" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0006" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0007" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0008" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0009" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0010" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0011" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0012" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_down0013" x="3" y="3" width="128" height="127"/>
+	<SubTexture name="minisonc_idle0000" x="134" y="3" width="104" height="153" frameX="-1" frameY="0" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0001" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0002" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0003" x="134" y="3" width="104" height="153" frameX="-1" frameY="0" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0004" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0005" x="134" y="3" width="104" height="153" frameX="-1" frameY="0" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0006" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0007" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0008" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0009" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0010" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0011" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0012" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_idle0013" x="241" y="3" width="103" height="146" frameX="0" frameY="-3" frameWidth="105" frameHeight="153"/>
+	<SubTexture name="minisonc_left0000" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0001" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0002" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0003" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0004" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0005" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0006" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0007" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0008" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0009" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0010" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0011" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0012" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_left0013" x="347" y="3" width="141" height="133"/>
+	<SubTexture name="minisonc_right0000" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0001" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0002" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0003" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0004" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0005" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0006" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0007" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0008" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0009" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0010" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0011" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0012" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_right0013" x="3" y="159" width="194" height="136"/>
+	<SubTexture name="minisonc_up0000" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0001" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0002" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0003" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0004" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0005" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0006" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0007" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0008" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0009" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0010" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0011" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0012" x="200" y="159" width="168" height="147"/>
+	<SubTexture name="minisonc_up0013" x="200" y="159" width="168" height="147"/>
+</TextureAtlas>

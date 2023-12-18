@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanicSTAGE2_computerBF.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="minib_down0000" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0001" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0002" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0003" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0004" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0005" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0006" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0007" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0008" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0009" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0010" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0011" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0012" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_down0013" x="3" y="3" width="118" height="103"/>
+	<SubTexture name="minib_idle0000" x="124" y="3" width="105" height="117"/>
+	<SubTexture name="minib_idle0001" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0002" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0003" x="124" y="3" width="105" height="117"/>
+	<SubTexture name="minib_idle0004" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0005" x="124" y="3" width="105" height="117"/>
+	<SubTexture name="minib_idle0006" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0007" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0008" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0009" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0010" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0011" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0012" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_idle0013" x="232" y="3" width="103" height="115" frameX="-1" frameY="0" frameWidth="105" frameHeight="117"/>
+	<SubTexture name="minib_left0000" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0001" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0002" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0003" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0004" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0005" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0006" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0007" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0008" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0009" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0010" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0011" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0012" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_left0013" x="338" y="3" width="126" height="119"/>
+	<SubTexture name="minib_right0000" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0001" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0002" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0003" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0004" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0005" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0006" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0007" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0008" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0009" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0010" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0011" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0012" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_right0013" x="3" y="125" width="120" height="118"/>
+	<SubTexture name="minib_up0000" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0001" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0002" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0003" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0004" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0005" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0006" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0007" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0008" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0009" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0010" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0011" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0012" x="126" y="125" width="104" height="127"/>
+	<SubTexture name="minib_up0013" x="126" y="125" width="104" height="127"/>
+</TextureAtlas>

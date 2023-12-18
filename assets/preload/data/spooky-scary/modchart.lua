@@ -5,6 +5,5 @@ function onCreate()
     addLuaSprite("funnyBlack", true)
 end
 function onSongStart()
-
     doTweenAlpha("shiiii", "funnyBlack", 0, 8.5, "quartIn")
 end

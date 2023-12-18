@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="its_called_a_road.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Road road road0000" x="5" y="5" width="3538" height="477" pivotX="1970.2" pivotY="-478.05" frameX="-2" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0001" x="5" y="5" width="3538" height="477" frameX="-2" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0002" x="5" y="487" width="3539" height="477" frameX="-1" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0003" x="5" y="487" width="3539" height="477" frameX="-1" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0004" x="5" y="969" width="3541" height="477" frameX="0" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0005" x="5" y="969" width="3541" height="477" frameX="0" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0006" x="5" y="1451" width="3540" height="478" frameX="0" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0007" x="5" y="1451" width="3540" height="478" frameX="0" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0008" x="5" y="1934" width="3539" height="477" frameX="-1" frameY="0" frameWidth="3541" frameHeight="478"/>
+	<SubTexture name="Road road road0009" x="5" y="1934" width="3539" height="477" frameX="-1" frameY="0" frameWidth="3541" frameHeight="478"/>
+</TextureAtlas>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cracksmoekr.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="chainsmoker0000" x="0" y="0" width="826" height="1165" frameX="0" frameY="-10" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0001" x="0" y="0" width="826" height="1165" frameX="0" frameY="-10" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0002" x="826" y="0" width="782" height="1131" frameX="-12" frameY="-18" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0003" x="826" y="0" width="782" height="1131" frameX="-12" frameY="-18" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0004" x="1608" y="0" width="760" height="1130" frameX="-24" frameY="-7" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0005" x="1608" y="0" width="760" height="1130" frameX="-24" frameY="-7" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0006" x="2368" y="0" width="755" height="1130" frameX="-21" frameY="-3" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0007" x="2368" y="0" width="755" height="1130" frameX="-21" frameY="-3" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0008" x="3123" y="0" width="748" height="1129" frameX="-25" frameY="0" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0009" x="3123" y="0" width="748" height="1129" frameX="-25" frameY="0" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0010" x="0" y="1165" width="752" height="1130" frameX="-24" frameY="-2" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0011" x="0" y="1165" width="752" height="1130" frameX="-24" frameY="-2" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0012" x="752" y="1165" width="770" height="1135" frameX="-16" frameY="-4" frameWidth="826" frameHeight="1175"/>
+	<SubTexture name="chainsmoker0013" x="752" y="1165" width="770" height="1135" frameX="-16" frameY="-4" frameWidth="826" frameHeight="1175"/>
+</TextureAtlas>

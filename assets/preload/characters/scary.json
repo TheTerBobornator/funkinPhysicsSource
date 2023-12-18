@@ -57,7 +57,7 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/trolling/Spooky_Assets",
+	"image": "characters/internet/Spooky_Assets",
 	"position": [
 		0,
 		100
@@ -73,6 +73,6 @@
 		0,
 		50
 	],
-	"sing_duration": 4.00000000000001,
+	"sing_duration": 4.0,
 	"scale": 1
 }

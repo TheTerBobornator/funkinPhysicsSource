@@ -14,7 +14,7 @@ local centerMod = 1
  local setColor = 'ffffff'
  local sungColor = 'ff7800'
 
- local font = 'vcr.ttf'
+ local font = 'impact.otf'
 
  local autoMode = false
 

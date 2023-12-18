@@ -1,5 +1,9 @@
 package;
 
+import flixel.system.FlxSound;
+import flixel.FlxCamera;
+import flixel.effects.FlxFlicker;
+import flixel.FlxSprite;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSubState;
@@ -19,19 +23,20 @@ class GameOverSubstate extends MusicBeatSubstate
 	var playingDeathSound:Bool = false;
 
 	var stageSuffix:String = "";
+	var endSound:FlxSound = new FlxSound(); //used to get the duration of the sfx for the fade to be more seamless
 
 	public static var characterName:String = 'bf-dead';
 	public static var deathSoundName:String = 'fnf_loss_sfx';
-	public static var loopSoundName:String = 'gameOver';
-	public static var endSoundName:String = 'gameOverEnd';
+	public static var loopSoundName:String = 'gameOverUpbeat';
+	public static var endSoundName:String = 'gameOverUpbeatEnd';
 
 	public static var instance:GameOverSubstate;
 
 	public static function resetVariables() {
 		characterName = 'bf-dead';
 		deathSoundName = 'fnf_loss_sfx';
-		loopSoundName = 'gameOver';
-		endSoundName = 'gameOverEnd';
+		loopSoundName = 'gameOverUpbeat';
+		endSoundName = 'gameOverUpbeatEnd';
 	}
 
 	override function create()
@@ -42,6 +47,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		super.create();
 	}
 
+	var daBPM:Int = 100;
 	public function new(x:Float, y:Float, camX:Float, camY:Float)
 	{
 		super();
@@ -58,7 +64,13 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollow = new FlxPoint(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
-		Conductor.changeBPM(100);
+		
+		switch (loopSoundName)
+		{
+			//case 'gameOverEvil':
+			//	daBPM = 144;
+		}
+		Conductor.changeBPM(daBPM);
 		// FlxG.camera.followLerp = 1;
 		// FlxG.camera.focusOn(FlxPoint.get(FlxG.width / 2, FlxG.height / 2));
 		FlxG.camera.scroll.set();
@@ -96,16 +108,10 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			WeekData.loadTheFirstEnabledMod();
 
-			switch (PlayState.SONG.song)
-			{
-				case 'Spooky Scary':
-					MusicBeatState.switchState(new FreeplaySelectState());
-				default:
-					if(PlayState.isStoryMode) 
-						MusicBeatState.switchState(new MainMenuState());
-					else
-						MusicBeatState.switchState(new FreeplayState());
-			}
+			if(PlayState.isStoryMode) 
+				MusicBeatState.switchState(new MainMenuState());
+			else
+				MusicBeatState.switchState(new FreeplayState(PlayState.songCategory));
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			PlayState.instance.callOnLuas('onGameOverConfirm', [false]);
@@ -163,7 +169,8 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	function coolStartDeath(?volume:Float = 1):Void
 	{
-		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
+		if (loopSoundName != '')
+			FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
 	}
 
 	function endBullshit():Void
@@ -173,11 +180,18 @@ class GameOverSubstate extends MusicBeatSubstate
 			isEnding = true;
 			boyfriend.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
-			FlxG.sound.play(Paths.music(endSoundName));
+			if (endSoundName != '')
+			{
+				endSound.loadEmbedded(Paths.music(endSoundName), false, true);
+				endSound.play(true, 0);
+				FlxG.sound.list.add(endSound);
+
+			}
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)
 			{
-				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()
+				FlxG.camera.fade(FlxColor.BLACK, (endSound.length / 1000) - 0.7, false, function()
 				{
+					endSound.destroy();
 					MusicBeatState.resetState();
 				});
 			});

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanicSpook.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sanic0000" x="10" y="10" width="809" height="946" frameX="0" frameY="-4" frameWidth="809" frameHeight="950"/>
+	<SubTexture name="sanic0001" x="839" y="10" width="809" height="946" frameX="0" frameY="-4" frameWidth="809" frameHeight="950"/>
+	<SubTexture name="sanic0002" x="10" y="976" width="809" height="950"/>
+</TextureAtlas>

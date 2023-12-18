@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="awestruckGAMEOVERretryBTN_assets.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="retrybtn_appear0000" x="3" y="3" width="100" height="100" frameX="-170" frameY="-40" frameWidth="577" frameHeight="205"/>
+	<SubTexture name="retrybtn_appear0001" x="106" y="3" width="577" height="69" frameX="0" frameY="-68" frameWidth="577" frameHeight="205"/>
+	<SubTexture name="retrybtn_appear0002" x="3" y="106" width="412" height="205" frameX="-82" frameY="0" frameWidth="577" frameHeight="205"/>
+	<SubTexture name="retrybtn_appear0003" x="418" y="106" width="410" height="171" frameX="-83" frameY="-17" frameWidth="577" frameHeight="205"/>
+	<SubTexture name="retrybtn_hover0000" x="3" y="314" width="410" height="171"/>
+	<SubTexture name="retrybtn_hover0001" x="416" y="314" width="382" height="171" frameX="-14" frameY="0" frameWidth="410" frameHeight="171"/>
+	<SubTexture name="retrybtn_loop0000" x="3" y="488" width="410" height="171"/>
+	<SubTexture name="retrybtn_loop0001" x="416" y="488" width="382" height="171" frameX="-14" frameY="0" frameWidth="410" frameHeight="171"/>
+	<SubTexture name="retrybtn_press0000" x="3" y="662" width="410" height="171" frameX="-83" frameY="-17" frameWidth="577" frameHeight="205"/>
+	<SubTexture name="retrybtn_press0001" x="416" y="662" width="412" height="205" frameX="-82" frameY="0" frameWidth="577" frameHeight="205"/>
+	<SubTexture name="retrybtn_press0002" x="3" y="870" width="577" height="69" frameX="0" frameY="-68" frameWidth="577" frameHeight="205"/>
+	<SubTexture name="retrybtn_press0003" x="583" y="870" width="100" height="100" frameX="-170" frameY="-40" frameWidth="577" frameHeight="205"/>
+</TextureAtlas>

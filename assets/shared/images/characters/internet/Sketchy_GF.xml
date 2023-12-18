@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Sketchy_GF.png">
+	<!-- Created with Adobe Animate version 23.0.1.70 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Sketchy_GF_Idle0000" x="10" y="10" width="465" height="647" frameX="-1" frameY="-1" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0001" x="10" y="10" width="465" height="647" frameX="-1" frameY="-1" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0002" x="495" y="10" width="465" height="648" frameX="-1" frameY="0" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0003" x="495" y="10" width="465" height="648" frameX="-1" frameY="0" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0004" x="980" y="10" width="464" height="646" frameX="-2" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0005" x="980" y="10" width="464" height="646" frameX="-2" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0006" x="1464" y="10" width="464" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0007" x="1464" y="10" width="464" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0008" x="1948" y="10" width="464" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0009" x="1948" y="10" width="464" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0010" x="1948" y="10" width="464" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0011" x="1948" y="10" width="464" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0012" x="1948" y="10" width="464" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0013" x="2432" y="10" width="463" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0014" x="2432" y="10" width="463" height="645" frameX="-2" frameY="-3" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0015" x="2915" y="10" width="462" height="644" frameX="-3" frameY="-4" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0016" x="2915" y="10" width="462" height="644" frameX="-3" frameY="-4" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0017" x="10" y="678" width="460" height="642" frameX="-4" frameY="-6" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0018" x="10" y="678" width="460" height="642" frameX="-4" frameY="-6" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0019" x="490" y="678" width="463" height="644" frameX="-3" frameY="-4" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0020" x="490" y="678" width="463" height="644" frameX="-3" frameY="-4" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0021" x="973" y="678" width="465" height="646" frameX="-2" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0022" x="973" y="678" width="465" height="646" frameX="-2" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0023" x="1458" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0024" x="1458" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0025" x="1942" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0026" x="1942" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0027" x="1942" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0028" x="1942" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0029" x="1942" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0030" x="2426" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0031" x="2426" y="678" width="464" height="646" frameX="-3" frameY="-2" frameWidth="468" frameHeight="648"/>
+	<SubTexture name="Sketchy_GF_Idle0032" x="2910" y="678" width="464" height="645" frameX="-3" frameY="-3" frameWidth="468" frameHeight="648"/>
+</TextureAtlas>

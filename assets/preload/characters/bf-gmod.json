@@ -1,0 +1,210 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-7,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF NOTE LEFT0"
+		},
+		{
+			"offsets": [
+				1,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF NOTE DOWN0"
+		},
+		{
+			"offsets": [
+				-5,
+				57
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "BF NOTE UP0"
+		},
+		{
+			"offsets": [
+				-6,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF NOTE RIGHT0"
+		},
+		{
+			"offsets": [
+				-6,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BF NOTE LEFT MISS"
+		},
+		{
+			"offsets": [
+				1,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF NOTE DOWN MISS"
+		},
+		{
+			"offsets": [
+				-5,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF NOTE UP MISS"
+		},
+		{
+			"offsets": [
+				-6,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF NOTE RIGHT MISS"
+		},
+		{
+			"offsets": [
+				-6,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF HEY"
+		},
+		{
+			"offsets": [
+				-9,
+				58
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
+		},
+		{
+			"offsets": [
+				-9,
+				58
+			],
+			"loop": true,
+			"fps": 14,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
+		},
+		{
+			"offsets": [
+				-9,
+				58
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF Dead confirm"
+		},
+		{
+			"offsets": [
+				-6,
+				56
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF idle dance"
+		},
+		{
+			"offsets": [
+				14,
+				56
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "staring",
+			"loop": false,
+			"name": "BF Staring"
+		},
+		{
+			"offsets": [
+				14,
+				56
+			],
+			"indices": [4],
+			"fps": 14,
+			"anim": "idle-staring",
+			"loop": false,
+			"name": "BF Staring"
+		},
+		{
+			"offsets": [
+				14,
+				56
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "shock",
+			"loop": false,
+			"name": "BF schocked"
+		},
+		{
+			"offsets": [
+				14,
+				56
+			],
+			"indices": [7],
+			"fps": 14,
+			"anim": "idle-shock",
+			"loop": false,
+			"name": "BF schocked"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/trolling/Gmod Bf",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
