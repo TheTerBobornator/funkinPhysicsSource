@@ -511,7 +511,6 @@ class PlayState extends MusicBeatState
 			"happiness" => "Chill",
 			"controlling yourself" => "Tense",
 			"spooky scary" => "Chill",
-			"idiot" => "Chill"
 		];
 
 		if (pauseMusicPerSongMap.get(SONG.song.toLowerCase()) == null)
@@ -4298,10 +4297,12 @@ class PlayState extends MusicBeatState
 						}
 					case 'chrom' | 'chroma' | 'chromatic' | 'chromatic abberation':
 						if (ClientPrefs.photosensitivity)
+						{
 							if (value1.toLowerCase() == 'camhud' || value1.toLowerCase() == 'hud')
 								addChroma(0.002, true);
 							else
 								addChroma(0.002, false);
+						}
 					case 'static' | 'vcr':
 						if (value1.toLowerCase() == 'camhud' || value1.toLowerCase() == 'hud')
 							shadersHUD.push(new ShaderFilter(new Shaders.Static()));
@@ -4318,13 +4319,16 @@ class PlayState extends MusicBeatState
 						else
 							shadersGame.push(new ShaderFilter(new Shaders.RedColorShaderTest()));
 					case 'mlg':
-						if (mlgShader == null)
-							mlgShader = new ColorSwap();
+						if (ClientPrefs.photosensitivity && ClientPrefs.flashing)
+						{
+							if (mlgShader == null)
+								mlgShader = new ColorSwap();
 
-						if (value1.toLowerCase() == 'camhud' || value1.toLowerCase() == 'hud')
-							shadersHUD.push(new ShaderFilter(mlgShader.shader));
-						else
-							shadersGame.push(new ShaderFilter(mlgShader.shader));
+							if (value1.toLowerCase() == 'camhud' || value1.toLowerCase() == 'hud')
+								shadersHUD.push(new ShaderFilter(mlgShader.shader));
+							else
+								shadersGame.push(new ShaderFilter(mlgShader.shader));
+						}
 
 					case 'clear' | 'null' | 'none':
 						if (value1.toLowerCase() == 'camhud' || value1.toLowerCase() == 'hud')
@@ -5802,7 +5806,6 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-
 			curMagnetScroll = Std.int(Math.abs(daNote.noteData));
 		}
 	}
@@ -6229,7 +6232,7 @@ class PlayState extends MusicBeatState
 		{
 			Application.current.window.resizable = true;
 			//Application.current.window.title = Application.current.meta.get('title'); poo
-			Application.current.window.title = "Funkin' Physics v2.0.0";
+			Application.current.window.title = "Funkin' Physics v2.0.1";
 			Main.fpsVar.visible = ClientPrefs.showFPS;
 		}
 		super.destroy();

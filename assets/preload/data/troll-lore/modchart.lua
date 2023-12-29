@@ -1,9 +1,11 @@
 local trollfaceSinging = false;
 
 function onCreatePost()
-	for i=0,3 do
-		setPropertyFromGroup('opponentStrums', i, 'x', _G['defaultPlayerStrumX'..i])
-		setPropertyFromGroup('playerStrums', i, 'x', _G['defaultOpponentStrumX'..i])
+    if not middlescroll then
+        for i=0,3 do
+	    	setPropertyFromGroup('opponentStrums', i, 'x', _G['defaultPlayerStrumX'..i])
+	    	setPropertyFromGroup('playerStrums', i, 'x', _G['defaultOpponentStrumX'..i])
+        end
 	end
 
     setProperty('gf.alpha', 0.00001)
@@ -45,8 +47,10 @@ function onBeatHit()
     end
 
     if curBeat == 456 then
-        for i=0,3 do
-            noteTweenAlpha('noteTweenAlpha'..i, i, 0, 1, 'quadInOut')
+        if not middlescroll then
+            for i=0,3 do
+                noteTweenAlpha('noteTweenAlpha'..i, i, 0, 1, 'quadInOut')
+            end
         end
     end
 
@@ -55,8 +59,10 @@ function onBeatHit()
         if curBeat == 460 or curBeat == 524 or curBeat == 604 then
             trollfaceSinging = true
             triggerEvent('Change Icon', 'player', 'lore-trollface')
-            for i=0,3 do
-                noteTweenX('noteTweenTrollface'..i, i + 4, _G['defaultPlayerStrumX'..i], 1, 'bounceOut')
+            if not middlescroll then
+                for i=0,3 do
+                    noteTweenX('noteTweenTrollface'..i, i + 4, _G['defaultPlayerStrumX'..i], 1, 'bounceOut')
+                end
             end
         end
     end
@@ -65,8 +71,10 @@ function onBeatHit()
         if curBeat == 508 or curBeat == 588 then
             trollfaceSinging = false
             triggerEvent('Change Icon', 'player', 'lore-trollge')
-            for i=0,3 do
-                noteTweenX('noteTweenTrollge'..i, i + 4, _G['defaultOpponentStrumX'..i], 1, 'bounceOut')
+            if not middlescroll then
+                for i=0,3 do
+                    noteTweenX('noteTweenTrollge'..i, i + 4, _G['defaultOpponentStrumX'..i], 1, 'bounceOut')
+                end
             end
         end
     end

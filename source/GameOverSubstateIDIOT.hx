@@ -114,7 +114,7 @@ class GameOverSubstateIDIOT extends MusicBeatSubstate
 
 	function coolStartDeath(?volume:Float = 1):Void
 	{
-		FlxG.sound.playMusic(Paths.music('gameOverIDIOT'), volume);
+		FlxG.sound.playMusic(Paths.music('gameOverIDIOT'), volume, true);
 	}
 
 	function endBullshit():Void
@@ -124,7 +124,7 @@ class GameOverSubstateIDIOT extends MusicBeatSubstate
 			isEnding = true;
 			dead.animation.play('confirm', true);
 			FlxG.sound.music.stop();
-			FlxG.sound.play(Paths.music('gameOverChillEnd'));
+			FlxG.sound.play(Paths.music('gameOverUpbeatEnd'));
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)
 			{
 				stupid.fade(FlxColor.BLACK, 2, false, function()

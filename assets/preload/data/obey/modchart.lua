@@ -1,7 +1,11 @@
 local bfOriginX = 0
 local bfOriginY = 0
 local bfOriginWidth = 0
+local defaultOpponentStrumAlpha = 1
 function onCreate()
+    if middlescroll then
+        defaultOpponentStrumAlpha = 0.35
+    end
     setProperty('skipCredit', true)
     setProperty('camZooming', true)
     setProperty('camZoomingMult', 0)
@@ -107,7 +111,7 @@ function onBeatHit()
         setGraphicSize('boyfriend', bfOriginWidth)
         setProperty('malleo.alpha', 1)
         for i=0,3 do
-            setPropertyFromGroup('opponentStrums', i, 'alpha', 1)
+            setPropertyFromGroup('opponentStrums', i, 'alpha', defaultOpponentStrumAlpha)
             setPropertyFromGroup('playerStrums', i, 'x', _G['defaultPlayerStrumX'..i])
             setPropertyFromGroup('weegeeGroup', i, 'alpha', 1)
             setPropertyFromGroup('weegeeGroup', i + 3, 'alpha', 1)
@@ -119,7 +123,7 @@ function onBeatHit()
     end
     if curBeat == 356 then
         for i=0,3 do
-			setPropertyFromGroup('opponentStrums', i, 'alpha', 0)
+			setPropertyFromGroup('opponentStrums', i, 'alpha', 0.35)
             setPropertyFromGroup('playerStrums', i, 'x', (-228 + (160 * getPropertyFromClass('Note', 'swagWidth') * i) + (screenWidth / 2)))
 		end
         setProperty('bubbles.alpha', 1)
@@ -167,7 +171,7 @@ function onBeatHit()
     end
     if curBeat == 505 then
         for i=0,3 do
-            setPropertyFromGroup('opponentStrums', i, 'alpha', 1)
+            setPropertyFromGroup('opponentStrums', i, 'alpha', defaultOpponentStrumAlpha)
             setPropertyFromGroup('playerStrums', i, 'x', _G['defaultPlayerStrumX'..i])
         end
     end

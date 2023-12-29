@@ -15,10 +15,10 @@ end
 function onTimerCompleted(timer)
 	if timer == 'noteReset' then
 		for i=0,3 do
-			noteTweenX('defaultNotetweenX'..i, i, _G['defaultOpponentStrumX'..i], 0.8, 'bounceOut')
-			noteTweenY('defaultNotetweenY'..i, i, _G['defaultOpponentStrumY'..i], 0.8, 'bounceOut')
-			noteTweenX('defaultNotetweenX'..i + 4, i + 4, _G['defaultPlayerStrumX0'..i], 0.8, 'bounceOut')
-			noteTweenY('defaultNotetweenY'..i + 4, i + 4, _G['defaultPlayerStrumY0'..i], 0.8, 'bounceOut')
+			noteTweenX('grenadeReturnDefaultNotetweenX'..i, i, _G['defaultOpponentStrumX'..i], 0.8, 'bounceOut')
+			noteTweenY('grenadeReturnDefaultNotetweenY'..i, i, _G['defaultOpponentStrumY'..i], 0.8, 'bounceOut')
+			noteTweenX('grenadeReturnDefaultNotetweenX'..i + 4, i + 4, _G['defaultPlayerStrumX'..i], 0.8, 'bounceOut')
+			noteTweenY('grenadeReturnDefaultNotetweenY'..i + 4, i + 4, _G['defaultPlayerStrumY'..i], 0.8, 'bounceOut')
 		end
 	end
 end

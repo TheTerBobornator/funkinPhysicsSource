@@ -1,5 +1,5 @@
 Directors
-Balloon::balloon::Lead Director, Creator of Funkin Physics, Artist::https://twitter.com/Balloon84195471::0xFFffe400
+Balloon::balloon::Lead Director, Creator of Funkin Physics, Artist::https://twitter.com/MrBalloon_898::0xFFffe400
 Dest::dest::Director, Charter, Artist::https://twitter.com/DesttBruh::0xFFf3d284
 
 Co-Directors
@@ -33,7 +33,7 @@ Delete That::delete-that::Composer::https://twitter.com/DeleteThatTaken::0xFF0f0
 Keegan::keegan::Composer::https://twitter.com/__Keegan_::0xFF4d1cff
 Armydillo::armydillo::Composer::https://twitter.com/Armydilloiscool::0xFF9a7df0
 Leslay::leslay::Chromatic Scale maker::https://twitter.com/LeSlayWasTaken::0xFFc10f0f
-Ironik::ironic::Composer::https://twitter.com/Ironik0422::0xFFefd295
+Ironik::ironik::Composer::https://twitter.com/Ironik0422::0xFFefd295
 
 Animators
 Cheez::cheez::Animator::https://twitter.com/cheezsomething::0xFF9f9eaa
@@ -50,7 +50,7 @@ Martin::martin::Charter::https://twitter.com/LeBallBackup::0xFFc62b2d
 
 Voice Actors
 Ovron::ovron::Voice Actor::https://gamebanana.com/members/1903050::0xFF2d5ec0
-Mr. Salvage::mr-salvage::Voice Actor::https://twitter.com/MrSalvage3::0xFFe9b600
+Mr. Salvage::mr-salvage::Voice Actor::https://twitter.com/MrSalvage3 ::0xFFe9b600
 TylerTheGamer::tyler-the-gamer::Voice Actor::https://twitter.com/TylerTheGamer64::0xFFc21b3a
 Flaconadir::flaconadir::Voice Actor::https://twitter.com/flaconadir::0xFF94252f
 

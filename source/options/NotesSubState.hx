@@ -42,9 +42,14 @@ class NotesSubState extends MusicBeatSubstate
 	var hsbText:Alphabet;
 
 	var posX = 230;
+
+	var backButton:MenuBackButton;
+
 	public function new() {
 		super();
 		
+		FlxG.mouse.visible = true;
+
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = 0xFFea71fd;
 		bg.screenCenter();
@@ -89,7 +94,7 @@ class NotesSubState extends MusicBeatSubstate
 		hsbText.x = posX + 240;
 		add(hsbText);
 
-		var backButton:MenuBackButton = new MenuBackButton(null);
+		backButton = new MenuBackButton(null);
 		add(backButton);
 		
 		changeSelection();
@@ -175,7 +180,7 @@ class NotesSubState extends MusicBeatSubstate
 			}
 		}
 
-		if (controls.BACK || (changingNote && controls.ACCEPT)) {
+		if (controls.BACK || (changingNote && controls.ACCEPT) || (FlxG.mouse.justPressed && FlxG.mouse.overlaps(backButton))) {
 			if(!changingNote) {
 				close();
 			} else {

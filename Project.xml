@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Funkin' Physics v2.0.0" file="Funkin' Physics" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="2.0.0" company="ShadowMario" />
+	<app title="Funkin' Physics v2.0.1" file="Funkin' Physics" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="2.0.1" company="ShadowMario" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />

@@ -54,6 +54,11 @@ function onBeatHit()
         setProperty('opponentCameraOffset[0]', getProperty('opponentCameraOffset[0]') + 150)
         setProperty('opponentCameraOffset[1]', getProperty('opponentCameraOffset[1]') - 100)
     end
+    if curBeat == 33 then
+        --idk some people had issues with these getting fucked? temp solution sort of 
+        setProperty('funnyBlack.alpha', 0)
+        setProperty('camHUD.alpha', 1)
+    end
     if curBeat == 111 then
         for i=3,7 do
             if i % 2 == 0 then

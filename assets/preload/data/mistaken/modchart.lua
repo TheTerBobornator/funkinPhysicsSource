@@ -1,66 +1,26 @@
-local normal = false
+-- rebuilt from the ground up from whatever the hell version 1.5's was
+-- shouldnt have noticable differences but i still hate this modchart, i wanna keep it the same for the fans tho
 
-local weee = false
-
-local bopping = false
-local bopping2 = false
-
-local x4,x5,x6,x7,y4,y5,y6,y7
-
-function update (elapsed)
-local currentBeat = (songPos / 1000)*(bpm/60)
-    if weee then
-        for i=0,7 do
-            setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((currentBeat + i*7)), i)
-            setActorY(_G['defaultStrum'..i..'Y'],i)
+function onUpdate(elapsed)
+    local currentBeat = (getSongPosition()/1000)*(curBpm/60)
+    if curBeat >= 128 then
+        for i=0,3 do
+            setPropertyFromGroup('opponentStrums', i, 'x', _G['defaultOpponentStrumX'..i] + 32 * math.sin(currentBeat + i*7))
+            setPropertyFromGroup('playerStrums', i, 'x', _G['defaultPlayerStrumX'..i] + 32 * math.sin(currentBeat + (i+4)*7))
         end
-        camHudAngle = 10 * math.sin(currentBeat * 0.5)
-        cameraAngle = 10 * math.sin(currentBeat * 0.5)
+        doTweenAngle('hudwweeeeww', 'camHUD', 10 * math.sin(currentBeat * 0.5), 0.1)
+        doTweenAngle('gamewweeeeww', 'camGame', 10 * math.sin(currentBeat * 0.5), 0.1)
     end
 end
 
-
-
-function beatHit (beat)
-	if bopping then
-		setCamZoom(1)
-	end
-    if bopping2 then
-		setHudZoom(1.25)
-	end
-end
-
-
-
-
-function stepHit (step)
-    if step == 1 then
-        changeDadCharacter("trolling2e")
-        changeDadCharacter("trolling2")
+function onBeatHit()
+    if curBeat >= 128 and curBeat < 288 then
+        setProperty('camGame.zoom', 1) --boi what the hell boi
     end
-	if step == 512 then
-		weee = true
-        bopping = true
+    if curBeat >= 288 and curBeat < 368 then
+        setProperty('camHUD.zoom', 1.25)
     end
-    if step == 1152 then
-        bopping2 = true
-        bopping = false
-        changeDadCharacter("trolling2e")
+    if curBeat == 368 then
+        doTweenAlpha('bye', 'camHUD', 0, 2)
     end
-    if step == 1472 then
-        bopping2 = false
-        tweenFadeOut('camHUD',0,2)
-        tweenFadeOut('camNotes',0,2)
-        tweenFadeOut('camSustains',0,2)
-    end
-end
-
-
-
-function playerTwoTurn()
-    tweenZoom(camGame,1.3,0.1)
-end
-
-function playerOneTurn()
-    tweenZoom(camGame,0.90,0.1)
 end

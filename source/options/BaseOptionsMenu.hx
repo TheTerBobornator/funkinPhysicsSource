@@ -43,6 +43,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 
 	public var title:String;
 	public var rpcTitle:String;
+	var backButton:MenuBackButton;
 
 	public function new()
 	{
@@ -55,6 +56,8 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		DiscordClient.changePresence(rpcTitle, null);
 		#end
 		
+		FlxG.mouse.visible = true;
+
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = 0xFFea71fd;
 		bg.screenCenter();
@@ -121,7 +124,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 			updateTextFrom(optionsArray[i]);
 		}
 
-		var backButton:MenuBackButton = new MenuBackButton(null);
+		backButton = new MenuBackButton(null);
 		add(backButton);
 
 		changeSelection();
@@ -150,7 +153,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		if(FlxG.mouse.wheel != 0)
 			changeSelection(-FlxG.mouse.wheel);
 
-		if (controls.BACK) {
+		if (controls.BACK || (FlxG.mouse.justPressed && FlxG.mouse.overlaps(backButton))) {
 			close();
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
@@ -265,6 +268,8 @@ class BaseOptionsMenu extends MusicBeatSubstate
 			}
 		}
 
+
+		
 		if(boyfriend != null && boyfriend.animation.curAnim.finished) {
 			boyfriend.dance();
 		}

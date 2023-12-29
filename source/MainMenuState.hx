@@ -42,6 +42,9 @@ class MainMenuState extends MusicBeatState
 	var debugKeys:Array<FlxKey>;
 
 	var completedItemTween:Bool = false;
+
+	var inputAttempt:String = '';
+
 //anchors away
 
 	override function create()
@@ -114,22 +117,22 @@ class MainMenuState extends MusicBeatState
 			switch (i) 
 			{
 				case 0:
-					displayText = 'Week 1';
+					displayText = 'Week 1 ';
 					icon.offset.set(-19, 16);
 				case 1:
-					displayText = 'Week 2';
+					displayText = 'Week 2 ';
 					icon.offset.set(-43, 5);
 				case 2:
-					displayText = 'Extras';
+					displayText = 'Freeplay '; // why did we call this extras
 					icon.offset.set(0, 18);
 				case 3:
-					displayText = 'Credits';
+					displayText = 'Credits ';
 					icon.offset.set(-33, 9);
 				case 4:
-					displayText = 'Options';
+					displayText = 'Options ';
 					icon.offset.set(-48, 10);
 				case 5:
-					displayText = 'Community';
+					displayText = 'Community ';
 					icon.offset.set(-27, 6);
 			}
 
@@ -160,6 +163,8 @@ class MainMenuState extends MusicBeatState
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Funkin' Physics v" + Application.current.meta.get('version'), 12);
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
+		inputAttempt = '';
 
 		// NG.core.calls.event.logEvent('swag').send();
 
@@ -232,6 +237,8 @@ class MainMenuState extends MusicBeatState
 			#end
 		}
 
+		checkForPasscode();
+
 		super.update(elapsed);
 	}
 
@@ -269,7 +276,9 @@ class MainMenuState extends MusicBeatState
 								PlayState.campaignMisses = 0;
 								PlayState.storyWeek = 1;
 								PlayState.storyPlaylist = ['Trolling', 'Foretoken', 'Impending Doom'];
-								LoadingState.loadAndSwitchState(new PlayState(), true);
+								//LoadingState.loadAndSwitchState(new PlayState(), true);
+								openSubState(new FreeplayWarningSubstate());
+								FlxG.sound.music.fadeOut(1, 0.5);
 								FreeplayState.destroyFreeplayVocals();
 							case 'week2':
 								PlayState.isStoryMode = true;
@@ -335,4 +344,96 @@ class MainMenuState extends MusicBeatState
 				spr.alpha = 0.00001;
 		});
 	}
+
+	function checkForPasscode()
+		{
+			if (FlxG.keys.justPressed.ANY)
+			{
+				if (FlxG.keys.justPressed.A)
+					inputAttempt += 'A';
+				else if (FlxG.keys.justPressed.B)
+					inputAttempt += 'B';
+				else if (FlxG.keys.justPressed.C)
+					inputAttempt += 'C';
+				else if (FlxG.keys.justPressed.D)
+					inputAttempt += 'D';
+				else if (FlxG.keys.justPressed.E)
+					inputAttempt += 'E';
+				else if (FlxG.keys.justPressed.F)
+					inputAttempt += 'F';
+				else if (FlxG.keys.justPressed.G)
+					inputAttempt += 'G';
+				else if (FlxG.keys.justPressed.H)
+					inputAttempt += 'H';
+				else if (FlxG.keys.justPressed.I)
+					inputAttempt += 'I';
+				else if (FlxG.keys.justPressed.J)
+					inputAttempt += 'J';
+				else if (FlxG.keys.justPressed.K)
+					inputAttempt += 'K';
+				else if (FlxG.keys.justPressed.L)
+					inputAttempt += 'L';
+				else if (FlxG.keys.justPressed.M)
+					inputAttempt += 'M';
+				else if (FlxG.keys.justPressed.N)
+					inputAttempt += 'N';
+				else if (FlxG.keys.justPressed.O)
+					inputAttempt += 'O';
+				else if (FlxG.keys.justPressed.P)
+					inputAttempt += 'P';
+				else if (FlxG.keys.justPressed.Q)
+					inputAttempt += 'Q';
+				else if (FlxG.keys.justPressed.R)
+					inputAttempt += 'R';
+				else if (FlxG.keys.justPressed.S)
+					inputAttempt += 'S';
+				else if (FlxG.keys.justPressed.T)
+					inputAttempt += 'T';
+				else if (FlxG.keys.justPressed.U)
+					inputAttempt += 'U';
+				else if (FlxG.keys.justPressed.V)
+					inputAttempt += 'V';
+				else if (FlxG.keys.justPressed.W)
+					inputAttempt += 'W';
+				else if (FlxG.keys.justPressed.X)
+					inputAttempt += 'X';
+				else if (FlxG.keys.justPressed.Y)
+					inputAttempt += 'Y';
+				else if (FlxG.keys.justPressed.Z)
+					inputAttempt += 'Z';
+				else if (FlxG.keys.justPressed.ZERO)
+					inputAttempt += '0';
+				else if (FlxG.keys.justPressed.ONE)
+					inputAttempt += '1';
+				else if (FlxG.keys.justPressed.TWO)
+					inputAttempt += '2';
+				else if (FlxG.keys.justPressed.THREE)
+					inputAttempt += '3';
+				else if (FlxG.keys.justPressed.FOUR)
+					inputAttempt += '4';
+				else if (FlxG.keys.justPressed.FIVE)
+					inputAttempt += '5';
+				else if (FlxG.keys.justPressed.SIX)
+					inputAttempt += '6';
+				else if (FlxG.keys.justPressed.SEVEN)
+					inputAttempt += '7';
+				else if (FlxG.keys.justPressed.EIGHT)
+					inputAttempt += '8';
+				else if (FlxG.keys.justPressed.NINE)
+					inputAttempt += '9';
+	
+				if (inputAttempt.contains('SKILLISSUE'))
+				{
+					if (inputAttempt == 'SKILLISSUE')
+					{
+						FlxG.sound.play(Paths.sound('but_ogg'), 1, false, null, true, function()
+						{
+							StoryMenuState.weekCompleted.set(1, true);
+							StoryMenuState.weekCompleted.set(2, true);
+							MusicBeatState.resetState();
+						});
+					}
+				}
+			}
+		}
 }

@@ -34,6 +34,8 @@ class ControlsSubState extends MusicBeatSubstate {
 	private static var defaultKey:String = 'Reset to Default Keys';
 	private var bindLength:Int = 0;
 
+	var backButton:MenuBackButton;
+
 	var optionShit:Array<Dynamic> = [
 		['4 KEY'],
 		['Left', 'note_left'],
@@ -91,6 +93,8 @@ class ControlsSubState extends MusicBeatSubstate {
 	public function new() {
 		super();
 
+		FlxG.mouse.visible = true;
+
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = 0xFFea71fd;
 		bg.screenCenter();
@@ -130,7 +134,7 @@ class ControlsSubState extends MusicBeatSubstate {
 			}
 		}
 
-		var backButton:MenuBackButton = new MenuBackButton(null);
+		backButton = new MenuBackButton(null);
 		add(backButton);
 
 		changeSelection();
@@ -152,7 +156,7 @@ class ControlsSubState extends MusicBeatSubstate {
 			if(FlxG.mouse.wheel != 0)
 				changeSelection(-FlxG.mouse.wheel);
 
-			if (controls.BACK) {
+			if (controls.BACK || (FlxG.mouse.justPressed && FlxG.mouse.overlaps(backButton))) {
 				ClientPrefs.reloadControls();
 				close();
 				FlxG.sound.play(Paths.sound('cancelMenu'));

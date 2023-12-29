@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "idle",
-			"fps": 14,
-			"name": "idle",
-			"indices": []
+			"loop": false,
+			"name": "Lore Trollface Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-40,
-				-190
+				183,
+				60
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 14,
-			"name": "down",
-			"indices": []
-		},
-		{
 			"loop": false,
-			"offsets": [
-				-200,
-				-58
-			],
-			"anim": "singUP",
-			"fps": 14,
-			"name": "up",
-			"indices": []
+			"name": "Lore Trollface Down"
 		},
 		{
 			"offsets": [
-				91,
-				-47
+				61,
+				48
 			],
 			"indices": [],
-			"fps": 14,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "right"
-		},
-		{
-			"offsets": [
-				-398,
-				-112
-			],
-			"indices": [],
-			"fps": 14,
+			"fps": 24,
 			"anim": "singRIGHT",
 			"loop": false,
-			"name": "left"
+			"name": "Lore Trollface Right"
+		},
+		{
+			"offsets": [
+				274,
+				4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Lore Trollface Left"
+		},
+		{
+			"offsets": [
+				6,
+				63
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Lore Trollface Up"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/trolling/trollface_lore_limc",
+	"image": "characters/trolling/lore_limc_trollface",
 	"position": [
-		100,
-		200
+		350,
+		330
 	],
 	"healthicon": "lore-trollface",
 	"flip_x": true,
@@ -70,8 +70,8 @@
 		255
 	],
 	"camera_position": [
-		180,
-		50
+		-70,
+		-80
 	],
 	"sing_duration": 4,
 	"scale": 1

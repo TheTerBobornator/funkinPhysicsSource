@@ -66,7 +66,6 @@ class FreeplayState extends MusicBeatState
 	var curAge:Int = 0;
 
 	var inputAttempt:String = '';
-	var secretCodes:Array<String> = ['BALDI', 'SKIBIDI'];
 	var warningOpen:Bool = false;
 
 	public function new(type:String = 'incidents')

@@ -1,107 +1,108 @@
-local normal = false
+-- less rebuilt from the ground up
+-- pretty much just copy pasted everything from 1.5 and tweaked it to work on psych, hence the stupid naming of variables (not that i dont do that myself with some things)
+-- anyway i hate this modchart but idc because this is an old song and again, fo da fans
 
+local noteSpin = 0;
+
+local normal = false
 local shet = false
 local OHFUCK = false
 local normal1 = false
-local cok = false
 
-local bopping = false
-local bopping2 = false
-
-
-function update (elapsed)
-local currentBeat = (songPos / 1000)*(bpm/60)
-    for i=0,7 do
-        setActorAngle(getActorAngle(i) + 1, i)
+function onUpdatePost(elapsed)
+    -- probably one of the stupidest things ive done but it works,
+    -- literally just increase the value as time passes and set the angle of the first 200 notes in the notes group
+    -- setting angle/angularVelocity is a pain without setting the strum's angle also but i think this works, no more than 200 notes are onscreen at once ithink
+    -- too lazy to bother finding a better way lole
+    noteSpin = noteSpin + 1
+    for i=0,200 do
+        setPropertyFromGroup('notes', i, 'angle', noteSpin)
     end
-
-    if shet then
-        for i=0,7 do
-        setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((currentBeat + i*7)), i)
-        setActorY(_G['defaultStrum'..i..'Y'] + 32 * math.cos((currentBeat + i*0.25) * math.pi), i)
+end
+function onUpdate(elapsed)
+    local currentBeat = (getSongPosition()/1000)*(curBpm/60)
+    if shet or OHFUCK then
+        for i=0,3 do
+            setPropertyFromGroup('opponentStrums', i, 'x', _G['defaultOpponentStrumX'..i] + 32 * math.sin(currentBeat + i*7))
+            setPropertyFromGroup('playerStrums', i, 'x', _G['defaultPlayerStrumX'..i] + 32 * math.sin(currentBeat + (i+4)*7))
+            setPropertyFromGroup('opponentStrums', i, 'y', _G['defaultOpponentStrumY'..i] + 32 * math.sin((currentBeat + i*0.25) * math.pi))
+            setPropertyFromGroup('playerStrums', i, 'y', _G['defaultPlayerStrumY'..i] + 32 * math.sin((currentBeat + (i+4)*0.25) * math.pi))
         end
     end
     if normal1 then
 		for i=0,7 do
-			setActorX(_G['defaultStrum'..i..'X'], i)
-			setActorY(_G['defaultStrum'..i..'Y'], i)
+            setPropertyFromGroup('opponentStrums', i, 'x', _G['defaultOpponentStrumX'..i])
+            setPropertyFromGroup('playerStrums', i, 'x', _G['defaultPlayerStrumX'..i])
+            setPropertyFromGroup('opponentStrums', i, 'y', _G['defaultOpponentStrumY'..i])
+            setPropertyFromGroup('playerStrums', i, 'y', _G['defaultPlayerStrumY'..i])
 		end
 	end
     if OHFUCK then
-        for i=0,7 do
-        setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((currentBeat + i*7)), i)
-        setActorY(_G['defaultStrum'..i..'Y'] + 32 * math.cos((currentBeat + i*0.25) * math.pi), i)
-        end
-        camHudAngle = 20 * math.sin(currentBeat * 0.5)
-        cameraAngle = -20 * math.sin(currentBeat * 0.5)
+        doTweenAngle('hudwweeeeww', 'camHUD', 20 * math.sin(currentBeat * 0.5), 0.1)
+        doTweenAngle('gamewweeeeww', 'camGame', -20 * math.sin(currentBeat * 0.5), 0.1)
     end
 end
 
-function beatHit (beat)
-	if bopping then
-		setCamZoom(1)
-	end
-    if bopping2 then
-        setCamZoom(1)
-	end
-end
-
-function stepHit (step)
-	if step == 416 then
-		bopping = true
+function onBeatHit()
+    if curBeat >= 104 and curBeat < 264 then
+        setProperty('camGame.zoom', 1)
+    end
+    if curBeat >= 264 and curBeat < 392 then
+        setProperty('camGame.zoom', 1.5)
+        setProperty('camHUD.zoom', 1.25)
+    end
+    -- ew
+    if curBeat == 104 then
         shet = true
     end
-    if step == 672 then
+    if curBeat == 168 then
         OHFUCK = true
         shet = false
     end
-    if step == 800 then
+    if curBeat == 200 then
         OHFUCK = false
         normal1 = true
     end
-    if step == 832 then
+    if curBeat == 208 then
         OHFUCK = true
         normal1 = false
     end
-    if step == 864 then
+    if curBeat == 216 then
         OHFUCK = false
         normal1 = true
     end
-    if step == 896 then
+    if curBeat == 224 then
         OHFUCK = true
         normal1 = false
     end
-    if step == 1056 then
-        bopping2 = true
-        bopping = false
+    if curBeat == 264 then
         for i=0,7 do
-			tweenFadeOut(i,0,0.6)
+            noteTweenAlpha('bye'..i, i, 0, 0.6)
 		end
     end
-    if step == 1106 then
+    if curBeat == 276 then
         for i=4,7 do
-			tweenFadeIn(i,1,0.6)
+            noteTweenAlpha('hello'..i, i, 1, 0.6)
 		end
     end
-    if step == 1376 then
+    if curBeat == 344 then
         for i=0,3 do
-			tweenFadeIn(i,1,0.6)
+			noteTweenAlpha('hello'..i, i, 1, 0.6)
 		end
-        cockusballus = false
         OHFUCK = true 
     end
-    if step == 1696 then
+    if curBeat == 392 then
         OHFUCK = false
-        bopping2 = false
         normal1 = true
+        doTweenAngle('hudReturn', 'camHUD', 0, 1)
+        doTweenAngle('gameReturn', 'camGame', 0, 1)
+        doTweenAlpha('bfLeave', 'boyfriend', 0, 1)
+        doTweenAlpha('gfLeave', 'gf', 0, 1)
+
+        makeLuaSprite("funnyWhite", "", -600, -220)
+        makeGraphic("funnyWhite", 3000, 2000, "0xFFFFFFFF")
+        setProperty("funnyWhite.alpha", 0)
+        addLuaSprite("funnyWhite", false)
+        doTweenAlpha("fadeIn", "funnyWhite", 1, 1)
     end
-end
-
-
-function playerTwoTurn()
-    tweenZoom(camGame,1.3,0.1)
-end
-
-function playerOneTurn()
-    tweenZoom(camGame,0.85,0.1)
 end

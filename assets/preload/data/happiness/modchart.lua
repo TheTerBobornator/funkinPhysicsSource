@@ -5,10 +5,12 @@ function onCreate()
 end
 
 function onCreatePost()
-	for i=0,3 do
-		setPropertyFromGroup('opponentStrums', i, 'x', _G['defaultPlayerStrumX'..i])
-		setPropertyFromGroup('playerStrums', i, 'x', _G['defaultOpponentStrumX'..i])
-	end
+    if not middlescroll then
+	    for i=0,3 do
+	    	setPropertyFromGroup('opponentStrums', i, 'x', _G['defaultPlayerStrumX'..i])
+	    	setPropertyFromGroup('playerStrums', i, 'x', _G['defaultOpponentStrumX'..i])
+    	end
+    end
     setProperty('iconP1.flipX',true)
     setProperty('iconP2.flipX',true)
     setProperty('healthBar.flipX',true)
